@@ -12,7 +12,9 @@
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:coverage": "yarn test --collectCoverage",
-    "codecov": "yarn test:coverage && codecov -f coverage/*.json"
+    "codecov": "yarn test:coverage && codecov -f coverage/*.json",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -29,6 +31,7 @@
     "codecov": "^3.3.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.7.1",
+    "react-styleguidist": "^9.0.5",
     "react-testing-library": "^6.1.1",
     "ts-jest": "^24.0.1",
     "typescript": "^3.4.1",
