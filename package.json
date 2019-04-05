@@ -12,7 +12,9 @@
     "start": "webpack-dev-server --mode development",
     "test": "jest",
     "test:coverage": "yarn test --collectCoverage",
-    "codecov": "yarn test:coverage && codecov -f coverage/*.json"
+    "codecov": "yarn test:coverage && codecov -f coverage/*.json",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
