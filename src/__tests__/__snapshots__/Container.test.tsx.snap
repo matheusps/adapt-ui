@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container component shoult match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    style="background-color: rgb(206, 206, 206); padding: 1rem;"
+  />
+</DocumentFragment>
+`;
