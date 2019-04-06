@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
 
-type Measure = 'sm' | 'md' | 'lg' | 'xl'
+import AnimatedSvg from './styled/AnimatedSvg'
 
-const getSpeed = (speed: string) =>
+const getSpeed = (speed: Speed) =>
   speed === 'fast' ? 600 : speed === 'slow' ? 900 : 750
 
 const getThickness = (thickness: Measure) =>
@@ -19,14 +19,6 @@ const getThickness = (thickness: Measure) =>
 const getGap = (gap: Measure) =>
   gap === 'sm' ? 1 : gap === 'md' ? 3 : gap === 'lg' ? 4 : gap === 'xl' ? 5 : 4
 
-interface LoaderProps {
-  color: string
-  speed: 'fast' | 'slow' | 'normal'
-  gap: Measure
-  thickness: Measure
-  size: string
-}
-
 const Loader: FunctionComponent<LoaderProps> = ({
   thickness,
   size,
@@ -34,31 +26,13 @@ const Loader: FunctionComponent<LoaderProps> = ({
   color,
   gap,
 }) => (
-  <svg
+  <AnimatedSvg
     height={size}
     width={size}
     style={{ animationDuration: `${getSpeed(speed)}ms` }}
-    className="__react-svg-spinner_circle"
     role="img"
-    aria-labelledby="title desc"
     viewBox="0 0 32 32"
   >
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-      .__react-svg-spinner_circle{
-          transition-property: transform;
-          animation-name: __react-svg-spinner_infinite-spin;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-      }
-      @keyframes __react-svg-spinner_infinite-spin {
-          from {transform: rotate(0deg)}
-          to {transform: rotate(360deg)}
-      }
-    `,
-      }}
-    />
     <circle
       role="presentation"
       cx={16}
@@ -70,7 +44,7 @@ const Loader: FunctionComponent<LoaderProps> = ({
       strokeDasharray={Math.PI * 2 * (11 - getGap(gap))}
       strokeLinecap="round"
     />
-  </svg>
+  </AnimatedSvg>
 )
 
 Loader.defaultProps = {
