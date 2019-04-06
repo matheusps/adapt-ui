@@ -19,4 +19,27 @@ describe('Container component', () => {
     )
     expect(component.asFragment()).toMatchSnapshot()
   })
+
+  it('should match snapshot with all measures', () => {
+    const component = render(
+      <div>
+        <Loader thickness="sm" gap="sm" />
+        <Loader thickness="md" gap="md" />
+        <Loader thickness="lg" gap="lg" />
+        <Loader thickness="xl" gap="xl" />
+      </div>
+    )
+    expect(component.asFragment()).toMatchSnapshot()
+  })
+
+  it('should match snapshot with all speeds', () => {
+    const component = render(
+      <div>
+        <Loader speed="slow" />
+        <Loader speed="normal" />
+        <Loader speed="fast" />
+      </div>
+    )
+    expect(component.asFragment()).toMatchSnapshot()
+  })
 })
