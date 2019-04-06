@@ -1,23 +1,7 @@
 import React, { FunctionComponent } from 'react'
 
-import AnimatedSvg from './styled/AnimatedSvg'
-
-const getSpeed = (speed: Speed) =>
-  speed === 'fast' ? 600 : speed === 'slow' ? 900 : 750
-
-const getThickness = (thickness: Measure) =>
-  thickness === 'sm'
-    ? 2
-    : thickness === 'md'
-    ? 4
-    : thickness === 'lg'
-    ? 6
-    : thickness === 'xl'
-    ? 8
-    : 4
-
-const getGap = (gap: Measure) =>
-  gap === 'sm' ? 1 : gap === 'md' ? 3 : gap === 'lg' ? 4 : gap === 'xl' ? 5 : 4
+import AnimatedSvg from './helpers/AnimatedSvg'
+import { getGap, getSpeed, getThickness } from './helpers/helpers'
 
 const Loader: FunctionComponent<LoaderProps> = ({
   thickness,
@@ -29,7 +13,7 @@ const Loader: FunctionComponent<LoaderProps> = ({
   <AnimatedSvg
     height={size}
     width={size}
-    style={{ animationDuration: `${getSpeed(speed)}ms` }}
+    style={{ animationDuration: `${getSpeed(speed!)}ms` }}
     role="img"
     viewBox="0 0 32 32"
   >
@@ -37,11 +21,11 @@ const Loader: FunctionComponent<LoaderProps> = ({
       role="presentation"
       cx={16}
       cy={16}
-      r={14 - getThickness(thickness) / 2}
+      r={14 - getThickness(thickness!) / 2}
       stroke={color}
       fill="none"
-      strokeWidth={getThickness(thickness)}
-      strokeDasharray={Math.PI * 2 * (11 - getGap(gap))}
+      strokeWidth={getThickness(thickness!)}
+      strokeDasharray={Math.PI * 2 * (11 - getGap(gap!))}
       strokeLinecap="round"
     />
   </AnimatedSvg>
@@ -52,6 +36,7 @@ Loader.defaultProps = {
   size: '2rem',
   thickness: 'md',
   speed: 'normal',
+  gap: 'lg',
 }
 
 export default Loader

@@ -11,5 +11,5 @@
     "isolatedModules": true,
     "esModuleInterop": true
   },
-  "include": ["./**/*.d.ts", "./**/*.tsx"]
+  "include": ["src"]
 }

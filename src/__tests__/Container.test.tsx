@@ -8,7 +8,7 @@ describe('Container component', () => {
     expect(component).toBeTruthy()
   })
 
-  it('shoult match snapshot', () => {
+  it('should match snapshot', () => {
     const component = render(<Container />)
     expect(component.asFragment()).toMatchSnapshot()
   })
