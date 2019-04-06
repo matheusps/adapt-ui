@@ -1,0 +1,5 @@
+Default Loader
+
+```js
+<Loader />
+```
