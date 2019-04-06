@@ -5,12 +5,21 @@ const infiniteSpin = keyframes`
   to {transform: rotate(360deg)}
 `
 
-const AnimatedSvg = styled.svg`
+const Svg = styled.svg`
   transition-property: transform;
   animation-name: ${infiniteSpin};
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 `
 
+const Circle = styled.circle`
+  stroke: ${props => {
+    switch (props.color) {
+      case 'primary':
+        return props.theme.color.primary.default
+    }
+  }};
+`
+
 /** @component */
-export default AnimatedSvg
+export { Svg, Circle }

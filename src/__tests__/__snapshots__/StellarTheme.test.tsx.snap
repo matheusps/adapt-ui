@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container component should match snapshot 1`] = `
+<DocumentFragment>
+  <p>
+    Test
+  </p>
+</DocumentFragment>
+`;

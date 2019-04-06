@@ -11,12 +11,13 @@ exports[`Container component should match snapshot as default 1`] = `
     width="2rem"
   >
     <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke="rgba(0,0,0,0.4)"
       stroke-dasharray="43.982297150257104"
       stroke-linecap="round"
       stroke-width="4"
@@ -27,88 +28,90 @@ exports[`Container component should match snapshot as default 1`] = `
 
 exports[`Container component should match snapshot with all measures 1`] = `
 <DocumentFragment>
-  <div>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 750ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="13"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="62.83185307179586"
-        stroke-linecap="round"
-        stroke-width="2"
-      />
-    </svg>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 750ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="12"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="50.26548245743669"
-        stroke-linecap="round"
-        stroke-width="4"
-      />
-    </svg>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 750ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="11"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="43.982297150257104"
-        stroke-linecap="round"
-        stroke-width="6"
-      />
-    </svg>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 750ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="10"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="37.69911184307752"
-        stroke-linecap="round"
-        stroke-width="8"
-      />
-    </svg>
-  </div>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 750ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="13"
+      role="presentation"
+      stroke-dasharray="62.83185307179586"
+      stroke-linecap="round"
+      stroke-width="2"
+    />
+  </svg>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 750ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="12"
+      role="presentation"
+      stroke-dasharray="50.26548245743669"
+      stroke-linecap="round"
+      stroke-width="4"
+    />
+  </svg>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 750ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="11"
+      role="presentation"
+      stroke-dasharray="43.982297150257104"
+      stroke-linecap="round"
+      stroke-width="6"
+    />
+  </svg>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 750ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="10"
+      role="presentation"
+      stroke-dasharray="37.69911184307752"
+      stroke-linecap="round"
+      stroke-width="8"
+    />
+  </svg>
 </DocumentFragment>
 `;
 
@@ -123,12 +126,13 @@ exports[`Container component should match snapshot with all props 1`] = `
     width="3rem"
   >
     <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke="black"
       stroke-dasharray="37.69911184307752"
       stroke-linecap="round"
       stroke-width="4"
@@ -139,67 +143,68 @@ exports[`Container component should match snapshot with all props 1`] = `
 
 exports[`Container component should match snapshot with all speeds 1`] = `
 <DocumentFragment>
-  <div>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 900ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="12"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="43.982297150257104"
-        stroke-linecap="round"
-        stroke-width="4"
-      />
-    </svg>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 750ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="12"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="43.982297150257104"
-        stroke-linecap="round"
-        stroke-width="4"
-      />
-    </svg>
-    <svg
-      class="sc-bdVaJa bcqvGF"
-      height="2rem"
-      role="img"
-      style="animation-duration: 600ms;"
-      viewBox="0 0 32 32"
-      width="2rem"
-    >
-      <circle
-        cx="16"
-        cy="16"
-        fill="none"
-        r="12"
-        role="presentation"
-        stroke="rgba(0,0,0,0.4)"
-        stroke-dasharray="43.982297150257104"
-        stroke-linecap="round"
-        stroke-width="4"
-      />
-    </svg>
-  </div>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 900ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="12"
+      role="presentation"
+      stroke-dasharray="43.982297150257104"
+      stroke-linecap="round"
+      stroke-width="4"
+    />
+  </svg>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 750ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="12"
+      role="presentation"
+      stroke-dasharray="43.982297150257104"
+      stroke-linecap="round"
+      stroke-width="4"
+    />
+  </svg>
+  <svg
+    class="sc-bdVaJa bcqvGF"
+    height="2rem"
+    role="img"
+    style="animation-duration: 600ms;"
+    viewBox="0 0 32 32"
+    width="2rem"
+  >
+    <circle
+      class="sc-bwzfXH boYAcf"
+      color="primary"
+      cx="16"
+      cy="16"
+      fill="none"
+      r="12"
+      role="presentation"
+      stroke-dasharray="43.982297150257104"
+      stroke-linecap="round"
+      stroke-width="4"
+    />
+  </svg>
 </DocumentFragment>
 `;

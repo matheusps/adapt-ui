@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 
-import AnimatedSvg from './helpers/AnimatedSvg'
+import { Svg, Circle } from './helpers/styled'
 import { getGap, getSpeed, getThickness } from './helpers/helpers'
 
 const Loader: FunctionComponent<LoaderProps> = ({
@@ -10,29 +10,29 @@ const Loader: FunctionComponent<LoaderProps> = ({
   color,
   gap,
 }) => (
-  <AnimatedSvg
+  <Svg
     height={size}
     width={size}
     style={{ animationDuration: `${getSpeed(speed!)}ms` }}
     role="img"
     viewBox="0 0 32 32"
   >
-    <circle
+    <Circle
       role="presentation"
       cx={16}
       cy={16}
+      color={color}
       r={14 - getThickness(thickness!) / 2}
-      stroke={color}
       fill="none"
       strokeWidth={getThickness(thickness!)}
       strokeDasharray={Math.PI * 2 * (11 - getGap(gap!))}
       strokeLinecap="round"
     />
-  </AnimatedSvg>
+  </Svg>
 )
 
 Loader.defaultProps = {
-  color: 'rgba(0,0,0,0.4)',
+  color: 'primary',
   size: '2rem',
   thickness: 'md',
   speed: 'normal',
