@@ -1,6 +1,6 @@
 type Measure = 'sm' | 'md' | 'lg' | 'xl'
 type Speed = 'fast' | 'slow' | 'normal'
-type Color = 'primary'
+type Color = 'primary' | 'secondary' | 'success'
 interface LoaderProps {
   color?: Color
   speed?: Speed

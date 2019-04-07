@@ -17,6 +17,10 @@ const Circle = styled.circle`
     switch (props.color) {
       case 'primary':
         return props.theme.color.primary.default
+      case 'secondary':
+        return props.theme.color.secondary.default
+      case 'success':
+        return props.theme.color.success.default
     }
   }};
 `

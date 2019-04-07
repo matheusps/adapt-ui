@@ -1,15 +1,20 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import Container from '../components/Container'
+import StellarTheme from '../components/StellarTheme'
 
 describe('Container component', () => {
+  const component = render(
+    <StellarTheme>
+      <Container bg="primary" />
+    </StellarTheme>
+  )
+
   it('should render', () => {
-    const component = render(<Container />)
     expect(component).toBeTruthy()
   })
 
   it('should match snapshot', () => {
-    const component = render(<Container />)
     expect(component.asFragment()).toMatchSnapshot()
   })
 })

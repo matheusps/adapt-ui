@@ -3,7 +3,7 @@
 exports[`Container component should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    style="background-color: rgb(206, 206, 206); padding: 1rem;"
+    class="sc-bdVaJa gECytu"
   />
 </DocumentFragment>
 `;
