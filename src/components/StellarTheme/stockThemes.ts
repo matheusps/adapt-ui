@@ -1,5 +1,5 @@
 export const light = {
-  color: {
+  colors: {
     base: {
       default: '#fafafa',
       darken: '#cecece',

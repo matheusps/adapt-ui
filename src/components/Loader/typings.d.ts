@@ -1,10 +1,6 @@
-type Measure = 'sm' | 'md' | 'lg' | 'xl'
-type Speed = 'fast' | 'slow' | 'normal'
-type Color = 'primary' | 'secondary' | 'success'
-interface LoaderProps {
-  color?: Color
-  speed?: Speed
-  gap?: Measure
-  thickness?: Measure
-  size?: string
+interface LoaderProps extends EnhancedWithTheme {
+  readonly speed?: Speed
+  readonly gap?: Measure
+  readonly thickness?: Measure
+  readonly size?: string
 }

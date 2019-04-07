@@ -10,7 +10,7 @@ const Div = styled.div`
   background-color: ${(props: ContainerProps) => {
     switch (props.bg) {
       case 'primary':
-        return props.theme.color.primary.lighten
+        return props.theme.colors.primary.lighten
     }
   }};
   padding: 1rem;
