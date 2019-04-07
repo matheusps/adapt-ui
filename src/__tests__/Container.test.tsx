@@ -6,7 +6,7 @@ import StellarTheme from '../components/StellarTheme'
 describe('Container component', () => {
   const component = render(
     <StellarTheme>
-      <Container bg="primary" />
+      <Container color="primary" />
     </StellarTheme>
   )
 
