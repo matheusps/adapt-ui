@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import { selectTheme } from '../../../helpers'
+import { selectTheme } from '../../../global/helpers'
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}

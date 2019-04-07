@@ -1,27 +1,26 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
+import { selectTheme } from '../../global/helpers'
 
-interface ContainerProps {
-  bg: 'primary'
-  theme?: any
-}
+interface Props extends EnhancedWithTheme {}
 
-const Div = styled.div`
-  background-color: ${(props: ContainerProps) => {
-    switch (props.bg) {
-      case 'primary':
-        return props.theme.colors.primary.lighten
-    }
-  }};
+const Div = styled.div<EnhancedWithTheme>`
+  background-color: ${props =>
+    selectTheme(props.theme, props.color, props.shade)};
   padding: 1rem;
 `
 
-const Container: FunctionComponent<ContainerProps> = ({ bg, children }) => {
-  return <Div bg={bg}>{children}</Div>
+const Container: FunctionComponent<Props> = ({ color, shade, children }) => {
+  return (
+    <Div color={color} shade={shade}>
+      {children}
+    </Div>
+  )
 }
 
 Container.defaultProps = {
-  bg: 'primary',
+  color: 'primary',
+  shade: 'lighten',
 }
 
 export default Container
