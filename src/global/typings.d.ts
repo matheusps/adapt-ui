@@ -3,12 +3,12 @@ type Speed = 'fast' | 'slow' | 'normal'
 
 type Color = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error'
 
-type Shade = 'default' | 'lighten' | 'darken' | 'constrast'
+type Shade = 'default' | 'lighten' | 'darken' | 'contrast'
 interface Shades {
   default: string
   lighten: string
   darken: string
-  constrast: string
+  contrast: string
 }
 interface ColorSystem {
   readonly base: Shades

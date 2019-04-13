@@ -16,19 +16,19 @@ export const light = {
       default: '#256EFF',
       darken: '#113274',
       lighten: '#AFCAFF',
-      contrast: '#',
+      contrast: '#fff',
     },
     secondary: {
       default: '#46237A',
       darken: '#',
       lighten: '#',
-      contrast: '',
+      contrast: '#fff',
     },
     success: {
       default: '#3DDC97',
       darken: '#',
       lighten: '#',
-      contrast: '',
+      contrast: '#fff',
     },
     warning: {
       default: '#',
