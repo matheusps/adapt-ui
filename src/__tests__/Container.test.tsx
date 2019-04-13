@@ -1,13 +1,13 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import Container from '../components/Container'
-import StellarTheme from '../components/StellarTheme'
+import QuarksTheme from '../components/QuarksTheme'
 
 describe('Container component', () => {
   const component = render(
-    <StellarTheme>
+    <QuarksTheme>
       <Container color="primary" />
-    </StellarTheme>
+    </QuarksTheme>
   )
 
   it('should render', () => {

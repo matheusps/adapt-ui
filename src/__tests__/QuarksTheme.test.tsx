@@ -1,12 +1,12 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-import StellarTheme from '../components/StellarTheme'
+import QuarksTheme from '../components/QuarksTheme'
 
 describe('Container component', () => {
   const component = render(
-    <StellarTheme>
+    <QuarksTheme>
       <p>Test</p>
-    </StellarTheme>
+    </QuarksTheme>
   )
 
   it('should render', () => {

@@ -1,3 +1,0 @@
-interface StellarThemeProps {
-  theme?: any
-}

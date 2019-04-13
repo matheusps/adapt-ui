@@ -1,14 +1,14 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import Button from '../components/Button'
-import StellarTheme from '../components/StellarTheme'
+import QuarksTheme from '../components/QuarksTheme'
 
 describe('Container component', () => {
   const renderComponent = (customProps?) =>
     render(
-      <StellarTheme>
+      <QuarksTheme>
         <Button {...customProps!}>Test</Button>
-      </StellarTheme>
+      </QuarksTheme>
     )
 
   it('should render', () => {

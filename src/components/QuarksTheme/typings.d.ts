@@ -1,0 +1,3 @@
+interface QuarksThemeProps {
+  theme?: any
+}

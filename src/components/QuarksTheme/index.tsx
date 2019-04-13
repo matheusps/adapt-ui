@@ -6,7 +6,7 @@ import { light } from './stockThemes'
 /**
  * Wraps around Theme-provider from styled-components 💅🏻
  */
-const StellarTheme: FunctionComponent<StellarThemeProps> = ({ children }) => {
+const QuarksTheme: FunctionComponent<QuarksThemeProps> = ({ children }) => {
   return (
     <ThemeProvider theme={light}>
       <>{children}</>
@@ -14,4 +14,4 @@ const StellarTheme: FunctionComponent<StellarThemeProps> = ({ children }) => {
   )
 }
 
-export default StellarTheme
+export default QuarksTheme

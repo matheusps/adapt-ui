@@ -1,9 +1,9 @@
 {
-  "name": "react-stellar",
+  "name": "react-quarks",
   "version": "0.0.1",
-  "description": "React styleguide",
+  "description": "Elementary UI components",
   "main": "index.js",
-  "repository": "https://github.com/matheusps/react-stellar.git",
+  "repository": "https://github.com/matheusps/react-quarks.git",
   "author": "matheusps <matheus.ps@icloud.com>",
   "license": "MIT",
   "private": false,
