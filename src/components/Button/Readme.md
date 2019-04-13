@@ -1,11 +1,8 @@
-Buttons
+Colors
 
 ```js
-<Button size="sm">Stellar</Button>
-
-<Button size="md" color="secondary">Stellar</Button>
-
-<Button size="lg" color="success">Stellar</Button>
-
-<Button size="xl">Stellar</Button>
+<Button size="sm" color="base" shade="darken">Button SM</Button>
+<Button size="md" shade="lighten" >Button MD</Button>
+<Button size="lg">Button LG</Button>
+<Button size="xl" shade="darken">Button XL</Button>
 ```

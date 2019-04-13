@@ -19,8 +19,8 @@ const Container: FunctionComponent<Props> = ({ color, shade, children }) => {
 }
 
 Container.defaultProps = {
-  color: 'primary',
-  shade: 'lighten',
+  color: 'base',
+  shade: 'default',
 }
 
 export default Container

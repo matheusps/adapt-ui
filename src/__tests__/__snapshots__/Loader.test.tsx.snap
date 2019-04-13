@@ -11,7 +11,7 @@ exports[`Container component should match snapshot as default 1`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -37,7 +37,7 @@ exports[`Container component should match snapshot with all measures 1`] = `
     width="sm"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -63,7 +63,7 @@ exports[`Container component should match snapshot with all measures 2`] = `
     width="md"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -89,7 +89,7 @@ exports[`Container component should match snapshot with all measures 3`] = `
     width="lg"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -115,7 +115,7 @@ exports[`Container component should match snapshot with all measures 4`] = `
     width="xl"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -141,7 +141,7 @@ exports[`Container component should match snapshot with all props 1`] = `
     width="3rem"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -167,7 +167,7 @@ exports[`Container component should match snapshot with all speeds 1`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -193,7 +193,7 @@ exports[`Container component should match snapshot with all speeds 2`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
@@ -219,7 +219,7 @@ exports[`Container component should match snapshot with all speeds 3`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH boYAcf"
+      class="sc-bwzfXH cnuDMo"
       color="primary"
       cx="16"
       cy="16"
