@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { selectTheme, getMeasure } from '../../global/helpers'
 
 interface Props extends EnhancedWithTheme {
-  size: Measure
+  size?: Measure
 }
 
 const getFontSize = (measure: Measure) =>
@@ -22,8 +22,8 @@ const StyledButton = styled.button<Props>`
   background-color: ${props =>
     selectTheme(props.theme, props.color, props.shade)};
   color: ${props => selectTheme(props.theme, props.color, 'contrast')};
-  font-size: ${props => getFontSize(props.size)};
-  padding: ${props => getPadding(props.size)};
+  font-size: ${props => getFontSize(props.size!)};
+  padding: ${props => getPadding(props.size!)};
 
   font-weight: 500;
   line-height: 1.3;
