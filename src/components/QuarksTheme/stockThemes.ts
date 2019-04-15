@@ -6,13 +6,23 @@ export const light: ThemeProps = {
       },
       default: {
         light: '#F2EFE9',
-        basic: '#ccc',
-        dark: '#212121',
-      },
-      primary: {
-        light: '#474645',
         basic: '#191817',
         dark: '#020100',
+      },
+      primary: {
+        light: '#F0F6FF',
+        basic: '#3165EC',
+        dark: '#435582',
+      },
+      success: {
+        light: '#E1FFD5',
+        basic: '#5ca035',
+        dark: '#76966A',
+      },
+      warning: {
+        light: '#FFF4DD',
+        basic: '#FFB514',
+        dark: '#9C8860',
       },
     },
     text: {
