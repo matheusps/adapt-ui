@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
-import { selectTheme, getMeasure } from '../../global/helpers'
+import { selectUIAppearance, getMeasure } from '../../global/helpers'
 
 interface Props extends EnhancedWithTheme {
   size?: Measure
@@ -20,8 +20,8 @@ const getPadding = (measure: Measure) =>
 
 const StyledButton = styled.button<Props>`
   background-color: ${props =>
-    selectTheme(props.theme, props.color, props.shade)};
-  color: ${props => selectTheme(props.theme, props.color, 'contrast')};
+    selectUIAppearance(props.theme, props.appearance, 'light')};
+  color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
 
@@ -71,19 +71,18 @@ const StyledButton = styled.button<Props>`
 const Button: FunctionComponent<Props> = ({
   children,
   size,
-  color,
+  appearance,
   ...props
 }) => {
   return (
-    <StyledButton size={size} color={color} {...props}>
+    <StyledButton size={size} appearance={appearance} {...props}>
       {children}
     </StyledButton>
   )
 }
 
 Button.defaultProps = {
-  color: 'primary',
-  shade: 'default',
+  appearance: 'default',
   size: 'md',
 }
 

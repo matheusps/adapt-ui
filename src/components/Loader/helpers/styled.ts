@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import { selectTheme } from '../../../global/helpers'
+import { selectUIAppearance } from '../../../global/helpers'
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
@@ -15,7 +15,8 @@ const Svg = styled.svg`
 `
 
 const Circle = styled.circle<EnhancedWithTheme>`
-  stroke: ${props => selectTheme(props.theme, props.color, props.shade)};
+  stroke: ${props =>
+    selectUIAppearance(props.theme, props.appearance, props.tone)};
 `
 
 /** @component */

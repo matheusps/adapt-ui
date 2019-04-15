@@ -1,27 +1,33 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
-import { selectTheme } from '../../global/helpers'
+import { selectTextAppearance, selectUIAppearance } from '../../global/helpers'
 
 interface Props extends EnhancedWithTheme {}
 
 const Div = styled.div<EnhancedWithTheme>`
   background-color: ${props =>
-    selectTheme(props.theme, props.color, props.shade)};
-  color: ${props => selectTheme(props.theme, props.color, 'contrast')};
+    selectUIAppearance(props.theme, props.appearance, props.tone)};
+  color: ${props => selectTextAppearance(props.theme, props.text, props.tone)};
   padding: 1rem;
 `
 
-const Container: FunctionComponent<Props> = ({ color, shade, children }) => {
+const Container: FunctionComponent<Props> = ({
+  appearance,
+  tone,
+  text,
+  children,
+}) => {
   return (
-    <Div color={color} shade={shade}>
+    <Div appearance={appearance} tone={tone} text={text}>
       {children}
     </Div>
   )
 }
 
 Container.defaultProps = {
-  color: 'base',
-  shade: 'default',
+  appearance: 'base',
+  tone: 'basic',
+  text: 'display',
 }
 
 export default Container

@@ -1,14 +1,14 @@
 Colors
 
 ```js
-  <Button size="sm" shade="lighten">
+  <Button size="sm">
     Button SM
   </Button>
-  <Button size="md" shade="lighten">
+  <Button size="md" >
     Button MD
   </Button>
   <Button size="lg">Button LG</Button>
-  <Button size="xl" shade="darken">
+  <Button appearance="primary" size="xl">
     Button XL
   </Button>
 ```

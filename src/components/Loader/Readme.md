@@ -1,8 +1,8 @@
 Colors
 
 ```js
-<Loader color='primary' shade='contrast' />
-<Loader color='primary' shade='lighten' />
-<Loader color='primary' shade='default' />
-<Loader color='primary' shade='darken' />
+<Loader color='primary' tone='light' />
+<Loader color='primary' tone='basic' />
+<Loader color='primary' tone='dark' />
+<Loader color='default' />
 ```

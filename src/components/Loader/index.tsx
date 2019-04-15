@@ -7,8 +7,8 @@ const Loader: FunctionComponent<LoaderProps> = ({
   thickness,
   size,
   speed,
-  color,
-  shade,
+  appearance,
+  tone,
   gap,
 }) => (
   <Svg
@@ -22,8 +22,8 @@ const Loader: FunctionComponent<LoaderProps> = ({
       role="presentation"
       cx={16}
       cy={16}
-      color={color}
-      shade={shade}
+      appearance={appearance}
+      tone={tone}
       r={14 - getThickness(thickness!) / 2}
       fill="none"
       strokeWidth={getThickness(thickness!)}
@@ -34,8 +34,8 @@ const Loader: FunctionComponent<LoaderProps> = ({
 )
 
 Loader.defaultProps = {
-  color: 'primary',
-  shade: 'default',
+  appearance: 'primary',
+  tone: 'basic',
   size: '2rem',
   thickness: 'md',
   speed: 'normal',
