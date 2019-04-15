@@ -7,6 +7,7 @@ interface Props extends EnhancedWithTheme {}
 const Div = styled.div<EnhancedWithTheme>`
   background-color: ${props =>
     selectTheme(props.theme, props.color, props.shade)};
+  color: ${props => selectTheme(props.theme, props.color, 'contrast')};
   padding: 1rem;
 `
 
