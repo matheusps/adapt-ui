@@ -2,8 +2,24 @@
 
 exports[`Container component should match snapshot as default 1`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="2rem"
     role="img"
     style="animation-duration: 750ms;"
@@ -11,7 +27,7 @@ exports[`Container component should match snapshot as default 1`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -27,8 +43,24 @@ exports[`Container component should match snapshot as default 1`] = `
 
 exports[`Container component should match snapshot with all measures 1`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="sm"
     role="img"
     style="animation-duration: 750ms;"
@@ -36,7 +68,7 @@ exports[`Container component should match snapshot with all measures 1`] = `
     width="sm"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -52,8 +84,24 @@ exports[`Container component should match snapshot with all measures 1`] = `
 
 exports[`Container component should match snapshot with all measures 2`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="md"
     role="img"
     style="animation-duration: 750ms;"
@@ -61,7 +109,7 @@ exports[`Container component should match snapshot with all measures 2`] = `
     width="md"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -77,8 +125,24 @@ exports[`Container component should match snapshot with all measures 2`] = `
 
 exports[`Container component should match snapshot with all measures 3`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="lg"
     role="img"
     style="animation-duration: 750ms;"
@@ -86,7 +150,7 @@ exports[`Container component should match snapshot with all measures 3`] = `
     width="lg"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -102,8 +166,24 @@ exports[`Container component should match snapshot with all measures 3`] = `
 
 exports[`Container component should match snapshot with all measures 4`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="xl"
     role="img"
     style="animation-duration: 750ms;"
@@ -111,7 +191,7 @@ exports[`Container component should match snapshot with all measures 4`] = `
     width="xl"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -127,8 +207,24 @@ exports[`Container component should match snapshot with all measures 4`] = `
 
 exports[`Container component should match snapshot with all props 1`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="3rem"
     role="img"
     style="animation-duration: 600ms;"
@@ -136,7 +232,7 @@ exports[`Container component should match snapshot with all props 1`] = `
     width="3rem"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -152,8 +248,24 @@ exports[`Container component should match snapshot with all props 1`] = `
 
 exports[`Container component should match snapshot with all speeds 1`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="2rem"
     role="img"
     style="animation-duration: 900ms;"
@@ -161,7 +273,7 @@ exports[`Container component should match snapshot with all speeds 1`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -177,8 +289,24 @@ exports[`Container component should match snapshot with all speeds 1`] = `
 
 exports[`Container component should match snapshot with all speeds 2`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="2rem"
     role="img"
     style="animation-duration: 750ms;"
@@ -186,7 +314,7 @@ exports[`Container component should match snapshot with all speeds 2`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"
@@ -202,8 +330,24 @@ exports[`Container component should match snapshot with all speeds 2`] = `
 
 exports[`Container component should match snapshot with all speeds 3`] = `
 <DocumentFragment>
-  <svg
-    class="sc-bdVaJa bcqvGF"
+  .c0 {
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-animation-name: MQNGw;
+  animation-name: MQNGw;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.c1 {
+  stroke: #3165EC;
+}
+
+<svg
+    class="c0"
     height="2rem"
     role="img"
     style="animation-duration: 600ms;"
@@ -211,7 +355,7 @@ exports[`Container component should match snapshot with all speeds 3`] = `
     width="2rem"
   >
     <circle
-      class="sc-bwzfXH fUgKDt"
+      class="c1"
       cx="16"
       cy="16"
       fill="none"

@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import QuarksTheme from '../components/QuarksTheme'
+import 'jest-styled-components'
 
 describe('Container component', () => {
   const component = render(

@@ -27,8 +27,3 @@ Shapes
   <Button shape="rounded">Rounded</Button>
   <Button shape="pill">Pill</Button>
 ```
-
-Custom
-
-```js
-```
