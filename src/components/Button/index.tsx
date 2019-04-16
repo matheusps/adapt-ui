@@ -38,7 +38,7 @@ const StyledButton = styled.button<Props>`
     props.outline
       ? 'transparent'
       : selectUIAppearance(props.theme, props.appearance, 'light')};
-  color: ${props => selectUIAppearance(props.theme, props.appearance, 'dark')};
+  color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
   border-radius: ${props => getBorderRadius(props.shape!)};
@@ -49,9 +49,12 @@ const StyledButton = styled.button<Props>`
       props.outline ? 'basic' : 'light'
     )}`};
 
+  box-sizing: border-box;
+
   font-weight: 500;
-  line-height: 1.3;
-  margin: 10px;
+  font-stretch: normal;
+  line-height: 1.4;
+  margin: 0.2rem;
   display: relative;
   overflow: hidden;
   cursor: pointer;
@@ -62,8 +65,6 @@ const StyledButton = styled.button<Props>`
   justify-content: center;
   align-items: center;
 
-  transition: all 150ms linear;
-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -73,14 +74,17 @@ const StyledButton = styled.button<Props>`
   -ms-user-select: none;
   user-select: none;
 
+  transition: transform 0.2s ease-in;
+  will-change: transform;
+
   :hover {
-    transition: all 150ms linear;
-    opacity: 0.85;
+    transform: scale(0.975);
+    -webkit-transform: scale(0.975);
   }
 
   :active {
-    transition: all 150ms linear;
-    opacity: 0.75;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
   }
 
   :focus {
