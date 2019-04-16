@@ -6,6 +6,7 @@ import { selectUIAppearance, getMeasure } from '../../global/helpers'
 interface Props extends EnhancedWithTheme {
   size?: Measure
   shape?: Shape
+  outline?: boolean
 }
 
 const getBorderRadius = (shape: Shape) => {
@@ -34,11 +35,19 @@ const getPadding = (measure: Measure) =>
 
 const StyledButton = styled.button<Props>`
   background-color: ${props =>
-    selectUIAppearance(props.theme, props.appearance, 'light')};
-  color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
+    props.outline
+      ? 'transparent'
+      : selectUIAppearance(props.theme, props.appearance, 'light')};
+  color: ${props => selectUIAppearance(props.theme, props.appearance, 'dark')};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
   border-radius: ${props => getBorderRadius(props.shape!)};
+  border: ${props =>
+    `0.1rem solid ${selectUIAppearance(
+      props.theme,
+      props.appearance,
+      props.outline ? 'basic' : 'light'
+    )}`};
 
   font-weight: 500;
   line-height: 1.3;
@@ -50,7 +59,6 @@ const StyledButton = styled.button<Props>`
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
-  border: 0 none;
   justify-content: center;
   align-items: center;
 
@@ -80,23 +88,15 @@ const StyledButton = styled.button<Props>`
   }
 `
 
-const Button: FunctionComponent<Props> = ({
-  children,
-  size,
-  appearance,
-  ...props
-}) => {
-  return (
-    <StyledButton size={size} appearance={appearance} {...props}>
-      {children}
-    </StyledButton>
-  )
+const Button: FunctionComponent<Props> = ({ children, ...props }) => {
+  return <StyledButton {...props}>{children}</StyledButton>
 }
 
 Button.defaultProps = {
   appearance: 'default',
   size: 'md',
   shape: 'rounded',
+  outline: false,
 }
 
 export default Button

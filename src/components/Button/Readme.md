@@ -14,6 +14,10 @@ Colors
   <Button appearance="primary">Primary</Button>
   <Button appearance="success">Success</Button>
   <Button appearance="warning">Warning</Button>
+  <Button appearance="default" outline>Default</Button>
+  <Button appearance="primary" outline>Primary</Button>
+  <Button appearance="success" outline>Success</Button>
+  <Button appearance="warning" outline>Warning</Button>
 ```
 
 Shapes
@@ -22,4 +26,9 @@ Shapes
   <Button shape="squared">Squared</Button>
   <Button shape="rounded">Rounded</Button>
   <Button shape="pill">Pill</Button>
+```
+
+Custom
+
+```js
 ```
