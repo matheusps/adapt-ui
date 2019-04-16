@@ -25,7 +25,7 @@ describe('Container component', () => {
     const component = renderComponent({
       gap: 'xl',
       size: '3rem',
-      color: 'primary',
+      appearance: 'primary',
       speed: 'fast',
       thickness: 'md',
     })

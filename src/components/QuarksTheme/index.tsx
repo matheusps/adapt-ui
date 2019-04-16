@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import { light } from './stockThemes'
 
 interface Props {
-  theme: ThemeProps
+  theme?: ThemeProps
 }
 
 /**

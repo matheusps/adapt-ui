@@ -6,7 +6,7 @@ import QuarksTheme from '../components/QuarksTheme'
 describe('Container component', () => {
   const component = render(
     <QuarksTheme>
-      <Container color="primary" />
+      <Container />
     </QuarksTheme>
   )
 
