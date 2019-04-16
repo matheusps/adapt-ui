@@ -5,6 +5,7 @@ import { selectUIAppearance, getMeasure } from '../../global/helpers'
 
 interface Props extends EnhancedWithTheme {
   size?: Measure
+  shape?: Shape
 }
 
 const getFontSize = (measure: Measure) =>
@@ -38,7 +39,7 @@ const StyledButton = styled.button<Props>`
   text-transform: none;
   white-space: nowrap;
   border: 0 none;
-  border-radius: 4px;
+  border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
 

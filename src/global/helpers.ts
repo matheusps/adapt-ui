@@ -12,13 +12,17 @@ export const selectUIAppearance = (
   tone?: Tone
 ): string => get(props!, `colors.ui.${choose!}.${tone!}`)
 
-export const getMeasure = (measure: Measure, values: Array<any>) =>
-  measure === 'sm'
-    ? values[0]
-    : measure === 'md'
-    ? values[1]
-    : measure === 'lg'
-    ? values[2]
-    : measure === 'xl'
-    ? values[3]
-    : values[0]
+export const getMeasure = (measure: Measure, [sm, md, lg, xl]: Array<any>) => {
+  switch (measure) {
+    case 'sm':
+      return sm
+    case 'md':
+      return md
+    case 'lg':
+      return lg
+    case 'xl':
+      return xl
+    default:
+      return sm
+  }
+}
