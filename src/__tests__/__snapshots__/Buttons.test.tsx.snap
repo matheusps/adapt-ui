@@ -3,8 +3,7 @@
 exports[`Container component should match snapshot as default 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa duWJrr"
-    color="primary"
+    class="sc-bdVaJa cboeHo"
   >
     Test
   </button>
@@ -14,8 +13,7 @@ exports[`Container component should match snapshot as default 1`] = `
 exports[`Container component should match snapshot with all measures 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa cPnXVE"
-    color="primary"
+    class="sc-bdVaJa crZiJf"
   >
     Test
   </button>
@@ -25,8 +23,7 @@ exports[`Container component should match snapshot with all measures 1`] = `
 exports[`Container component should match snapshot with all measures 2`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa duWJrr"
-    color="primary"
+    class="sc-bdVaJa cboeHo"
   >
     Test
   </button>
@@ -36,8 +33,7 @@ exports[`Container component should match snapshot with all measures 2`] = `
 exports[`Container component should match snapshot with all measures 3`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa feqUcQ"
-    color="primary"
+    class="sc-bdVaJa bhWoTL"
   >
     Test
   </button>
@@ -47,8 +43,7 @@ exports[`Container component should match snapshot with all measures 3`] = `
 exports[`Container component should match snapshot with all measures 4`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa eCwtkd"
-    color="primary"
+    class="sc-bdVaJa fAlvFz"
   >
     Test
   </button>
@@ -58,7 +53,7 @@ exports[`Container component should match snapshot with all measures 4`] = `
 exports[`Container component should match snapshot with all props 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa feqUcQ"
+    class="sc-bdVaJa bhWoTL"
     color="primary"
   >
     Test

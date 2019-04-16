@@ -1,52 +1,49 @@
-export const light = {
+export const light: ThemeProps = {
   colors: {
+    ui: {
+      base: {
+        basic: '#fafafa',
+      },
+      default: {
+        light: '#F2EFE9',
+        basic: '#191817',
+        dark: '#020100',
+      },
+      primary: {
+        light: '#F0F6FF',
+        basic: '#3165EC',
+        dark: '#435582',
+      },
+      success: {
+        light: '#E1FFD5',
+        basic: '#5ca035',
+        dark: '#76966A',
+      },
+      warning: {
+        light: '#FFF4DD',
+        basic: '#FFB514',
+        dark: '#9C8860',
+      },
+    },
+    text: {
+      display: {
+        basic: '#000',
+      },
+    },
+  },
+}
+
+/** used of backgrounds
     base: {
       default: '#fafafa',
       darken: '#cecece',
       lighten: '#ffffff',
       contrast: '#000000',
     },
-    empty: {
-      default: '#',
-      darken: '#',
-      lighten: '#',
-      contrast: '#',
-    },
+  
     primary: {
-      default: '#256EFF',
-      darken: '#113274',
-      lighten: '#AFCAFF',
-      contrast: '#fff',
-    },
-    secondary: {
-      default: '#46237A',
-      darken: '#',
-      lighten: '#',
-      contrast: '#fff',
-    },
-    success: {
-      default: '#3DDC97',
-      darken: '#',
-      lighten: '#',
-      contrast: '#fff',
-    },
-    warning: {
-      default: '#',
-      darken: '#',
-      lighten: '#',
-      contrast: '#',
-    },
-    info: {
-      default: '#',
-      darken: '#',
-      lighten: '#',
-      contrast: '#',
-    },
-    error: {
-      default: '#FF495C',
-      darken: '#',
-      lighten: '#',
-      contrast: '#',
-    },
-  },
-}
+      default: '#191817', //EERIE BLACK
+      darken: '#020100', //REGISTRATION BLACK
+      lighten: '#474645', //OUTER SPACE
+      contrast: '#F2EFE9', //ALABASTER
+    }, */

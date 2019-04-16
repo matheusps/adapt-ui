@@ -3,8 +3,7 @@
 exports[`Container component should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bdVaJa gECytu"
-    color="primary"
+    class="sc-bdVaJa iWgDvT"
   />
 </DocumentFragment>
 `;

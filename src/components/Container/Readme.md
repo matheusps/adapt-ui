@@ -2,6 +2,6 @@ Simple example
 
 ```js
 <Container>
-  <p>React Stellar looks awesome!</p>
+  <p>This quark looks cool!</p>
 </Container>
 ```

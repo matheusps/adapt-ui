@@ -1,12 +1,8 @@
-Loader colors
+Colors
 
 ```js
-
-<Loader />
-<Loader shade='lighten' />
-<Loader shade='darken' />
-
-<Loader color='secondary' />
-<Loader color='success' />
-
+<Loader color='primary' tone='light' />
+<Loader color='primary' tone='basic' />
+<Loader color='primary' tone='dark' />
+<Loader color='default' />
 ```
