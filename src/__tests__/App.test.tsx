@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import App from '../App'
+import 'jest-styled-components'
 
 describe('App component', () => {
   it('should render', () => {

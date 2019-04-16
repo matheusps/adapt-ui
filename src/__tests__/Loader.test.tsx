@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import Loader from '../components/Loader'
 import QuarksTheme from '../components/QuarksTheme'
+import 'jest-styled-components'
 
 describe('Container component', () => {
   const renderComponent = (customProps?) =>
