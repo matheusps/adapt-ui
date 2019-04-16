@@ -8,6 +8,19 @@ interface Props extends EnhancedWithTheme {
   shape?: Shape
 }
 
+const getBorderRadius = (shape: Shape) => {
+  switch (shape) {
+    case 'pill':
+      return '100rem'
+    case 'squared':
+      return '0rem'
+    case 'rounded':
+      return '0.5rem'
+    default:
+      return '0rem'
+  }
+}
+
 const getFontSize = (measure: Measure) =>
   getMeasure(measure, ['0.8rem', '1rem', '1.25rem', '1.50rem'])
 
@@ -25,13 +38,12 @@ const StyledButton = styled.button<Props>`
   color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
+  border-radius: ${props => getBorderRadius(props.shape!)};
 
   font-weight: 500;
   line-height: 1.3;
-
   margin: 10px;
-
-  display: flex;
+  display: relative;
   overflow: hidden;
   cursor: pointer;
   text-align: center;
@@ -39,7 +51,6 @@ const StyledButton = styled.button<Props>`
   text-transform: none;
   white-space: nowrap;
   border: 0 none;
-  border-radius: 0.5rem;
   justify-content: center;
   align-items: center;
 
@@ -85,6 +96,7 @@ const Button: FunctionComponent<Props> = ({
 Button.defaultProps = {
   appearance: 'default',
   size: 'md',
+  shape: 'rounded',
 }
 
 export default Button
