@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'styled-components'
 
+import GlobalStyles from './GobalStyles'
 import { light } from './stockThemes'
 
 interface Props {
@@ -13,7 +14,10 @@ interface Props {
 const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <>{children}</>
+      <>
+        <GlobalStyles />
+        {children}
+      </>
     </ThemeProvider>
   )
 }

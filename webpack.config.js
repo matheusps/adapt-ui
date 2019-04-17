@@ -19,6 +19,10 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        loader: 'file-loader',
+      },
     ],
   },
   plugins: [
