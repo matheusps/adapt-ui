@@ -10,11 +10,13 @@ interface Props {
 const Paragraph = styled.p`
   font-size: 1.2rem;
   font-weight: 400;
+  text-justify: auto;
 `
 
 const H1 = styled.h1`
   font-size: 4rem;
   font-weight: 800;
+  margin: 0.67em 0;
 `
 const H2 = styled.h2`
   font-size: 3.5rem;

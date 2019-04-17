@@ -80,10 +80,6 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   }
 
-  h1 {
-    margin: 0.67em 0;
-  }
-
   hr {
     box-sizing: content-box; 
     height: 0; 
