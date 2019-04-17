@@ -56,6 +56,9 @@
       ".(ts|tsx)": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleNameMapper": {
+      "\\.(woff|woff2)$": "<rootDir>/src/__mocks__/fontMock.ts"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",
