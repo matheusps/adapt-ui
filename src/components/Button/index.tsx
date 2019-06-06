@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react'
 import styled from 'styled-components'
 
-import { selectUIAppearance, getMeasure } from '../../global/helpers'
+import { getMeasure, lightenOrDarken } from '../../global/helpers'
 
-interface Props extends EnhancedWithTheme {
+interface Props {
   size?: Measure
   shape?: Shape
   outline?: boolean
@@ -35,19 +35,12 @@ const getPadding = (measure: Measure) =>
 
 const StyledButton = styled.button<Props>`
   background-color: ${props =>
-    props.outline
-      ? 'transparent'
-      : selectUIAppearance(props.theme, props.appearance, 'light')};
-  color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
+    props.outline ? 'transparent' : props.theme.colors.darkest};
+  color: ${props => props.theme.colors.lightest};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
   border-radius: ${props => getBorderRadius(props.shape!)};
-  border: ${props =>
-    `0.1rem solid ${selectUIAppearance(
-      props.theme,
-      props.appearance,
-      props.outline ? 'basic' : 'light'
-    )}`};
+  border: none;
 
   box-sizing: border-box;
 
@@ -74,17 +67,17 @@ const StyledButton = styled.button<Props>`
   -ms-user-select: none;
   user-select: none;
 
-  transition: transform 0.2s ease-in;
-  will-change: transform;
+  transition: background-color 0.2s ease-in-out;
+  will-change: background-color;
 
   :hover {
-    transform: scale(0.975);
-    -webkit-transform: scale(0.975);
+    background-color: ${props =>
+      lightenOrDarken(props.theme.colors.darkest, 20)};
   }
 
   :active {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
+    background-color: ${props =>
+      lightenOrDarken(props.theme.colors.darkest, 40)};
   }
 
   :focus {
@@ -97,7 +90,6 @@ const Button: FunctionComponent<Props> = ({ children, ...props }) => {
 }
 
 Button.defaultProps = {
-  appearance: 'default',
   size: 'md',
   shape: 'rounded',
   outline: false,

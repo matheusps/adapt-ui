@@ -10,14 +10,8 @@ Sizes
 Colors
 
 ```js
-  <Button appearance="default">Default</Button>
-  <Button appearance="primary">Primary</Button>
-  <Button appearance="success">Success</Button>
-  <Button appearance="warning">Warning</Button>
-  <Button appearance="default" outline>Default</Button>
-  <Button appearance="primary" outline>Primary</Button>
-  <Button appearance="success" outline>Success</Button>
-  <Button appearance="warning" outline>Warning</Button>
+  <Button>Default</Button>
+  <Button outline>Default</Button>
 ```
 
 Shapes
