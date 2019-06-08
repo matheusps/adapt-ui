@@ -1,11 +1,11 @@
 export const imports = {
-  'src/docs/Button.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-docs-button" */ 'src/docs/Button.mdx'
-    ),
   'src/docs/Container.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-docs-container" */ 'src/docs/Container.mdx'
+    ),
+  'src/docs/Button.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-docs-button" */ 'src/docs/Button.mdx'
     ),
   'src/docs/Loader.mdx': () =>
     import(

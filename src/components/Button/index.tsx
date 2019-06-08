@@ -33,7 +33,7 @@ const getPadding = (measure: Measure) =>
     '0.80rem 2.6rem 0.80rem 2.6rem',
   ])
 
-const StyledButton = styled.button<Props>`
+const Button = styled.button<Props>`
   background-color: ${props =>
     props.outline ? 'transparent' : props.theme.colors.darkest};
   color: ${props => props.theme.colors.lightest};
@@ -84,10 +84,6 @@ const StyledButton = styled.button<Props>`
     outline: none;
   }
 `
-
-const Button: FunctionComponent<Props> = ({ children, ...props }) => {
-  return <StyledButton {...props}>{children}</StyledButton>
-}
 
 Button.defaultProps = {
   size: 'md',

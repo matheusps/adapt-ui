@@ -7,7 +7,9 @@
     "repository": "https://github.com/matheusps/react-quarks",
     "native": false,
     "codeSandbox": true,
-    "themeConfig": {},
+    "themeConfig": {
+      "mode": "light"
+    },
     "separator": "-",
     "files": "**/*.{md,markdown,mdx}",
     "wrapper": "src/components/QuarksTheme",
@@ -52,25 +54,6 @@
   ],
   "entries": [
     {
-      "key": "src/docs/Button.mdx",
-      "value": {
-        "id": "9a8e43b05e308e45dbea894b4b1a9511",
-        "filepath": "src/docs/Button.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Button.mdx",
-        "slug": "src-docs-button",
-        "route": "/src-docs-button",
-        "name": "Button",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "buttons",
-            "depth": 1,
-            "value": "Buttons"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/docs/Container.mdx",
       "value": {
         "id": "b50d48324514e85d6f94c111362da4ea",
@@ -85,6 +68,25 @@
             "slug": "container",
             "depth": 1,
             "value": "Container"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Button.mdx",
+      "value": {
+        "id": "9a8e43b05e308e45dbea894b4b1a9511",
+        "filepath": "src/docs/Button.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Button.mdx",
+        "slug": "src-docs-button",
+        "route": "/src-docs-button",
+        "name": "Button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "buttons",
+            "depth": 1,
+            "value": "Buttons"
           }
         ]
       }
@@ -123,6 +125,16 @@
             "slug": "text",
             "depth": 1,
             "value": "Text"
+          },
+          {
+            "slug": "heading",
+            "depth": 2,
+            "value": "Heading"
+          },
+          {
+            "slug": "paragraph",
+            "depth": 2,
+            "value": "Paragraph"
           }
         ]
       }
