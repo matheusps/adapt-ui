@@ -1,14 +1,16 @@
-import React, { FunctionComponent } from 'react'
+import React, { FC } from 'react'
 
-import { Svg, Circle } from './helpers/styled'
-import { getGap, getSpeed, getThickness } from './helpers/helpers'
+import { Svg, Circle } from './styled'
+import { getGap, getSpeed, getThickness } from '../../global/helpers'
 
-const Loader: FunctionComponent<LoaderProps> = ({
-  thickness,
-  size,
-  speed,
-  gap,
-}) => (
+interface Props {
+  readonly speed?: Speed
+  readonly gap?: Measure
+  readonly thickness?: Measure
+  readonly size?: string
+}
+
+const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
   <Svg
     height={size}
     width={size}

@@ -16,5 +16,4 @@ const Circle = styled.circle`
   stroke: ${props => props.theme.colors.darkest};
 `
 
-/** @component */
 export { Svg, Circle }
