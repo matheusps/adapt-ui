@@ -1,10 +1,22 @@
 export const light: ThemeProps = {
   colors: {
-    darkest: '#020100', //REGISTRATION BLACK
-    dark: '#212121',
-    neutral: '#191817', //EERIE BLACK
-    light: '#474645', //OUTER SPACE
-    lightest: '#F2EFE9', //ALABASTER
+    substratum: '#020100',
+    surface: {
+      1: '#212121',
+      2: '',
+      3: '',
+    },
+    text: {
+      display: '#F2EFE9',
+      subtle: '#474645',
+      muted: '#191817',
+    },
+    goal: {
+      create: '#385BBC',
+      destroy: '',
+      warn: '',
+      info: '',
+    },
   },
 }
 

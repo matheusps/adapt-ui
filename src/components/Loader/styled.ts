@@ -13,7 +13,7 @@ const Svg = styled.svg`
 `
 
 const Circle = styled.circle`
-  stroke: ${props => props.theme.colors.darkest};
+  stroke: ${props => props.theme.colors.goal.create};
 `
 
 export { Svg, Circle }

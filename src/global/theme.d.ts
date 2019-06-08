@@ -1,3 +1,3 @@
 interface ThemeProps {
-  readonly colors: ColorShades
+  readonly colors: Colors
 }

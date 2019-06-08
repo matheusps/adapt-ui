@@ -35,8 +35,8 @@ const getPadding = (measure: Measure) =>
 
 const Button = styled.button<Props>`
   background-color: ${props =>
-    props.outline ? 'transparent' : props.theme.colors.darkest};
-  color: ${props => props.theme.colors.lightest};
+    props.outline ? 'transparent' : props.theme.colors.goal.create};
+  color: ${props => props.theme.colors.text.display};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
   border-radius: ${props => getBorderRadius(props.shape!)};
@@ -72,12 +72,12 @@ const Button = styled.button<Props>`
 
   :hover {
     background-color: ${props =>
-      lightenOrDarken(props.theme.colors.darkest, 20)};
+      lightenOrDarken(props.theme.colors.goal.create, 20)};
   }
 
   :active {
     background-color: ${props =>
-      lightenOrDarken(props.theme.colors.darkest, 40)};
+      lightenOrDarken(props.theme.colors.goal.create, 40)};
   }
 
   :focus {
