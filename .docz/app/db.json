@@ -54,79 +54,6 @@
   ],
   "entries": [
     {
-      "key": "src/docs/Loader.mdx",
-      "value": {
-        "id": "e30bdde281356086db17cf6e5e1a069b",
-        "filepath": "src/docs/Loader.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Loader.mdx",
-        "slug": "src-docs-loader",
-        "route": "/src-docs-loader",
-        "name": "Loader",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "loader",
-            "depth": 1,
-            "value": "Loader"
-          },
-          {
-            "slug": "goals",
-            "depth": 2,
-            "value": "Goals"
-          },
-          {
-            "slug": "size",
-            "depth": 2,
-            "value": "Size"
-          },
-          {
-            "slug": "thickness",
-            "depth": 2,
-            "value": "Thickness"
-          },
-          {
-            "slug": "gap",
-            "depth": 2,
-            "value": "Gap"
-          },
-          {
-            "slug": "speed",
-            "depth": 2,
-            "value": "Speed"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/docs/Text.mdx",
-      "value": {
-        "id": "b1369bfa9ec99eaf331bf056ae89a064",
-        "filepath": "src/docs/Text.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Text.mdx",
-        "slug": "src-docs-text",
-        "route": "/src-docs-text",
-        "name": "Text",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "text",
-            "depth": 1,
-            "value": "Text"
-          },
-          {
-            "slug": "heading",
-            "depth": 2,
-            "value": "Heading"
-          },
-          {
-            "slug": "paragraph",
-            "depth": 2,
-            "value": "Paragraph"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/docs/Button.mdx",
       "value": {
         "id": "9a8e43b05e308e45dbea894b4b1a9511",
@@ -166,6 +93,30 @@
             "slug": "ghost",
             "depth": 3,
             "value": "Ghost"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Tabs.mdx",
+      "value": {
+        "id": "db0e27d4d3a33c5da3f129916f55cc2d",
+        "filepath": "src/docs/Tabs.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Tabs.mdx",
+        "slug": "src-docs-tabs",
+        "route": "/src-docs-tabs",
+        "name": "Tabs",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "size",
+            "depth": 2,
+            "value": "Size"
           }
         ]
       }
@@ -345,6 +296,79 @@
             "slug": "flexbox-grow",
             "depth": 2,
             "value": "Flexbox grow"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Text.mdx",
+      "value": {
+        "id": "b1369bfa9ec99eaf331bf056ae89a064",
+        "filepath": "src/docs/Text.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Text.mdx",
+        "slug": "src-docs-text",
+        "route": "/src-docs-text",
+        "name": "Text",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "text",
+            "depth": 1,
+            "value": "Text"
+          },
+          {
+            "slug": "heading",
+            "depth": 2,
+            "value": "Heading"
+          },
+          {
+            "slug": "paragraph",
+            "depth": 2,
+            "value": "Paragraph"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Loader.mdx",
+      "value": {
+        "id": "e30bdde281356086db17cf6e5e1a069b",
+        "filepath": "src/docs/Loader.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Loader.mdx",
+        "slug": "src-docs-loader",
+        "route": "/src-docs-loader",
+        "name": "Loader",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "loader",
+            "depth": 1,
+            "value": "Loader"
+          },
+          {
+            "slug": "goals",
+            "depth": 2,
+            "value": "Goals"
+          },
+          {
+            "slug": "size",
+            "depth": 2,
+            "value": "Size"
+          },
+          {
+            "slug": "thickness",
+            "depth": 2,
+            "value": "Thickness"
+          },
+          {
+            "slug": "gap",
+            "depth": 2,
+            "value": "Gap"
+          },
+          {
+            "slug": "speed",
+            "depth": 2,
+            "value": "Speed"
           }
         ]
       }

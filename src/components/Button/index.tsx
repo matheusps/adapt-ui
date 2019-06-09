@@ -36,7 +36,7 @@ const Button = styled.button<Props>`
       : '#fff'};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   border: none;
 
   box-sizing: border-box;

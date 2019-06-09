@@ -1,0 +1,33 @@
+---
+## name: Button
+---
+
+import { useState } from 'react'
+import { Playground } from 'docz'
+
+import { Tabs, Tab } from '../components/Tabs'
+import { Heading } from '../components/Text'
+
+# Button
+
+## Size
+
+<Playground>
+  {() => {
+    const [current, setCurrent] = useState('tab1')
+    return (
+      <>
+      <Tabs currentTab={current} onChange={setCurrent}>
+        <Tab id="tab1" label="Tab 1" />
+        <Tab id="tab2" label="Tab 2" />
+        <Tab id="tab3" label="Tab 3" />
+      </Tabs>
+      { current === 'tab1' && <Heading level={5}>Tab 1</Heading>}
+      { current === 'tab2' && <Heading level={5}>Tab 2</Heading>} 
+      { current === 'tab3' && <Heading level={5}>Tab 3</Heading>}
+      </>
+    )
+
+}}
+
+</Playground>
