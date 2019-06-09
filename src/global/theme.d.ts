@@ -3,5 +3,5 @@ interface ThemeProps {
 }
 
 interface withGoal {
-  goal?: 'create' | 'destroy' | 'info' | 'warn' | 'confirm'
+  goal?: 'create' | 'destroy' | 'info' | 'warn'
 }

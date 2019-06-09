@@ -1,25 +1,15 @@
-import React, { FunctionComponent } from 'react'
+import { get } from 'lodash'
 import styled from 'styled-components'
 
-import { getMeasure, lightenOrDarken } from '../../global/helpers'
+import {
+  getMeasure,
+  lightenOrDarken,
+  isBrightColor,
+} from '../../global/helpers'
 
-interface Props {
+interface Props extends withGoal {
   size?: Measure
-  shape?: Shape
-  outline?: boolean
-}
-
-const getBorderRadius = (shape: Shape) => {
-  switch (shape) {
-    case 'pill':
-      return '100rem'
-    case 'squared':
-      return '0rem'
-    case 'rounded':
-      return '0.5rem'
-    default:
-      return '0rem'
-  }
+  kind?: 'link' | 'ghost' | 'default'
 }
 
 const getFontSize = (measure: Measure) =>
@@ -34,12 +24,19 @@ const getPadding = (measure: Measure) =>
   ])
 
 const Button = styled.button<Props>`
-  background-color: ${props =>
-    props.outline ? 'transparent' : props.theme.colors.goal.create};
-  color: ${props => props.theme.colors.text.display};
+  background-color: ${({ kind, theme, goal }) =>
+    kind === 'ghost' || kind === 'link'
+      ? 'transparent'
+      : get(theme.colors.goal, goal)};
+  color: ${({ kind, theme, goal }) =>
+    kind === 'ghost' || kind === 'link'
+      ? get(theme.colors.goal, goal)
+      : isBrightColor(get(theme.colors.goal, goal))
+      ? '#000'
+      : '#fff'};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
-  border-radius: ${props => getBorderRadius(props.shape!)};
+  border-radius: 0.5rem;
   border: none;
 
   box-sizing: border-box;
@@ -72,12 +69,12 @@ const Button = styled.button<Props>`
 
   :hover {
     background-color: ${props =>
-      lightenOrDarken(props.theme.colors.goal.create, 20)};
+      lightenOrDarken(get(props.theme.colors.goal, props.goal), -20)};
   }
 
   :active {
     background-color: ${props =>
-      lightenOrDarken(props.theme.colors.goal.create, 40)};
+      lightenOrDarken(get(props.theme.colors.goal, props.goal), -40)};
   }
 
   :focus {
@@ -86,9 +83,9 @@ const Button = styled.button<Props>`
 `
 
 Button.defaultProps = {
+  goal: 'create',
   size: 'md',
-  shape: 'rounded',
-  outline: false,
+  kind: 'default',
 }
 
 export default Button

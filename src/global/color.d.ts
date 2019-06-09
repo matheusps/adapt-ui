@@ -23,6 +23,5 @@ interface Colors {
     destroy: String
     warn: String
     info: String
-    confirm: String
   }
 }

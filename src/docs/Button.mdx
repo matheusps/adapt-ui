@@ -2,11 +2,61 @@
 ## name: Button
 ---
 
-import { Props } from 'docz'
+import { Playground } from 'docz'
 import Button from '../components/Button'
 
-# Buttons
+# Button
 
-<Props of={Button} />
+## Size
 
-<Button>Button</Button>
+<Playground>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+  <Button size="xl">XLarge</Button>
+</Playground>
+
+## Goals
+
+<Playground>
+  <Button goal="create">Create</Button>
+  <Button goal="destroy">Destroy</Button>
+  <Button goal="info">Info</Button>
+  <Button goal="warn">Warn</Button>
+</Playground>
+
+## Kinds
+
+### Default
+
+<Playground>
+  <Button kind="default" goal="create">
+    Create
+  </Button>
+  <Button kind="default" goal="destroy">
+    Destroy
+  </Button>
+  <Button kind="default" goal="info">
+    Info
+  </Button>
+  <Button kind="default" goal="warn">
+    Warn
+  </Button>
+</Playground>
+
+### Ghost
+
+<Playground>
+  <Button kind="ghost" goal="create">
+    Create
+  </Button>
+  <Button kind="ghost" goal="destroy">
+    Destroy
+  </Button>
+  <Button kind="ghost" goal="info">
+    Info
+  </Button>
+  <Button kind="ghost" goal="warn">
+    Warn
+  </Button>
+</Playground>
