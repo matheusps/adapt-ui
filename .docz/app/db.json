@@ -73,45 +73,6 @@
       }
     },
     {
-      "key": "src/docs/Loader.mdx",
-      "value": {
-        "id": "e30bdde281356086db17cf6e5e1a069b",
-        "filepath": "src/docs/Loader.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Loader.mdx",
-        "slug": "src-docs-loader",
-        "route": "/src-docs-loader",
-        "name": "Loader",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "loaders",
-            "depth": 1,
-            "value": "Loaders"
-          },
-          {
-            "slug": "size",
-            "depth": 2,
-            "value": "Size"
-          },
-          {
-            "slug": "thickness",
-            "depth": 2,
-            "value": "Thickness"
-          },
-          {
-            "slug": "gap",
-            "depth": 2,
-            "value": "Gap"
-          },
-          {
-            "slug": "speed",
-            "depth": 2,
-            "value": "Speed"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/docs/Surface.mdx",
       "value": {
         "id": "47abeafa27bf3f68f49e5c014ee64263",
@@ -315,6 +276,50 @@
             "slug": "paragraph",
             "depth": 2,
             "value": "Paragraph"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Loader.mdx",
+      "value": {
+        "id": "e30bdde281356086db17cf6e5e1a069b",
+        "filepath": "src/docs/Loader.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Loader.mdx",
+        "slug": "src-docs-loader",
+        "route": "/src-docs-loader",
+        "name": "Loader",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "loader",
+            "depth": 1,
+            "value": "Loader"
+          },
+          {
+            "slug": "goals",
+            "depth": 2,
+            "value": "Goals"
+          },
+          {
+            "slug": "size",
+            "depth": 2,
+            "value": "Size"
+          },
+          {
+            "slug": "thickness",
+            "depth": 2,
+            "value": "Thickness"
+          },
+          {
+            "slug": "gap",
+            "depth": 2,
+            "value": "Gap"
+          },
+          {
+            "slug": "speed",
+            "depth": 2,
+            "value": "Speed"
           }
         ]
       }

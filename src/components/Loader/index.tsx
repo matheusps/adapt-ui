@@ -3,14 +3,14 @@ import React, { FC } from 'react'
 import { Svg, Circle } from './styled'
 import { getGap, getSpeed, getThickness, getSize } from '../../global/helpers'
 
-interface Props {
+interface Props extends withGoal {
   readonly speed?: Speed
   readonly gap?: Measure
   readonly thickness?: Measure
   readonly size?: Measure
 }
 
-const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
+const Loader: FC<Props> = ({ thickness, size, speed, gap, goal }) => (
   <Svg
     height={`${getSize(size!)}rem`}
     width={`${getSize(size!)}rem`}
@@ -19,6 +19,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
     viewBox="0 0 32 32"
   >
     <Circle
+      goal={goal}
       role="presentation"
       cx={16}
       cy={16}
@@ -32,6 +33,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
 )
 
 Loader.defaultProps = {
+  goal: 'create',
   size: 'md',
   thickness: 'md',
   speed: 'normal',

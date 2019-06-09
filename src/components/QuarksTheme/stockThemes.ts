@@ -12,10 +12,11 @@ export const dark: ThemeProps = {
       muted: '#191817',
     },
     goal: {
-      create: '#385BBC',
-      destroy: '',
-      warn: '',
-      info: '',
+      create: '#8560FF',
+      destroy: '#DA2C38',
+      warn: '#FCFC62',
+      info: '#FC440F',
+      confirm: '#0CCE6B',
     },
   },
 }
