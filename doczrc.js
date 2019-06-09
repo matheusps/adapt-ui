@@ -3,7 +3,7 @@ export default {
   files: '**/*.{md,markdown,mdx}',
   wrapper: 'src/components/QuarksTheme',
   themeConfig: {
-    mode: 'light',
+    mode: 'dark',
   },
   typescript: true,
   plugins: [],

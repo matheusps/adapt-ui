@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from './GobalStyles'
-import { light } from './stockThemes'
+import { dark } from './stockThemes'
 
 interface Props {
   theme?: ThemeProps
@@ -23,7 +23,7 @@ const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
 }
 
 QuarksTheme.defaultProps = {
-  theme: light,
+  theme: dark,
 }
 
 export default QuarksTheme

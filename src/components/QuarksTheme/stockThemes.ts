@@ -1,10 +1,10 @@
-export const light: ThemeProps = {
+export const dark: ThemeProps = {
   colors: {
-    substratum: '#020100',
+    substratum: '#030305',
     surface: {
-      1: '#212121',
-      2: '',
-      3: '',
+      1: '#08090E',
+      2: '#0D0F16',
+      3: '#12141F',
     },
     text: {
       display: '#F2EFE9',

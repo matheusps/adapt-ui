@@ -8,7 +8,7 @@
     "native": false,
     "codeSandbox": true,
     "themeConfig": {
-      "mode": "light"
+      "mode": "dark"
     },
     "separator": "-",
     "files": "**/*.{md,markdown,mdx}",
@@ -73,25 +73,6 @@
       }
     },
     {
-      "key": "src/docs/Container.mdx",
-      "value": {
-        "id": "b50d48324514e85d6f94c111362da4ea",
-        "filepath": "src/docs/Container.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Container.mdx",
-        "slug": "src-docs-container",
-        "route": "/src-docs-container",
-        "name": "Container",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "container",
-            "depth": 1,
-            "value": "Container"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/docs/Loader.mdx",
       "value": {
         "id": "e30bdde281356086db17cf6e5e1a069b",
@@ -135,6 +116,185 @@
             "slug": "paragraph",
             "depth": 2,
             "value": "Paragraph"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Surface.mdx",
+      "value": {
+        "id": "47abeafa27bf3f68f49e5c014ee64263",
+        "filepath": "src/docs/Surface.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Surface.mdx",
+        "slug": "src-docs-surface",
+        "route": "/src-docs-surface",
+        "name": "Surface",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "surface",
+            "depth": 1,
+            "value": "Surface"
+          },
+          {
+            "slug": "lifting",
+            "depth": 2,
+            "value": "Lifting"
+          },
+          {
+            "slug": "flexbox-direction",
+            "depth": 2,
+            "value": "Flexbox direction"
+          },
+          {
+            "slug": "row",
+            "depth": 3,
+            "value": "Row"
+          },
+          {
+            "slug": "row-reverse",
+            "depth": 3,
+            "value": "Row Reverse"
+          },
+          {
+            "slug": "column",
+            "depth": 3,
+            "value": "Column"
+          },
+          {
+            "slug": "column-reverse",
+            "depth": 3,
+            "value": "Column Reverse"
+          },
+          {
+            "slug": "flexbox-wrap",
+            "depth": 2,
+            "value": "Flexbox wrap"
+          },
+          {
+            "slug": "wrap",
+            "depth": 3,
+            "value": "Wrap"
+          },
+          {
+            "slug": "wrap-reverse",
+            "depth": 3,
+            "value": "Wrap Reverse"
+          },
+          {
+            "slug": "flexbox-align-items",
+            "depth": 2,
+            "value": "Flexbox align-items"
+          },
+          {
+            "slug": "flex-start",
+            "depth": 3,
+            "value": "Flex start"
+          },
+          {
+            "slug": "flex-end",
+            "depth": 3,
+            "value": "Flex end"
+          },
+          {
+            "slug": "center",
+            "depth": 3,
+            "value": "Center"
+          },
+          {
+            "slug": "baseline",
+            "depth": 3,
+            "value": "Baseline"
+          },
+          {
+            "slug": "stretch",
+            "depth": 3,
+            "value": "Stretch"
+          },
+          {
+            "slug": "flexbox-justify-content",
+            "depth": 2,
+            "value": "Flexbox justify-content"
+          },
+          {
+            "slug": "flex-start-1",
+            "depth": 3,
+            "value": "Flex start"
+          },
+          {
+            "slug": "flex-end-1",
+            "depth": 3,
+            "value": "Flex end"
+          },
+          {
+            "slug": "center-1",
+            "depth": 3,
+            "value": "Center"
+          },
+          {
+            "slug": "space-between",
+            "depth": 3,
+            "value": "Space between"
+          },
+          {
+            "slug": "space-around",
+            "depth": 3,
+            "value": "Space around"
+          },
+          {
+            "slug": "space-evenly",
+            "depth": 3,
+            "value": "Space evenly"
+          },
+          {
+            "slug": "flexbox-align-content",
+            "depth": 2,
+            "value": "Flexbox align-content"
+          },
+          {
+            "slug": "flex-start-2",
+            "depth": 3,
+            "value": "Flex start"
+          },
+          {
+            "slug": "flex-end-2",
+            "depth": 3,
+            "value": "Flex end"
+          },
+          {
+            "slug": "center-2",
+            "depth": 3,
+            "value": "Center"
+          },
+          {
+            "slug": "space-between-1",
+            "depth": 3,
+            "value": "Space between"
+          },
+          {
+            "slug": "space-around-1",
+            "depth": 3,
+            "value": "Space around"
+          },
+          {
+            "slug": "stretch-1",
+            "depth": 3,
+            "value": "Stretch"
+          },
+          {
+            "slug": "flexbox-order",
+            "depth": 2,
+            "value": "Flexbox order"
+          },
+          {
+            "slug": "flexbox-shrink",
+            "depth": 2,
+            "value": "Flexbox shrink"
+          },
+          {
+            "slug": "flexbox-grow",
+            "depth": 2,
+            "value": "Flexbox grow"
           }
         ]
       }

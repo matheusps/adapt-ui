@@ -1,0 +1,436 @@
+---
+## name: Surface
+---
+
+import { Playground, Props } from 'docz'
+import Surface from '../components/Surface'
+
+# Surface
+
+<Props of={Surface} />
+
+## Lifting
+
+<Surface lifting={1}>First lift</Surface>
+<Surface lifting={2}>Second lift</Surface>
+<Surface lifting={3}>Third lift</Surface>
+
+<Surface>
+  Substratum
+  <Surface lifting={1}>
+    1
+    <Surface lifting={2}>
+      2<Surface lifting={3}>3</Surface>
+    </Surface>
+  </Surface>
+</Surface>
+
+## Flexbox direction
+
+### Row
+
+<Playground>
+  <Surface direction="row">
+    <Surface lifting={1}>1</Surface>
+    <Surface lifting={2}>2</Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Row Reverse
+
+<Playground>
+  <Surface direction="row-reverse">
+    <Surface lifting={1}>1</Surface>
+    <Surface lifting={2}>2</Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Column
+
+<Playground>
+  <Surface direction="column">
+    <Surface lifting={1}>1</Surface>
+    <Surface lifting={2}>2</Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Column Reverse
+
+<Playground>
+  <Surface direction="column-reverse">
+    <Surface lifting={1}>1</Surface>
+    <Surface lifting={2}>2</Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+## Flexbox wrap
+
+### Wrap
+
+<Playground>
+  <Surface wrap="wrap">
+    <Surface width="30%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="30%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="30%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Wrap Reverse
+
+<Playground>
+  <Surface wrap="wrap-reverse">
+    <Surface width="30%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="30%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="30%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+## Flexbox align-items
+
+### Flex start
+
+<Playground>
+  <Surface items="flex-start">
+    <Surface lifting={1}>
+      1 <br /> 1 <br /> 1
+    </Surface>
+    <Surface lifting={2}>
+      2 <br /> 2
+    </Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <Surface items="flex-end">
+    <Surface lifting={1}>
+      1 <br /> 1 <br /> 1
+    </Surface>
+    <Surface lifting={2}>
+      2 <br /> 2
+    </Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Center
+
+<Playground>
+  <Surface items="center">
+    <Surface lifting={1}>
+      1 <br /> 1 <br /> 1
+    </Surface>
+    <Surface lifting={2}>
+      2 <br /> 2
+    </Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Baseline
+
+<Playground>
+  <Surface items="baseline">
+    <Surface lifting={1}>
+      1 <br /> 1 <br /> 1
+    </Surface>
+    <Surface lifting={2}>
+      2 <br /> 2
+    </Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <Surface items="stretch">
+    <Surface lifting={1}>
+      1 <br /> 1 <br /> 1
+    </Surface>
+    <Surface lifting={2}>
+      2 <br /> 2
+    </Surface>
+    <Surface lifting={3}>3</Surface>
+  </Surface>
+</Playground>
+
+## Flexbox justify-content
+
+### Flex start
+
+<Playground>
+  <Surface justify="flex-start">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <Surface justify="flex-end">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Center
+
+<Playground>
+  <Surface justify="center">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Space between
+
+<Playground>
+  <Surface justify="space-between">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Space around
+
+<Playground>
+  <Surface justify="space-around">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+### Space evenly
+
+<Playground>
+  <Surface justify="space-evenly">
+    <Surface width="20%" lifting={1}>
+      1
+    </Surface>
+    <Surface width="20%" lifting={2}>
+      2
+    </Surface>
+    <Surface width="20%" lifting={3}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+## Flexbox align-content
+
+### Flex start
+
+<Playground>
+  <Surface height="20rem" content="flex-start" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+### Flex end
+
+<Playground>
+  <Surface height="20rem" content="flex-end" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+### Center
+
+<Playground>
+  <Surface height="20rem" content="center" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+### Space between
+
+<Playground>
+  <Surface height="20rem" content="space-between" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+### Space around
+
+<Playground>
+  <Surface height="20rem" content="space-around" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+### Stretch
+
+<Playground>
+  <Surface height="20rem" content="stretch" wrap="wrap">
+    <Surface width="10rem" lifting={2}>
+      1
+    </Surface>
+    <Surface width="20rem" lifting={2}>
+      2
+    </Surface>
+    <Surface width="15rem" lifting={2}>
+      3
+    </Surface>
+    <Surface width="5rem" lifting={2}>
+      4
+    </Surface>
+  </Surface>
+</Playground>
+
+## Flexbox order
+
+<Playground>
+  <Surface>
+    <Surface lifting={1} order="3">
+      1
+    </Surface>
+    <Surface lifting={2} order="1">
+      2
+    </Surface>
+    <Surface lifting={3} order="2">
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+## Flexbox shrink
+
+<Playground>
+  <Surface width="100%">
+    <Surface lifting={1} shrink={3} width="100%">
+      1
+    </Surface>
+    <Surface lifting={2} shrink={1} width="100%">
+      2
+    </Surface>
+    <Surface lifting={3} shrink={2} width="100%">
+      3
+    </Surface>
+  </Surface>
+</Playground>
+
+## Flexbox grow
+
+<Playground>
+  <Surface>
+    <Surface lifting={1} grow={2}>
+      1
+    </Surface>
+    <Surface lifting={2} grow={0}>
+      2
+    </Surface>
+    <Surface lifting={3} grow={1}>
+      3
+    </Surface>
+  </Surface>
+</Playground>
