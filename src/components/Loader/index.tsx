@@ -1,19 +1,19 @@
 import React, { FC } from 'react'
 
 import { Svg, Circle } from './styled'
-import { getGap, getSpeed, getThickness } from '../../global/helpers'
+import { getGap, getSpeed, getThickness, getSize } from '../../global/helpers'
 
 interface Props {
   readonly speed?: Speed
   readonly gap?: Measure
   readonly thickness?: Measure
-  readonly size?: string
+  readonly size?: Measure
 }
 
 const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
   <Svg
-    height={size}
-    width={size}
+    height={`${getSize(size!)}rem`}
+    width={`${getSize(size!)}rem`}
     style={{ animationDuration: `${getSpeed(speed!)}ms` }}
     role="img"
     viewBox="0 0 32 32"
@@ -32,7 +32,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap }) => (
 )
 
 Loader.defaultProps = {
-  size: '2rem',
+  size: 'md',
   thickness: 'md',
   speed: 'normal',
   gap: 'lg',

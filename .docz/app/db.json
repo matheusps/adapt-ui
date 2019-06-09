@@ -87,35 +87,26 @@
             "slug": "loaders",
             "depth": 1,
             "value": "Loaders"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/docs/Text.mdx",
-      "value": {
-        "id": "b1369bfa9ec99eaf331bf056ae89a064",
-        "filepath": "src/docs/Text.mdx",
-        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Text.mdx",
-        "slug": "src-docs-text",
-        "route": "/src-docs-text",
-        "name": "Text",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "text",
-            "depth": 1,
-            "value": "Text"
           },
           {
-            "slug": "heading",
+            "slug": "size",
             "depth": 2,
-            "value": "Heading"
+            "value": "Size"
           },
           {
-            "slug": "paragraph",
+            "slug": "thickness",
             "depth": 2,
-            "value": "Paragraph"
+            "value": "Thickness"
+          },
+          {
+            "slug": "gap",
+            "depth": 2,
+            "value": "Gap"
+          },
+          {
+            "slug": "speed",
+            "depth": 2,
+            "value": "Speed"
           }
         ]
       }
@@ -295,6 +286,35 @@
             "slug": "flexbox-grow",
             "depth": 2,
             "value": "Flexbox grow"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docs/Text.mdx",
+      "value": {
+        "id": "b1369bfa9ec99eaf331bf056ae89a064",
+        "filepath": "src/docs/Text.mdx",
+        "link": "https://github.com/matheusps/react-quarks/edit/master/src/docs/Text.mdx",
+        "slug": "src-docs-text",
+        "route": "/src-docs-text",
+        "name": "Text",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "text",
+            "depth": 1,
+            "value": "Text"
+          },
+          {
+            "slug": "heading",
+            "depth": 2,
+            "value": "Heading"
+          },
+          {
+            "slug": "paragraph",
+            "depth": 2,
+            "value": "Paragraph"
           }
         ]
       }

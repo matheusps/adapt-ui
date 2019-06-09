@@ -7,12 +7,12 @@ export const imports = {
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-docs-loader" */ 'src/docs/Loader.mdx'
     ),
-  'src/docs/Text.mdx': () =>
-    import(
-      /* webpackPrefetch: true, webpackChunkName: "src-docs-text" */ 'src/docs/Text.mdx'
-    ),
   'src/docs/Surface.mdx': () =>
     import(
       /* webpackPrefetch: true, webpackChunkName: "src-docs-surface" */ 'src/docs/Surface.mdx'
+    ),
+  'src/docs/Text.mdx': () =>
+    import(
+      /* webpackPrefetch: true, webpackChunkName: "src-docs-text" */ 'src/docs/Text.mdx'
     ),
 }

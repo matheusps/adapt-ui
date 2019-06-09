@@ -27,6 +27,17 @@ export const getThickness = (thickness: Measure) =>
     ? 8
     : 4
 
+export const getSize = (size: Measure) =>
+  size === 'sm'
+    ? 2
+    : size === 'md'
+    ? 4
+    : size === 'lg'
+    ? 6
+    : size === 'xl'
+    ? 8
+    : 4
+
 export const getGap = (gap: Measure) =>
   gap === 'sm' ? 1 : gap === 'md' ? 3 : gap === 'lg' ? 4 : gap === 'xl' ? 5 : 4
 
