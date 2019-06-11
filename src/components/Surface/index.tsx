@@ -61,7 +61,7 @@ const Surface = styled.div<Props>(
     backgroundColor: lifting ? surface[lifting] : substratum,
     color: text.display,
     margin: '0.5rem',
-    padding: '1rem',
+    padding: '.5rem',
     borderRadius: roundness,
     width: props.width,
     height: props.height,

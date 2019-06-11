@@ -1,16 +1,20 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import Surface from '../Surface'
-import Button from '../Button'
 import { TabsProvider } from './ context'
 
-interface Props {
-  currentTab: string | number
-  onChange: Function
-}
-
-const Tabs: FC<Props> = ({ currentTab, onChange, children }) => {
+const Tabs: FC<TabsProps> = ({
+  currentTab,
+  onChange,
+  position,
+  fixed,
+  children,
+}) => {
   return (
-    <Surface lifting={3} width="100%" style={{ padding: 0 }}>
+    <Surface
+      lifting={3}
+      width="100%"
+      style={{ padding: 0, border: 0, borderRadius: 0 }}
+    >
       <TabsProvider
         value={{
           currentTab: currentTab,

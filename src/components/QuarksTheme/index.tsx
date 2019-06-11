@@ -23,7 +23,7 @@ const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
 }
 
 QuarksTheme.defaultProps = {
-  theme: dark,
+  theme: light,
 }
 
 export default QuarksTheme

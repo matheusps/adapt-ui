@@ -5,6 +5,7 @@ type HLevel = 1 | 2 | 3 | 4 | 5 | 6
 
 interface Props {
   level: HLevel
+  style: any //Find correct extension
 }
 
 const H1 = styled.h1`
@@ -52,9 +53,9 @@ const getComponent = (level: HLevel) => {
   }
 }
 
-const Heading: FC<Props> = ({ level, children }) => {
+const Heading: FC<Props> = ({ level, children, ...rest }) => {
   const H = getComponent(level)
-  return <H>{children}</H>
+  return <H {...rest}>{children}</H>
 }
 
 export default Heading
