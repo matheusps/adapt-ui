@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import GlobalStyles from './GobalStyles'
-import { dark } from './stockThemes'
+import { dark, light } from './stockThemes'
 
 interface Props {
   theme?: ThemeProps

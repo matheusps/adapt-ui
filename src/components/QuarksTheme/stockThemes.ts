@@ -18,6 +18,34 @@ export const dark: ThemeProps = {
       info: '#8560FF',
     },
   },
+  elements: {
+    roundness: '.8rem',
+  },
+}
+
+export const light: ThemeProps = {
+  colors: {
+    substratum: '#cecece',
+    surface: {
+      1: '#F2EFE9',
+      2: '#FDFAF3',
+      3: '#FFF',
+    },
+    text: {
+      display: '#000',
+      subtle: '#474645',
+      muted: '#191817',
+    },
+    goal: {
+      create: '#52545C',
+      destroy: '#DA2C38',
+      warn: '#f4420e',
+      info: '#8560FF',
+    },
+  },
+  elements: {
+    roundness: '.8rem',
+  },
 }
 
 /** used of backgrounds

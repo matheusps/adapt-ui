@@ -53,6 +53,7 @@ const Surface = styled.div<Props>(
     lifting,
     theme: {
       colors: { text, surface, substratum },
+      elements: { roundness },
     },
     ...props
   }) => ({
@@ -61,7 +62,7 @@ const Surface = styled.div<Props>(
     color: text.display,
     margin: '0.5rem',
     padding: '1rem',
-    borderRadius: '.8rem',
+    borderRadius: roundness,
     width: props.width,
     height: props.height,
     order: props.order,
