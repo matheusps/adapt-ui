@@ -1,3 +1,6 @@
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
+
 export const getMeasure = (measure: Measure, [sm, md, lg, xl]: Array<any>) => {
   switch (measure) {
     case 'sm':
@@ -52,21 +55,16 @@ export const lightenOrDarken = (color: string, amount: number) => {
   return '#' + (green | (blue << 8) | (red << 16)).toString(16)
 }
 
-export const isBrightColor = (color: any) => {
-  let r, g, b, hsp
-  if (color.match(/^rgb/)) {
-    color = color.match(
-      /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/
-    )
-    r = color[1]
-    g = color[2]
-    b = color[3]
-  } else {
-    color = +('0x' + color.slice(1).replace(color.length < 5 && /./g, '$&$&'))
-    r = color >> 16
-    g = (color >> 8) & 255
-    b = color & 255
-  }
-  hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b))
-  return hsp > 127.5
+/**
+ * Returns the RGBA of given skinType
+ * @param skin
+ * @param alpha
+ */
+export const getSkin = (skin: skinType, alpha = 1) => {
+  const themeContext = useContext<ThemeProps>(ThemeContext)
+  const { r, g, b } = themeContext.colors.skin[skin]
+  return `rgba(${r},${g},${b},${alpha})`
 }
+
+export const getColor = (color: Color, alpha = 1) =>
+  `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`

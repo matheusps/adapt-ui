@@ -27,13 +27,11 @@ const Button = styled.button<Props>`
   background-color: ${({ kind, theme, goal }) =>
     kind === 'ghost' || kind === 'link'
       ? 'transparent'
-      : get(theme.colors.goal, goal)};
+      : 'rgba(49, 101, 236, .2)'};
   color: ${({ kind, theme, goal }) =>
     kind === 'ghost' || kind === 'link'
       ? get(theme.colors.goal, goal)
-      : isBrightColor(get(theme.colors.goal, goal))
-      ? '#000'
-      : '#fff'};
+      : 'rgb(49, 101, 236)'};
   font-size: ${props => getFontSize(props.size!)};
   padding: ${props => getPadding(props.size!)};
   border-radius: ${({ theme }) => theme.elements.roundness};
@@ -68,8 +66,7 @@ const Button = styled.button<Props>`
   will-change: background-color;
 
   :hover {
-    background-color: ${props =>
-      lightenOrDarken(get(props.theme.colors.goal, props.goal), -20)};
+    background-color: rgba(49, 101, 236, 0.4);
   }
 
   :active {

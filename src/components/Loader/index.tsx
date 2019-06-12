@@ -1,16 +1,23 @@
 import React, { FC } from 'react'
 
-import { Svg, Circle } from './styled'
-import { getGap, getSpeed, getThickness, getSize } from '../../global/helpers'
+import { Svg } from './styled'
 
-interface Props extends withGoal {
+import {
+  getGap,
+  getSpeed,
+  getThickness,
+  getSize,
+  getSkin,
+} from '../../global/helpers'
+
+interface Props extends HasSkin {
   readonly speed?: Speed
   readonly gap?: Measure
   readonly thickness?: Measure
   readonly size?: Measure
 }
 
-const Loader: FC<Props> = ({ thickness, size, speed, gap, goal }) => (
+const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => (
   <Svg
     height={`${getSize(size!)}rem`}
     width={`${getSize(size!)}rem`}
@@ -18,11 +25,11 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap, goal }) => (
     role="img"
     viewBox="0 0 32 32"
   >
-    <Circle
-      goal={goal}
+    <circle
       role="presentation"
       cx={16}
       cy={16}
+      stroke={getSkin(skin!)}
       r={14 - getThickness(thickness!) / 2}
       fill="none"
       strokeWidth={getThickness(thickness!)}
@@ -33,7 +40,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap, goal }) => (
 )
 
 Loader.defaultProps = {
-  goal: 'create',
+  skin: 'primary',
   size: 'md',
   thickness: 'md',
   speed: 'normal',

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-
-type lifting = 1 | 2 | 3
+import { getColor } from '../../global/helpers'
 
 interface Flex {
   /** width in percentage or px */
@@ -43,23 +42,52 @@ interface Flex {
     | 'stretch'
 }
 
-interface Props extends Flex {
-  /** Lifting of surface, none => substratum */
-  lifting?: lifting
+interface Props extends Flex, Liftable {}
+
+const getZIndex = (lifting?: Measure) => {
+  switch (lifting) {
+    case 'sm':
+      return 1
+    case 'md':
+      return 2
+    case 'lg':
+      return 3
+    case 'xl':
+      return 4
+    default:
+      return 0
+  }
+}
+
+const getAlpha = (lifting?: Measure) => {
+  switch (lifting) {
+    case 'sm':
+      return 0.05
+    case 'md':
+      return 0.1
+    case 'lg':
+      return 0.15
+    case 'xl':
+      return 0.2
+    default:
+      return 0
+  }
 }
 
 const Surface = styled.div<Props>(
   ({
     lifting,
     theme: {
-      colors: { text, surface, substratum },
+      colors: { contrast, substratum },
       elements: { roundness },
     },
     ...props
   }) => ({
-    zIndex: lifting ? lifting : 0,
-    backgroundColor: lifting ? surface[lifting] : substratum,
-    color: text.display,
+    zIndex: getZIndex(lifting),
+    backgroundColor: lifting
+      ? getColor(contrast, getAlpha(lifting))
+      : getColor(substratum),
+    color: contrast,
     margin: '0.5rem',
     padding: '.5rem',
     borderRadius: roundness,

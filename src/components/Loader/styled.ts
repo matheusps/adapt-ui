@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import { get } from 'lodash'
+import { getSkin } from '../../global/helpers'
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
@@ -13,8 +14,4 @@ const Svg = styled.svg`
   animation-timing-function: linear;
 `
 
-const Circle = styled.circle<withGoal>`
-  stroke: ${props => get(props.theme.colors.goal, props.goal)};
-`
-
-export { Svg, Circle }
+export { Svg }

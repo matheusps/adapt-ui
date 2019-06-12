@@ -1,20 +1,28 @@
+/**
+ * Represent a color on RGB system
+ */
+interface Color {
+  r: number
+  g: number
+  b: number
+}
+
+/**
+ * Theme's color system
+ */
 interface Colors {
-  substratum: String
-  surface: {
-    1: String
-    2: String
-    3: String
-  }
-  text: {
-    display: String
-    subtle: String
-    muted: String
-  }
-  goal: {
-    create: String
-    destroy: String
-    warn: String
-    info: String
+  /** Surfaces base color */
+  substratum: Color
+  /** Substratum contrast color that will be graded */
+  contrast: Color
+  /** Skins that can be applied to certain elements */
+  skin: {
+    primary: Color
+    secondary: Color
+    warning: Color
+    info: Color
+    danger: Color
+    success: Color
   }
 }
 
@@ -25,6 +33,18 @@ interface ThemeProps {
   }
 }
 
-interface withGoal {
-  goal?: 'create' | 'destroy' | 'info' | 'warn'
+type skinType = 'primary' | 'secondary' | 'info' | 'danger' | 'sucess'
+
+/**
+ * Represents components that could have skin
+ */
+interface HasSkin {
+  skin?: skinType
+}
+
+/**
+ * Represents elements that can be lifted
+ */
+interface Liftable {
+  lifting?: Measure
 }
