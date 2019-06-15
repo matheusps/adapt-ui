@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { getColor } from '../../helpers/getColor'
+import { getColor, getMeasure } from '../../helpers'
 import useTheme from '../../hooks/useTheme'
 
 interface Flex {
@@ -48,35 +48,11 @@ interface Flex {
 
 interface Props extends Flex, Liftable {}
 
-const getZIndex = (lifting?: Measure) => {
-  switch (lifting) {
-    case 'sm':
-      return 1
-    case 'md':
-      return 2
-    case 'lg':
-      return 3
-    case 'xl':
-      return 4
-    default:
-      return 0
-  }
-}
+const getZIndex = (lifting?: Measure) =>
+  lifting ? getMeasure(lifting!, [1, 2, 3, 4]) : 0
 
-const getAlpha = (lifting?: Measure) => {
-  switch (lifting) {
-    case 'sm':
-      return 0.05
-    case 'md':
-      return 0.1
-    case 'lg':
-      return 0.15
-    case 'xl':
-      return 0.2
-    default:
-      return 0
-  }
-}
+const getAlpha = (lifting?: Measure) =>
+  lifting ? getMeasure(lifting!, [0.05, 0.1, 0.15, 0.2]) : 0
 
 /**
  * TODO: Separate margin and padding into constants.

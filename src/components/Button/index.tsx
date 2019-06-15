@@ -2,9 +2,8 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { getMeasure } from '../../global/helpers'
 import useTheme from '../../hooks/useTheme'
-import { getColor } from '../../helpers/getColor'
+import { getColor, getMeasure } from '../../helpers'
 
 interface Props extends HasSkin {
   size?: Measure

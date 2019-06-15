@@ -2,10 +2,8 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/core'
 
-import { getGap, getSpeed, getThickness, getSize } from '../../global/helpers'
-
-import { getColor } from '../../helpers/getColor'
 import useTheme from '../../hooks/useTheme'
+import { getMeasure, getColor } from '../../helpers'
 
 interface Props extends HasSkin {
   readonly speed?: Speed
@@ -18,6 +16,16 @@ const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
   to {transform: rotate(360deg)}
 `
+
+export const getSpeed = (speed: Speed) =>
+  speed === 'fast' ? 600 : speed === 'slow' ? 900 : 750
+
+export const getThickness = (thickness: Measure) =>
+  getMeasure(thickness, [2, 4, 6, 8])
+
+export const getSize = (size: Measure) => getMeasure(size, [2, 4, 6, 8])
+
+export const getGap = (gap: Measure) => getMeasure(gap, [1, 3, 4, 5])
 
 const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
   const { colors } = useTheme()
