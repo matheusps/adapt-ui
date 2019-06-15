@@ -9,7 +9,7 @@ interface Props extends HasSkin {
   readonly speed?: Speed
   readonly gap?: Measure
   readonly thickness?: Measure
-  readonly size?: Measure
+  readonly size?: Measure | number
 }
 
 const infiniteSpin = keyframes`
@@ -21,11 +21,12 @@ export const getSpeed = (speed: Speed) =>
   speed === 'fast' ? 600 : speed === 'slow' ? 900 : 750
 
 export const getThickness = (thickness: Measure) =>
-  getMeasure(thickness, [2, 4, 6, 8])
+  getMeasure(thickness, [2, 4, 6, 7])
 
-export const getSize = (size: Measure) => getMeasure(size, [2, 4, 6, 8])
+export const getSize = (size: Measure | number) =>
+  typeof size === 'number' ? size : getMeasure(size, [1.5, 2, 3, 4])
 
-export const getGap = (gap: Measure) => getMeasure(gap, [1, 3, 4, 5])
+export const getGap = (gap: Measure) => getMeasure(gap, [1.5, 2, 3, 4])
 
 const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
   const { colors } = useTheme()

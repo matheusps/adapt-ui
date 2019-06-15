@@ -4,14 +4,17 @@ import { jsx, css } from '@emotion/core'
 
 import useTheme from '../../hooks/useTheme'
 import { getColor, getMeasure } from '../../helpers'
+import { Loader } from '..'
+import { getSize } from '../Loader'
 
 interface Props extends HasSkin {
   size?: Measure
+  loading?: boolean
   kind?: 'link' | 'ghost' | 'default'
 }
 
 const getFontSize = (measure: Measure) =>
-  getMeasure(measure, ['0.8rem', '1rem', '1.25rem', '1.50rem'])
+  getMeasure(measure, [0.8, 1, 1.25, 1.5])
 
 const getPadding = (measure: Measure) =>
   getMeasure(measure, [
@@ -25,10 +28,10 @@ const getPadding = (measure: Measure) =>
  * TODO: create kinds, receive button interface, loading button
  * @param param0
  */
-const Button: FC<Props> = ({ size, skin, children, ...rest }) => {
+const Button: FC<Props> = ({ size, skin, children, loading, ...rest }) => {
   const { elements, colors } = useTheme()
 
-  const fontSize = getFontSize(size!)
+  const fontSize = `${getFontSize(size!)}rem`
   const padding = getPadding(size!)
   const borderRadius = elements.roundness
 
@@ -81,7 +84,7 @@ const Button: FC<Props> = ({ size, skin, children, ...rest }) => {
         }
       `}
     >
-      {children}
+      {loading ? <Loader size={getFontSize(size!)} skin={skin} /> : children}
     </button>
   )
 }
@@ -90,6 +93,7 @@ Button.defaultProps = {
   skin: 'primary',
   size: 'md',
   kind: 'default',
+  loading: false,
 }
 
 export default Button
