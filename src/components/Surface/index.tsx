@@ -4,49 +4,9 @@ import { jsx, css } from '@emotion/core'
 
 import { getColor, getMeasure } from '../../helpers'
 import useTheme from '../../hooks/useTheme'
+import Flex from '../Flexible'
 
-interface Flex {
-  /** width in percentage or px */
-  width?: string
-  /** height in percentage or px */
-  height?: string
-  /** element order */
-  order?: number
-  /** element grow */
-  grow?: number
-  /** element shrink */
-  shrink?: number
-  /** flex-basis */
-  basis?: 'auto' | number
-  /** align-self */
-  self?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  /** if is inline-flex */
-  inline?: boolean
-  /** flex-direction */
-  direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse'
-  /** flex-wrap */
-  wrap?: 'nowrap' | 'wrap' | 'wrap-reverse'
-  /** justify-content */
-  justify?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly'
-  /** align-items */
-  items?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  /** align-content */
-  content?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'stretch'
-}
-
-interface Props extends Flex, Liftable {}
+interface Props extends Flexible, Liftable {}
 
 const getZIndex = (lifting?: Measure) =>
   lifting ? getMeasure(lifting!, [1, 2, 3, 4]) : 0
@@ -57,23 +17,7 @@ const getAlpha = (lifting?: Measure) =>
 /**
  * TODO: Separate margin and padding into constants.
  */
-const Surface: FC<Props> = ({
-  lifting,
-  width,
-  height,
-  order,
-  shrink,
-  grow,
-  basis,
-  self,
-  inline,
-  direction,
-  wrap,
-  justify,
-  content,
-  items,
-  children,
-}) => {
+const Surface: FC<Props> = ({ lifting, children, ...rest }) => {
   const { colors, elements } = useTheme()
 
   const zIndex = getZIndex(lifting)
@@ -84,7 +28,8 @@ const Surface: FC<Props> = ({
   const borderRadius = elements.roundness
 
   return (
-    <div
+    <Flex
+      {...rest}
       css={css`
         z-index: ${zIndex};
         background-color: ${bgColor};
@@ -92,23 +37,10 @@ const Surface: FC<Props> = ({
         margin: 0.5rem;
         padding: 0.5rem;
         border-radius: ${borderRadius};
-        width: ${width};
-        height: ${height};
-        order: ${order};
-        flex-shrink: ${shrink};
-        flex-grow: ${grow};
-        flex-basis: ${basis};
-        align-self: ${self};
-        display: ${inline ? 'inline-flex' : 'flex'};
-        flex-direction: ${direction};
-        flex-wrap: ${wrap};
-        justify-content: ${justify};
-        align-items: ${items};
-        align-content: ${content};
       `}
     >
       {children}
-    </div>
+    </Flex>
   )
 }
 

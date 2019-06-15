@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import Surface from '../Surface'
-import { TabsProvider } from './ context'
+import { TabsProvider } from './context'
 
 const Tabs: FC<TabsProps> = ({
   activeTab,
