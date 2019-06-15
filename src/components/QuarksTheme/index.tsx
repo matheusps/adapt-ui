@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'emotion-theming'
 
 import GlobalStyles from './GobalStyles'
 import { darkside } from './theme'
@@ -9,11 +9,11 @@ interface Props {
 }
 
 /**
- * Wraps around Theme-provider from styled-components 💅🏻
+ * Wraps around Theme-provider from emotion 💅🏻
  */
 const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme!}>
       <>
         <GlobalStyles />
         {children}

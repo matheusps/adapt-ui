@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
+import React from 'react'
+import { Global, css } from '@emotion/core'
 
 /** HKGrotesk */
 import FontLight from './font/light.woff'
@@ -12,235 +13,249 @@ import FontSemibold2 from './font/semiBold.woff2'
 import FontBold from './font/bold.woff'
 import FontBold2 from './font/bold.woff2'
 
-const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: HkGrotesk;
-    src: url(${FontLight}) format('woff'),
-         url(${FontLight2}) format('woff2');
-    font-weight: 300;
-  }
+const GlobalStyles = () => {
+  return (
+    <Global
+      styles={css`
+        @font-face {
+          font-family: HkGrotesk;
+          src: url(${FontLight}) format('woff'),
+            url(${FontLight2}) format('woff2');
+          font-weight: 300;
+        }
 
-  @font-face {
-    font-family: HkGrotesk;
-    src: url(${FontRegular}) format('woff'),
-         url(${FontRegular2}) format('woff2');
-    font-weight: 400;
-  }
+        @font-face {
+          font-family: HkGrotesk;
+          src: url(${FontRegular}) format('woff'),
+            url(${FontRegular2}) format('woff2');
+          font-weight: 400;
+        }
 
-  @font-face {
-    font-family: HkGrotesk;
-    src: url(${FontMedium}) format('woff'),
-         url(${FontMedium2}) format('woff2');
-    font-weight: 500;
-  }
+        @font-face {
+          font-family: HkGrotesk;
+          src: url(${FontMedium}) format('woff'),
+            url(${FontMedium2}) format('woff2');
+          font-weight: 500;
+        }
 
-  @font-face {
-    font-family: HkGrotesk;
-    src: url(${FontSemibold}) format('woff'),
-         url(${FontSemibold2}) format('woff2');
-    font-weight: 600;
-  }
+        @font-face {
+          font-family: HkGrotesk;
+          src: url(${FontSemibold}) format('woff'),
+            url(${FontSemibold2}) format('woff2');
+          font-weight: 600;
+        }
 
-  @font-face {
-    font-family: HkGrotesk;
-    src: url(${FontBold}) format('woff'),
-         url(${FontBold2}) format('woff2');
-    font-weight: 800;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+        @font-face {
+          font-family: HkGrotesk;
+          src: url(${FontBold}) format('woff'),
+            url(${FontBold2}) format('woff2');
+          font-weight: 800;
+        }
 
-  h1, h2, h3, h4, h5, h6, p, button, input { 
-    font-family: HkGrotesk, sans-serif;
-  }
+        *,
+        *::before,
+        *::after {
+          box-sizing: inherit;
+        }
 
-  html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        button,
+        input {
+          font-family: HkGrotesk, sans-serif;
+        }
 
-  body {
-    font-family: HkGrotesk, sans-serif;
-    overflow-x: hidden;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-variant-ligatures: no-common-ligatures;
-    padding: 0;
-    margin: 0;
-  }
+        html {
+          line-height: 1.15;
+          -webkit-text-size-adjust: 100%;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
 
-  main {
-    display: block;
-  }
+        body {
+          font-family: HkGrotesk, sans-serif;
+          overflow-x: hidden;
+          text-rendering: optimizeLegibility;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          font-variant-ligatures: no-common-ligatures;
+          padding: 0;
+          margin: 0;
+        }
 
-  hr {
-    box-sizing: content-box; 
-    height: 0; 
-    overflow: visible; 
-  }
+        main {
+          display: block;
+        }
 
-  pre {
-    font-family: monospace, monospace; 
-    font-size: 1em; 
-  }
+        hr {
+          box-sizing: content-box;
+          height: 0;
+          overflow: visible;
+        }
 
-  a {
-    background-color: transparent;
-  }
+        pre {
+          font-family: monospace, monospace;
+          font-size: 1em;
+        }
 
-  abbr[title] {
-    border-bottom: none;
-    text-decoration: underline; 
-    text-decoration: underline dotted; 
-  }
+        a {
+          background-color: transparent;
+        }
 
-  b,
-  strong {
-    font-weight: bolder;
-  }
+        abbr[title] {
+          border-bottom: none;
+          text-decoration: underline;
+          text-decoration: underline dotted;
+        }
 
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace;
-    font-size: 1em; 
-  }
+        b,
+        strong {
+          font-weight: bolder;
+        }
 
-  small {
-    font-size: 80%;
-  }
+        code,
+        kbd,
+        samp {
+          font-family: monospace, monospace;
+          font-size: 1em;
+        }
 
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
+        small {
+          font-size: 80%;
+        }
 
-  sub {
-    bottom: -0.25em;
-  }
+        sub,
+        sup {
+          font-size: 75%;
+          line-height: 0;
+          position: relative;
+          vertical-align: baseline;
+        }
 
-  sup {
-    top: -0.5em;
-  }
+        sub {
+          bottom: -0.25em;
+        }
 
-  img {
-    border-style: none;
-  }
+        sup {
+          top: -0.5em;
+        }
 
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; 
-    font-size: 100%; 
-    line-height: 1.15; 
-    margin: 0; 
-  }
+        img {
+          border-style: none;
+        }
 
-  button,
-  input { 
-    overflow: visible;
-  }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+          font-family: inherit;
+          font-size: 100%;
+          line-height: 1.15;
+          margin: 0;
+        }
 
-  button,
-  select {
-    text-transform: none;
-  }
+        button,
+        input {
+          overflow: visible;
+        }
 
-  button,
-  [type="button"],
-  [type="reset"],
-  [type="submit"] {
-    -webkit-appearance: button;
-  }
+        button,
+        select {
+          text-transform: none;
+        }
 
-  button::-moz-focus-inner,
-  [type="button"]::-moz-focus-inner,
-  [type="reset"]::-moz-focus-inner,
-  [type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-  }
+        button,
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
+          -webkit-appearance: button;
+        }
 
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
+        button::-moz-focus-inner,
+        [type='button']::-moz-focus-inner,
+        [type='reset']::-moz-focus-inner,
+        [type='submit']::-moz-focus-inner {
+          border-style: none;
+          padding: 0;
+        }
 
-  fieldset {
-    padding: 0.35em 0.75em 0.625em;
-  }
+        button:-moz-focusring,
+        [type='button']:-moz-focusring,
+        [type='reset']:-moz-focusring,
+        [type='submit']:-moz-focusring {
+          outline: 1px dotted ButtonText;
+        }
 
-  legend {
-    box-sizing: border-box;
-    color: inherit; 
-    display: table; 
-    max-width: 100%; 
-    padding: 0; 
-    white-space: normal; 
-  }
+        fieldset {
+          padding: 0.35em 0.75em 0.625em;
+        }
 
-  progress {
-    vertical-align: baseline;
-  }
+        legend {
+          box-sizing: border-box;
+          color: inherit;
+          display: table;
+          max-width: 100%;
+          padding: 0;
+          white-space: normal;
+        }
 
-  textarea {
-    overflow: auto;
-  }
+        progress {
+          vertical-align: baseline;
+        }
 
-  [type="checkbox"],
-  [type="radio"] {
-    box-sizing: border-box; 
-    padding: 0; 
-  }
+        textarea {
+          overflow: auto;
+        }
 
-  [type="number"]::-webkit-inner-spin-button,
-  [type="number"]::-webkit-outer-spin-button {
-    height: auto;
-  }
+        [type='checkbox'],
+        [type='radio'] {
+          box-sizing: border-box;
+          padding: 0;
+        }
 
-  [type="search"] {
-    -webkit-appearance: textfield;
-    outline-offset: -2px; 
-  }
+        [type='number']::-webkit-inner-spin-button,
+        [type='number']::-webkit-outer-spin-button {
+          height: auto;
+        }
 
-  [type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
+        [type='search'] {
+          -webkit-appearance: textfield;
+          outline-offset: -2px;
+        }
 
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button; 
-    font: inherit; 
-  }
+        [type='search']::-webkit-search-decoration {
+          -webkit-appearance: none;
+        }
 
-  details {
-    display: block;
-  }
+        ::-webkit-file-upload-button {
+          -webkit-appearance: button;
+          font: inherit;
+        }
 
-  summary {
-    display: list-item;
-  }
+        details {
+          display: block;
+        }
 
-  template {
-    display: none;
-  }
+        summary {
+          display: list-item;
+        }
 
+        template {
+          display: none;
+        }
 
-  [hidden] {
-    display: none;
-  }
-`
+        [hidden] {
+          display: none;
+        }
+      `}
+    />
+  )
+}
+
 export default GlobalStyles

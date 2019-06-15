@@ -1,37 +1,27 @@
 import React, { FC } from 'react'
 import Surface from '../Surface'
 import Title from './Title'
-import styled from 'styled-components'
-import { get } from 'lodash'
-import { isBrightColor } from '../../global/helpers'
 
-interface Props extends withGoal {
+interface Props extends HasSkin {
   fixed?: boolean
   title?: string
   theme: string
 }
 
-const ReStyledSurface = styled(Surface)<Props>(
-  ({ theme: { colors }, goal }) => ({
-    backgroundColor: get(colors.goal, goal),
-    color: isBrightColor(get(colors.goal, goal)) ? '#000' : '#fff',
-    border: 0,
-    borderRadius: 0,
-    width: '100%',
-  })
-)
-
-const AppBar: FC<Props> = ({ fixed, goal, title, children }) => {
+/**
+ * TODO: Component meaning
+ */
+const AppBar: FC<Props> = ({ fixed, skin, title, children }) => {
   return (
-    <ReStyledSurface goal={goal} lifting={1}>
+    <Surface>
       {title && <Title text={title} />}
       {children}
-    </ReStyledSurface>
+    </Surface>
   )
 }
 
 AppBar.defaultProps = {
-  goal: 'create',
+  skin: 'primary',
 }
 
 export default AppBar

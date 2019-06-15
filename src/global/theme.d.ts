@@ -20,7 +20,6 @@ interface Colors {
     primary: Color
     secondary: Color
     warning: Color
-    info: Color
     danger: Color
     success: Color
   }
@@ -33,7 +32,7 @@ interface ThemeProps {
   }
 }
 
-type skinType = 'primary' | 'secondary' | 'info' | 'danger' | 'sucess'
+type skinType = 'primary' | 'secondary' | 'danger' | 'sucess'
 
 /**
  * Represents components that could have skin

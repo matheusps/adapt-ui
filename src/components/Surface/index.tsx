@@ -1,5 +1,9 @@
-import styled from 'styled-components'
-import { getColor } from '../../global/helpers'
+import React, { FC } from 'react'
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
+
+import { getColor } from '../../helpers/getColor'
+import useTheme from '../../hooks/useTheme'
 
 interface Flex {
   /** width in percentage or px */
@@ -74,38 +78,63 @@ const getAlpha = (lifting?: Measure) => {
   }
 }
 
-const Surface = styled.div<Props>(
-  ({
-    lifting,
-    theme: {
-      colors: { contrast, substratum },
-      elements: { roundness },
-    },
-    ...props
-  }) => ({
-    zIndex: getZIndex(lifting),
-    backgroundColor: lifting
-      ? getColor(contrast, getAlpha(lifting))
-      : getColor(substratum),
-    color: contrast,
-    margin: '0.5rem',
-    padding: '.5rem',
-    borderRadius: roundness,
-    width: props.width,
-    height: props.height,
-    order: props.order,
-    flexShrink: props.shrink,
-    flexGrow: props.grow,
-    flexBasis: props.basis,
-    alignSelf: props.self,
-    display: props.inline ? 'inline-flex' : 'flex',
-    flexDirection: props.direction,
-    flexWrap: props.wrap,
-    justifyContent: props.justify,
-    alignItems: props.items,
-    alignContent: props.content,
-  })
-)
+/**
+ * TODO: Separate margin and padding into constants.
+ */
+const Surface: FC<Props> = ({
+  lifting,
+  width,
+  height,
+  order,
+  shrink,
+  grow,
+  basis,
+  self,
+  inline,
+  direction,
+  wrap,
+  justify,
+  content,
+  items,
+  children,
+}) => {
+  const { colors, elements } = useTheme()
+
+  const zIndex = getZIndex(lifting)
+  const bgColor = lifting
+    ? getColor(colors.contrast, getAlpha(lifting))
+    : getColor(colors.substratum)
+  const color = getColor(colors.contrast)
+  const borderRadius = elements.roundness
+
+  return (
+    <div
+      css={css`
+        z-index: ${zIndex};
+        background-color: ${bgColor};
+        color: ${color};
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border-radius: ${borderRadius};
+        width: ${width};
+        height: ${height};
+        order: ${order};
+        flex-shrink: ${shrink};
+        flex-grow: ${grow};
+        flex-basis: ${basis};
+        align-self: ${self};
+        display: ${inline ? 'inline-flex' : 'flex'};
+        flex-direction: ${direction};
+        flex-wrap: ${wrap};
+        justify-content: ${justify};
+        align-items: ${items};
+        align-content: ${content};
+      `}
+    >
+      {children}
+    </div>
+  )
+}
 
 Surface.defaultProps = {
   width: 'auto',

@@ -1,6 +1,3 @@
-import { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
-
 export const getMeasure = (measure: Measure, [sm, md, lg, xl]: Array<any>) => {
   switch (measure) {
     case 'sm':
@@ -54,17 +51,3 @@ export const lightenOrDarken = (color: string, amount: number) => {
 
   return '#' + (green | (blue << 8) | (red << 16)).toString(16)
 }
-
-/**
- * Returns the RGBA of given skinType
- * @param skin
- * @param alpha
- */
-export const getSkin = (skin: skinType, alpha = 1) => {
-  const themeContext = useContext<ThemeProps>(ThemeContext)
-  const { r, g, b } = themeContext.colors.skin[skin]
-  return `rgba(${r},${g},${b},${alpha})`
-}
-
-export const getColor = (color: Color, alpha = 1) =>
-  `rgba(${color.r}, ${color.g}, ${color.b}, ${alpha})`
