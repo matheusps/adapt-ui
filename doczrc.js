@@ -1,7 +1,7 @@
 export default {
-  title: 'React Quarks',
+  title: 'Darkside',
   files: '**/*.{md,markdown,mdx}',
-  wrapper: 'src/components/QuarksTheme',
+  wrapper: 'src/components/Theme',
   themeConfig: {
     mode: 'dark',
   },

@@ -1,4 +1,4 @@
-export const darkside: ThemeProps = {
+export const theme: ThemeProps = {
   colors: {
     substratum: {
       r: 3,

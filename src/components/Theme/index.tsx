@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
 import GlobalStyles from './GobalStyles'
-import { darkside } from './theme'
+import { theme } from '../../config'
 
 interface Props {
   theme?: ThemeProps
@@ -11,7 +11,7 @@ interface Props {
 /**
  * Wraps around Theme-provider from emotion 💅🏻
  */
-const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
+const DarksideTheme: FunctionComponent<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme!}>
       <>
@@ -22,8 +22,8 @@ const QuarksTheme: FunctionComponent<Props> = ({ theme, children }) => {
   )
 }
 
-QuarksTheme.defaultProps = {
-  theme: darkside,
+DarksideTheme.defaultProps = {
+  theme: theme,
 }
 
-export default QuarksTheme
+export default DarksideTheme

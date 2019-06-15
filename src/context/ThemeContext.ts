@@ -1,7 +1,7 @@
 import React from 'react'
-import { darkside } from '../components/QuarksTheme/theme'
+import { theme } from '../config'
 
-const ThemeContext = React.createContext<ThemeProps>(darkside)
+const ThemeContext = React.createContext<ThemeProps>(theme)
 
 const { Provider } = ThemeContext
 

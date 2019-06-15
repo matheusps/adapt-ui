@@ -1,4 +1,4 @@
-### React Quarks
+### Darkside
 
 [![CircleCI](https://circleci.com/gh/matheusps/react-quarks.svg?style=svg)](https://circleci.com/gh/matheusps/react-quarks)
 [![codecov](https://codecov.io/gh/matheusps/react-quarks/branch/master/graph/badge.svg)](https://codecov.io/gh/matheusps/react-quarks)
@@ -10,8 +10,11 @@
 # install dependencies
 $ yarn
 
-# start development server
-$ yarn start
+# start development server with docz
+$ yarn dev
+
+# Build styleguide
+$ yarn build
 
 # check your types
 $ yarn check-types
@@ -22,9 +25,4 @@ $ yarn test
 # Get test coverage
 $ yarn test:coverage
 
-# Run styleguide
-$ yarn styleguide
-
-# Build styleguide
-$ yarn styleguide:build
 ```

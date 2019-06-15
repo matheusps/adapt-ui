@@ -1,9 +1,9 @@
 {
-  "name": "react-quarks",
+  "name": "darkside",
   "version": "0.0.1",
-  "description": "Elementary UI components",
+  "description": "React lib to create dark user interfaces",
   "main": "index.js",
-  "repository": "https://github.com/matheusps/react-quarks.git",
+  "repository": "https://github.com/matheusps/darkside.git",
   "author": "matheusps <matheus.ps@icloud.com>",
   "license": "MIT",
   "private": false,
