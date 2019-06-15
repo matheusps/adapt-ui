@@ -54,3 +54,6 @@ typings/
 
 #macos
 .DS_Store
+
+#docs
+.docz

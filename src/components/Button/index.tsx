@@ -1,25 +1,13 @@
-import React, { FunctionComponent } from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react'
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
 
-import { selectUIAppearance, getMeasure } from '../../global/helpers'
+import useTheme from '../../hooks/useTheme'
+import { getColor, getMeasure } from '../../helpers'
 
-interface Props extends EnhancedWithTheme {
+interface Props extends HasSkin {
   size?: Measure
-  shape?: Shape
-  outline?: boolean
-}
-
-const getBorderRadius = (shape: Shape) => {
-  switch (shape) {
-    case 'pill':
-      return '100rem'
-    case 'squared':
-      return '0rem'
-    case 'rounded':
-      return '0.5rem'
-    default:
-      return '0rem'
-  }
+  kind?: 'link' | 'ghost' | 'default'
 }
 
 const getFontSize = (measure: Measure) =>
@@ -33,74 +21,75 @@ const getPadding = (measure: Measure) =>
     '0.80rem 2.6rem 0.80rem 2.6rem',
   ])
 
-const StyledButton = styled.button<Props>`
-  background-color: ${props =>
-    props.outline
-      ? 'transparent'
-      : selectUIAppearance(props.theme, props.appearance, 'light')};
-  color: ${props => selectUIAppearance(props.theme, props.appearance, 'basic')};
-  font-size: ${props => getFontSize(props.size!)};
-  padding: ${props => getPadding(props.size!)};
-  border-radius: ${props => getBorderRadius(props.shape!)};
-  border: ${props =>
-    `0.1rem solid ${selectUIAppearance(
-      props.theme,
-      props.appearance,
-      props.outline ? 'basic' : 'light'
-    )}`};
+/**
+ * TODO: create kinds, receive button interface, loading button
+ * @param param0
+ */
+const Button: FC<Props> = ({ size, skin, children, ...rest }) => {
+  const { elements, colors } = useTheme()
 
-  box-sizing: border-box;
+  const fontSize = getFontSize(size!)
+  const padding = getPadding(size!)
+  const borderRadius = elements.roundness
 
-  font-weight: 500;
-  font-stretch: normal;
-  line-height: 1.4;
-  margin: 0.2rem;
-  display: relative;
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  white-space: nowrap;
-  justify-content: center;
-  align-items: center;
+  const buttonSkin = colors.skin[skin!]
+  const color = getColor(buttonSkin)
+  const bg = getColor(buttonSkin, 0.1)
+  const bgHover = getColor(buttonSkin, 0.2)
+  const bgActive = getColor(buttonSkin, 0.3)
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  return (
+    <button
+      {...rest}
+      css={css`
+        background-color: ${bg};
+        color: ${color};
+        font-size: ${fontSize};
+        padding: ${padding};
+        border-radius: ${borderRadius};
+        border: none;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-stretch: normal;
+        line-height: 1.4;
+        margin: 0.2rem;
+        display: relative;
+        overflow: hidden;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        white-space: nowrap;
+        justify-content: center;
+        align-items: center;
+        appearance: none;
+        user-select: none;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+        transition: background-color 0.2s ease-in-out;
+        will-change: background-color;
 
-  transition: transform 0.2s ease-in;
-  will-change: transform;
+        :hover {
+          background-color: ${bgHover};
+        }
 
-  :hover {
-    transform: scale(0.975);
-    -webkit-transform: scale(0.975);
-  }
+        :active {
+          background-color: ${bgActive};
+        }
 
-  :active {
-    transform: scale(0.9);
-    -webkit-transform: scale(0.9);
-  }
-
-  :focus {
-    outline: none;
-  }
-`
-
-const Button: FunctionComponent<Props> = ({ children, ...props }) => {
-  return <StyledButton {...props}>{children}</StyledButton>
+        :focus {
+          outline: none;
+        }
+      `}
+    >
+      {children}
+    </button>
+  )
 }
 
 Button.defaultProps = {
-  appearance: 'default',
+  skin: 'primary',
   size: 'md',
-  shape: 'rounded',
-  outline: false,
+  kind: 'default',
 }
 
 export default Button

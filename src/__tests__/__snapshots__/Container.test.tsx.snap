@@ -3,8 +3,7 @@
 exports[`Container component should match snapshot 1`] = `
 <DocumentFragment>
   .c0 {
-  background-color: #fafafa;
-  color: #000;
+  color: #020100;
   padding: 1rem;
 }
 
