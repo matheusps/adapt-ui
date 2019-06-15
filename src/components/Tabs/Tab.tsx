@@ -3,17 +3,19 @@ import Button from '../Button'
 import TabsContext from './ context'
 
 const Tab: FC<TabProps> = ({ id, label }) => {
-  const { currentTab, onChange } = useContext(TabsContext)
+  const { activeTab, onTabClick } = useContext(TabsContext)
   const handleClick = () => {
-    onChange(id)
+    onTabClick(id)
   }
+  const isActive = activeTab === id
+
   return (
-    <Button
+    <button
       onClick={handleClick}
-      style={{ backgroundColor: currentTab === id ? 'blue' : 'pink' }}
+      style={{ backgroundColor: isActive ? 'blue' : 'pink' }}
     >
       {label}
-    </Button>
+    </button>
   )
 }
 

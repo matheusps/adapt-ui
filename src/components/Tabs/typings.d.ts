@@ -1,17 +1,17 @@
 interface TabsContext {
-  currentTab: string | number
-  onChange: Function
+  activeTab: tabID
+  onTabClick: Function
 }
 
 interface TabsProps {
-  currentTab: string | number
-  onChange: Function
+  activeTab: tabID
+  onTabClick: Function
   fixed?: boolean
   position?: 'top' | 'bottom'
 }
 
 interface TabProps {
-  id: string | number
+  id: tabID
   label: string
   icon?: string
 }

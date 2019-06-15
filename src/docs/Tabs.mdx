@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Playground } from 'docz'
 
 import { Tabs, Tab } from '../components/Tabs'
+import useTabState from '../hooks/useTabState'
 import { Heading } from '../components/Text'
 
 # Button
@@ -14,17 +15,17 @@ import { Heading } from '../components/Text'
 
 <Playground>
   {() => {
-    const [current, setCurrent] = useState('tab1')
+    const tabState = useTabState('tab1')
     return (
       <>
-      <Tabs currentTab={current} onChange={setCurrent}>
+      <Tabs {...tabState}>
         <Tab id="tab1" label="Tab 1" />
         <Tab id="tab2" label="Tab 2" />
         <Tab id="tab3" label="Tab 3" />
       </Tabs>
-      { current === 'tab1' && <Heading level={5}>Tab 1</Heading>}
-      { current === 'tab2' && <Heading level={5}>Tab 2</Heading>} 
-      { current === 'tab3' && <Heading level={5}>Tab 3</Heading>}
+      { tabState.activeTab === 'tab1' && <Heading level={5}>Tab 1</Heading>}
+      { tabState.activeTab === 'tab2' && <Heading level={5}>Tab 2</Heading>} 
+      { tabState.activeTab === 'tab3' && <Heading level={5}>Tab 3</Heading>}
       </>
     )
 
