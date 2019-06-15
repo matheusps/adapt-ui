@@ -7,9 +7,15 @@ import { getColor, getMeasure } from '../../helpers'
 import { Loader } from '..'
 import { getSize } from '../Loader'
 
-interface Props extends HasSkin {
+interface Props
+  extends HasSkin,
+    React.DetailedHTMLProps<
+      React.ButtonHTMLAttributes<HTMLButtonElement>,
+      HTMLButtonElement
+    > {
   size?: Measure
   loading?: boolean
+  full?: boolean
   kind?: 'link' | 'ghost' | 'default'
 }
 
@@ -28,7 +34,15 @@ const getPadding = (measure: Measure) =>
  * TODO: create kinds, receive button interface, loading button
  * @param param0
  */
-const Button: FC<Props> = ({ size, skin, children, loading, ...rest }) => {
+const Button: FC<Props> = ({
+  size,
+  skin,
+  children,
+  full,
+  loading,
+  disabled,
+  ...rest
+}) => {
   const { elements, colors } = useTheme()
 
   const fontSize = `${getFontSize(size!)}rem`
@@ -36,29 +50,31 @@ const Button: FC<Props> = ({ size, skin, children, loading, ...rest }) => {
   const borderRadius = elements.roundness
 
   const buttonSkin = colors.skin[skin!]
-  const color = getColor(buttonSkin)
-  const bg = getColor(buttonSkin, 0.1)
-  const bgHover = getColor(buttonSkin, 0.2)
+  const color = getColor(buttonSkin, disabled ? 0.5 : 1)
+  const bg = getColor(buttonSkin, disabled ? 0.08 : 0.1)
+  const bgHover = getColor(buttonSkin, disabled ? 0.08 : 0.2)
   const bgActive = getColor(buttonSkin, 0.3)
 
   return (
     <button
       {...rest}
+      disabled={disabled}
       css={css`
         background-color: ${bg};
         color: ${color};
         font-size: ${fontSize};
         padding: ${padding};
         border-radius: ${borderRadius};
+        display: ${full ? 'block' : 'relative'};
+        width: ${full ? '100%' : 'auto'};
         border: none;
         box-sizing: border-box;
         font-weight: 500;
         font-stretch: normal;
         line-height: 1.4;
         margin: 0.2rem;
-        display: relative;
         overflow: hidden;
-        cursor: pointer;
+        cursor: ${disabled ? 'not-allowed' : 'pointer'};
         text-align: center;
         text-decoration: none;
         text-transform: none;
@@ -94,6 +110,7 @@ Button.defaultProps = {
   size: 'md',
   kind: 'default',
   loading: false,
+  full: false,
 }
 
 export default Button
