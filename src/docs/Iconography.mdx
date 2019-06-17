@@ -1,0 +1,59 @@
+---
+## name: Iconography
+---
+
+import { Playground, Props } from 'docz'
+
+import { Emoji } from '../components/Emoji.tsx'
+import { Icon } from '../components/Icon.tsx'
+
+# Icon
+
+<Props of={Icon} />
+
+## Size
+
+<Playground>
+  <Icon size="sm" type="solid" name="birthday-cake" />
+  {'  '}
+  <Icon size="md" name="birthday-cake" />
+  {'  '}
+  <Icon size="lg" name="birthday-cake" />
+  {'  '}
+  <Icon size="xl" name="birthday-cake" />
+</Playground>
+
+## Types
+
+<Playground>
+  <Icon size="xl" name="eye" type="solid" />
+  {'  '}
+  <Icon size="xl" name="eye" type="regular" />
+  {'  '}
+  <Icon size="xl" name="apple" type="brand" />
+</Playground>
+
+# Emoji
+
+<Props of={Emoji} />
+
+## Basic usage
+
+<Playground>
+  <Emoji symbol="🚀" />
+  <Emoji symbol=":smile:" />
+  <Emoji symbol="🇧🇷" />
+  <Emoji symbol="🕞" />
+  <Emoji symbol="👻" />
+  <Emoji symbol="👌🏾" />
+  <Emoji symbol=":brain:" />
+</Playground>
+
+## Size
+
+<Playground>
+  <Emoji size="sm" symbol="👨🏾‍💻" />
+  <Emoji size="md" symbol="👨🏾‍💻" />
+  <Emoji size="lg" symbol="👨🏾‍💻" />
+  <Emoji size="xl" symbol="👨🏾‍💻" />
+</Playground>
