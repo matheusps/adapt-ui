@@ -21,6 +21,11 @@ type NativeImgType = React.DetailedHTMLProps<
   HTMLImageElement
 >
 
+type NativeInputType = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>
+
 /**
  * Represent a color on RGB system
  */

@@ -12,6 +12,7 @@ import { Paragraph } from './Paragraph'
 import { DarksideTheme } from './DarksideTheme'
 import { GlobalStyles } from './GobalStyles'
 import { Icon } from './Icon'
+import { TextInput } from './TextInput'
 
 export {
   Icon,
@@ -28,4 +29,5 @@ export {
   Paragraph,
   DarksideTheme,
   GlobalStyles,
+  TextInput,
 }
