@@ -19,10 +19,9 @@ interface Props extends NativeInputType {
     | 'file'
 }
 
-const TextInput: React.FC<Props> = ({ type, size, ...rest }) => {
+const InputText: React.FC<Props> = ({ type, size, ...rest }) => {
   const { zIndex, bgColor, color } = useLifting('md')
   const { elements } = useTheme()
-
   const borderRadius = elements.roundness
   return (
     <input
@@ -33,7 +32,7 @@ const TextInput: React.FC<Props> = ({ type, size, ...rest }) => {
         color: ${color};
         border-radius: ${borderRadius};
         width: 100%;
-        padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+        padding: 0.8rem 1rem 0.8rem 1rem;
         border: none;
         :focus {
           outline: none;
@@ -44,4 +43,4 @@ const TextInput: React.FC<Props> = ({ type, size, ...rest }) => {
   )
 }
 
-export { TextInput }
+export { InputText }

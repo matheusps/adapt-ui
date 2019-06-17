@@ -12,10 +12,11 @@ import { Paragraph } from './Paragraph'
 import { DarksideTheme } from './DarksideTheme'
 import { GlobalStyles } from './GobalStyles'
 import { Icon } from './Icon'
-import { TextInput } from './TextInput'
 import { FormGroup } from './FormGroup'
 import { Form } from './Form'
-import { PasswordInput } from './PasswordInput'
+import { InputPassword } from './InputPassword'
+import { InputSearch } from './InputSearch'
+import { InputText } from './InputText'
 
 export {
   Icon,
@@ -32,8 +33,9 @@ export {
   Paragraph,
   DarksideTheme,
   GlobalStyles,
-  TextInput,
   FormGroup,
   Form,
-  PasswordInput,
+  InputPassword,
+  InputSearch,
+  InputText,
 }

@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  library,
-  IconPrefix,
-  IconName,
-} from '@fortawesome/fontawesome-svg-core'
+import { library, IconPrefix } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -26,10 +22,10 @@ const getPrefix = (type: any): IconPrefix => {
   }
 }
 
-const Icon: React.FC<IconType> = ({ name, type, size }) => {
+const Icon: React.FC<IconType> = ({ name, type, size, ...rest }) => {
   const prefix = getPrefix(type!)
   const iconSize = getMeasure(size!, ['1x', '2x', '3x', '4x'])
-  return <FontAwesomeIcon size={iconSize} icon={[prefix, name]} />
+  return <FontAwesomeIcon {...rest} size={iconSize} icon={[prefix, name]} />
 }
 
 Icon.defaultProps = {

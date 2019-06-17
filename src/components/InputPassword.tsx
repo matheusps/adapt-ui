@@ -1,24 +1,30 @@
 import React, { useState } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { Icon } from './Icon'
-import { TextInput } from './TextInput'
+
+import { InputText } from './InputText'
 import { IconButton } from './IconButton'
-import { Flexible } from './Flexible'
+import { Flexible } from '.'
 
-interface Props {
-  show?: boolean
-}
-
-const PasswordInput: React.FC<Props> = () => {
-  const [show, setShow] = useState(false)
+const InputWrapper = ({ children }) => {
   return (
-    <div
+    <Flexible
       css={css`
         position: relative;
+        width: 100%;
       `}
     >
-      <TextInput
+      {children}
+    </Flexible>
+  )
+}
+
+const InputPassword: React.FC<NativeInputType> = props => {
+  const [show, setShow] = useState(false)
+  return (
+    <InputWrapper>
+      <InputText
+        {...props}
         css={css`
           padding-right: 3rem;
         `}
@@ -26,11 +32,12 @@ const PasswordInput: React.FC<Props> = () => {
       />
       <IconButton
         css={css`
+          top: 50%;
+          z-index: 999;
+          right: 0.05rem;
           margin: 0 0.25rem;
           position: absolute;
-          top: 50%;
           transform: translateY(-50%);
-          right: 0.05rem;
         `}
         icon={{
           name: show ? 'eye-slash' : 'eye',
@@ -38,12 +45,8 @@ const PasswordInput: React.FC<Props> = () => {
         onClick={() => setShow(!show)}
         ghost
       />
-    </div>
+    </InputWrapper>
   )
 }
 
-PasswordInput.defaultProps = {
-  show: false,
-}
-
-export { PasswordInput }
+export { InputPassword }

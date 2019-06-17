@@ -4,7 +4,14 @@
 
 import { Playground } from 'docz'
 
-import { TextInput, Surface, FormGroup, Form, PasswordInput } from '../index'
+import {
+  InputText,
+  Surface,
+  FormGroup,
+  Form,
+  InputPassword,
+  InputSearch,
+} from '../index'
 
 # Forms
 
@@ -12,11 +19,14 @@ import { TextInput, Surface, FormGroup, Form, PasswordInput } from '../index'
 
 <Playground>
   <Form>
-    <FormGroup label="Username">
-      <TextInput type="text" />
+    <FormGroup label="Text">
+      <InputText type="text" placeholder="Type your text" />
     </FormGroup>
     <FormGroup label="Password">
-      <PasswordInput />
+      <InputPassword placeholder="Type your pass" />
+    </FormGroup>
+    <FormGroup label="Search">
+      <InputSearch placeholder="Start typing..." />
     </FormGroup>
   </Form>
 </Playground>
@@ -25,14 +35,14 @@ import { TextInput, Surface, FormGroup, Form, PasswordInput } from '../index'
 
 <Playground>
   <Surface wrap="wrap" direction="column" lifting="sm">
-    <TextInput type="text" />
-    <TextInput type="email" />
-    <TextInput type="search" />
-    <TextInput type="tel" />
-    <TextInput type="password" />
-    <TextInput type="number" />
-    <TextInput type="date" />
-    <TextInput type="color" />
-    <TextInput type="file" />
+    <InputText type="text" />
+    <InputText type="email" />
+    <InputText type="search" />
+    <InputText type="tel" />
+    <InputText type="password" />
+    <InputText type="number" />
+    <InputText type="date" />
+    <InputText type="color" />
+    <InputText type="file" />
   </Surface>
 </Playground>
