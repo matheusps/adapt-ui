@@ -1,6 +1,6 @@
 import React, { FC, useContext } from 'react'
 
-import { TabsContext } from './context'
+import { TabsContext } from '../context/TabsContext'
 
 const Tab: FC<TabProps> = ({ id, label }) => {
   const { activeTab, onTabClick } = useContext(TabsContext)

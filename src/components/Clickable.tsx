@@ -2,8 +2,8 @@ import * as React from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { useTheme } from '../../hooks'
-import { getColor } from '../../helpers'
+import { useTheme } from '../hooks'
+import { getColor } from '../helpers'
 
 const Clickable: React.FC<ClickableType> = ({
   skin,

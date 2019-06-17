@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { getMeasure } from '../../helpers'
+import { getMeasure } from '../helpers'
 import { Loader, Clickable } from '../index'
 
 interface Props extends ClickableType {

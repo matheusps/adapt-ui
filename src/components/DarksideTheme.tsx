@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
 import { GlobalStyles } from './GobalStyles'
-import { theme } from '../../config'
+import { theme } from '../config'
 
 interface Props {
   theme?: ThemeProps

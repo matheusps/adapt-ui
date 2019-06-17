@@ -1,6 +1,6 @@
 import * as React from 'react'
 import emojione from 'emojione'
-import { getMeasure } from '../../helpers'
+import { getMeasure } from '../helpers'
 
 interface Props extends NativeImgType {
   symbol: string

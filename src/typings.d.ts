@@ -1,3 +1,26 @@
+declare module '*.woff'
+declare module '*.woff2'
+
+type Measure = 'sm' | 'md' | 'lg' | 'xl'
+type Speed = 'fast' | 'slow' | 'normal'
+type Shape = 'squared' | 'rounded' | 'circle' | 'pill'
+type tabID = string | number
+
+type NativeDivType = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+>
+
+type NativeButtonType = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
+
+type NativeImgType = React.DetailedHTMLProps<
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
+>
+
 /**
  * Represent a color on RGB system
  */
@@ -91,4 +114,22 @@ interface FlexibleType {
 
 interface ClickableType extends HasSkin, NativeButtonType {
   full?: boolean
+}
+
+interface TabsContext {
+  activeTab: tabID
+  onTabClick: Function
+}
+
+interface TabsProps {
+  activeTab: tabID
+  onTabClick: Function
+  fixed?: boolean
+  position?: 'top' | 'bottom'
+}
+
+interface TabProps {
+  id: tabID
+  label: string
+  icon?: string
 }

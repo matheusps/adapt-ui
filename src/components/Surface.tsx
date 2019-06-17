@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { getColor, getMeasure } from '../../helpers'
-import { useTheme } from '../../hooks'
-import { Flexible } from '../Flexible'
+import { getColor, getMeasure } from '../helpers'
+import { useTheme } from '../hooks'
+import { Flexible } from './Flexible'
 
 interface Props extends FlexibleType, Liftable {}
 

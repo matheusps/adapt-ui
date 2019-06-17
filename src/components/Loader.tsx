@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css, keyframes } from '@emotion/core'
 
-import { useTheme } from '../../hooks'
-import { getMeasure, getColor } from '../../helpers'
+import { useTheme } from '../hooks'
+import { getMeasure, getColor } from '../helpers'
 
 interface Props extends HasSkin {
   readonly speed?: Speed

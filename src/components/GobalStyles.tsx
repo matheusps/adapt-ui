@@ -2,16 +2,16 @@ import React from 'react'
 import { Global, css } from '@emotion/core'
 
 /** HKGrotesk */
-import FontLight from './font/light.woff'
-import FontLight2 from './font/light.woff2'
-import FontRegular from './font/regular.woff'
-import FontRegular2 from './font/regular.woff2'
-import FontMedium from './font/medium.woff'
-import FontMedium2 from './font/medium.woff2'
-import FontSemibold from './font/semiBold.woff'
-import FontSemibold2 from './font/semiBold.woff2'
-import FontBold from './font/bold.woff'
-import FontBold2 from './font/bold.woff2'
+import FontLight from '../font/light.woff'
+import FontLight2 from '../font/light.woff2'
+import FontRegular from '../font/regular.woff'
+import FontRegular2 from '../font/regular.woff2'
+import FontMedium from '../font/medium.woff'
+import FontMedium2 from '../font/medium.woff2'
+import FontSemibold from '../font/semiBold.woff'
+import FontSemibold2 from '../font/semiBold.woff2'
+import FontBold from '../font/bold.woff'
+import FontBold2 from '../font/bold.woff2'
 
 const GlobalStyles = () => {
   return (

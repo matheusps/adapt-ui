@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import { Surface } from '../Surface'
-import { TabsProvider } from './context'
+import { Surface } from './Surface'
+import { TabsProvider } from '../context/TabsContext'
 
 const Tabs: FC<TabsProps> = ({ activeTab, onTabClick, fixed, children }) => {
   return (
