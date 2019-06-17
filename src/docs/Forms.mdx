@@ -4,14 +4,27 @@
 
 import { Playground } from 'docz'
 
-import { TextInput, Surface } from '../index'
+import { TextInput, Surface, FormGroup, Form, PasswordInput } from '../index'
 
 # Forms
+
+## Groups
+
+<Playground>
+  <Form>
+    <FormGroup label="Username">
+      <TextInput type="text" />
+    </FormGroup>
+    <FormGroup label="Password">
+      <PasswordInput />
+    </FormGroup>
+  </Form>
+</Playground>
 
 ## Text
 
 <Playground>
-  <Surface wrap="wrap" direction="column">
+  <Surface wrap="wrap" direction="column" lifting="sm">
     <TextInput type="text" />
     <TextInput type="email" />
     <TextInput type="search" />

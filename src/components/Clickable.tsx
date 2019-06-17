@@ -10,6 +10,9 @@ const Clickable: React.FC<ClickableType> = ({
   children,
   full,
   disabled,
+  onClick,
+  ghost,
+  noEffect,
   ...rest
 }) => {
   const { elements, colors } = useTheme()
@@ -21,14 +24,24 @@ const Clickable: React.FC<ClickableType> = ({
 
   const selectedSkin = colors.skin[skin!]
   const color = getColor(selectedSkin, disabled ? 0.5 : 1)
-  const bg = getColor(selectedSkin, disabled ? 0.08 : 0.1)
-  const bgHover = getColor(selectedSkin, disabled ? 0.08 : 0.2)
-  const bgActive = getColor(selectedSkin, 0.3)
+  const bg = ghost
+    ? 'transparent'
+    : getColor(selectedSkin, disabled ? 0.08 : 0.1)
+  const bgHover = !noEffect && getColor(selectedSkin, disabled ? 0.08 : 0.2)
+  const bgActive = !noEffect && getColor(selectedSkin, 0.3)
+
+  const handleClickEvent = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault()
+    onClick && onClick(e)
+  }
 
   return (
     <button
       {...rest}
       disabled={disabled}
+      onClick={handleClickEvent}
       css={css`
         background-color: ${bg};
         color: ${color};

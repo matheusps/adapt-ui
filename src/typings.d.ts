@@ -26,6 +26,11 @@ type NativeInputType = React.DetailedHTMLProps<
   HTMLInputElement
 >
 
+type NativeFormType = React.DetailedHTMLProps<
+  React.FormHTMLAttributes<HTMLFormElement>,
+  HTMLFormElement
+>
+
 /**
  * Represent a color on RGB system
  */
@@ -119,6 +124,8 @@ interface FlexibleType {
 
 interface ClickableType extends HasSkin, NativeButtonType {
   full?: boolean
+  noEffect?: boolean
+  ghost?: boolean
 }
 
 interface TabsContext {
@@ -142,7 +149,7 @@ interface TabProps {
 type IconType = {
   name: IconName
   size?: Measure
-  type: 'solid' | 'regular' | 'brand'
+  type?: 'solid' | 'regular' | 'brand'
 }
 
 interface ButtonType extends ClickableType {

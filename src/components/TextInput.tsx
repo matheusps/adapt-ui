@@ -20,19 +20,20 @@ interface Props extends NativeInputType {
 }
 
 const TextInput: React.FC<Props> = ({ type, size, ...rest }) => {
-  const { zIndex, bgColor, color } = useLifting('xl')
+  const { zIndex, bgColor, color } = useLifting('md')
   const { elements } = useTheme()
 
   const borderRadius = elements.roundness
   return (
     <input
+      {...rest}
       css={css`
         z-index: ${zIndex};
         background-color: ${bgColor};
         color: ${color};
         border-radius: ${borderRadius};
-        padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-        margin: 0.5rem;
+        width: 100%;
+        padding: 0.8rem 1.5rem 0.8rem 1.5rem;
         border: none;
         :focus {
           outline: none;

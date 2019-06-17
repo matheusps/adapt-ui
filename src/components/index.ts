@@ -13,6 +13,9 @@ import { DarksideTheme } from './DarksideTheme'
 import { GlobalStyles } from './GobalStyles'
 import { Icon } from './Icon'
 import { TextInput } from './TextInput'
+import { FormGroup } from './FormGroup'
+import { Form } from './Form'
+import { PasswordInput } from './PasswordInput'
 
 export {
   Icon,
@@ -30,4 +33,7 @@ export {
   DarksideTheme,
   GlobalStyles,
   TextInput,
+  FormGroup,
+  Form,
+  PasswordInput,
 }
