@@ -2,14 +2,12 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import useTheme from '../../hooks/useTheme'
-import { getColor, getMeasure } from '../../helpers'
-import { Loader } from '../index'
+import { getMeasure } from '../../helpers'
+import { Loader, Clickable } from '../index'
 
-interface Props extends HasSkin, NativeButtonType {
+interface Props extends ClickableType {
   size?: Measure
   loading?: boolean
-  full?: boolean
   kind?: 'link' | 'ghost' | 'default'
 }
 
@@ -25,86 +23,33 @@ const getPadding = (measure: Measure) =>
   ])
 
 /**
- * TODO: create kinds, receive button interface, loading button
- * @param param0
+ * TODO: create kinds
  */
-const Button: FC<Props> = ({
-  size,
-  skin,
-  children,
-  full,
-  loading,
-  disabled,
-  ...rest
-}) => {
-  const { elements, colors } = useTheme()
-
+const Button: FC<Props> = ({ size, children, loading, ...props }) => {
   const fontSize = `${getFontSize(size!)}rem`
   const padding = getPadding(size!)
-  const borderRadius = elements.roundness
-
-  const buttonSkin = colors.skin[skin!]
-  const color = getColor(buttonSkin, disabled ? 0.5 : 1)
-  const bg = getColor(buttonSkin, disabled ? 0.08 : 0.1)
-  const bgHover = getColor(buttonSkin, disabled ? 0.08 : 0.2)
-  const bgActive = getColor(buttonSkin, 0.3)
 
   return (
-    <button
-      {...rest}
-      disabled={disabled}
+    <Clickable
+      {...props}
       css={css`
-        background-color: ${bg};
-        color: ${color};
         font-size: ${fontSize};
         padding: ${padding};
-        border-radius: ${borderRadius};
-        display: ${full ? 'block' : 'relative'};
-        width: ${full ? '100%' : 'auto'};
-        border: none;
-        box-sizing: border-box;
-        font-weight: 500;
-        font-stretch: normal;
-        line-height: 1.4;
-        margin: 0.2rem;
-        overflow: hidden;
-        cursor: ${disabled ? 'not-allowed' : 'pointer'};
-        text-align: center;
-        text-decoration: none;
-        text-transform: none;
-        white-space: nowrap;
-        justify-content: center;
-        align-items: center;
-        appearance: none;
-        user-select: none;
-
-        transition: background-color 0.2s ease-in-out;
-        will-change: background-color;
-
-        :hover {
-          background-color: ${bgHover};
-        }
-
-        :active {
-          background-color: ${bgActive};
-        }
-
-        :focus {
-          outline: none;
-        }
       `}
     >
-      {loading ? <Loader size={getFontSize(size!)} skin={skin} /> : children}
-    </button>
+      {loading ? (
+        <Loader size={getFontSize(size!)} skin={props.skin} />
+      ) : (
+        children
+      )}
+    </Clickable>
   )
 }
 
 Button.defaultProps = {
-  skin: 'primary',
   size: 'md',
   kind: 'default',
   loading: false,
-  full: false,
 }
 
 export default Button

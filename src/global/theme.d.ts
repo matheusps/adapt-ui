@@ -88,3 +88,7 @@ interface FlexibleType {
     | 'space-around'
     | 'stretch'
 }
+
+interface ClickableType extends HasSkin, NativeButtonType {
+  full?: boolean
+}

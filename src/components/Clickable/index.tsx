@@ -3,19 +3,12 @@ import React, { FC } from 'react'
 import { jsx, css } from '@emotion/core'
 
 import useTheme from '../../hooks/useTheme'
-import { getColor, getMeasure } from '../../helpers'
-import { Loader } from '../index'
+import { getColor } from '../../helpers'
 
-interface Props extends HasSkin, NativeButtonType {
-  loading?: boolean
-  full?: boolean
-}
-
-const Clickable: FC<Props> = ({
+const Clickable: FC<ClickableType> = ({
   skin,
   children,
   full,
-  loading,
   disabled,
   ...rest
 }) => {
@@ -83,7 +76,7 @@ const Clickable: FC<Props> = ({
 }
 
 Clickable.defaultProps = {
-  skin: 'secondary',
+  skin: 'primary',
   full: false,
 }
 

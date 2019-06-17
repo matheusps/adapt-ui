@@ -12,14 +12,14 @@ export const theme: ThemeProps = {
     },
     skin: {
       primary: {
-        r: 100,
-        g: 181,
-        b: 246,
-      },
-      secondary: {
         r: 224,
         g: 224,
         b: 224,
+      },
+      secondary: {
+        r: 100,
+        g: 181,
+        b: 246,
       },
       success: {
         r: 129,
