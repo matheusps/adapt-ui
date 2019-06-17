@@ -4,14 +4,7 @@
 
 import { Playground } from 'docz'
 
-import {
-  InputText,
-  Surface,
-  FormGroup,
-  Form,
-  InputPassword,
-  InputSearch,
-} from '../index'
+import { Surface, FormGroup, Form, Input, Label } from '../index'
 
 # Forms
 
@@ -19,14 +12,17 @@ import {
 
 <Playground>
   <Form>
-    <FormGroup label="Text">
-      <InputText type="text" placeholder="Type your text" />
+    <FormGroup width="25%">
+      <Label>Text</Label>
+      <Input type="text" placeholder="Type your text" />
     </FormGroup>
-    <FormGroup label="Password">
-      <InputPassword placeholder="Type your pass" />
+    <FormGroup width="25%">
+      <Label>Password</Label>
+      <Input type="password" placeholder="Type your pass" />
     </FormGroup>
-    <FormGroup label="Search">
-      <InputSearch placeholder="Start typing..." />
+    <FormGroup width="25%">
+      <Label>Search</Label>
+      <Input type="search" placeholder="Start typing..." />
     </FormGroup>
   </Form>
 </Playground>
@@ -34,15 +30,30 @@ import {
 ## Text
 
 <Playground>
-  <Surface wrap="wrap" direction="column" lifting="sm">
-    <InputText type="text" />
-    <InputText type="email" />
-    <InputText type="search" />
-    <InputText type="tel" />
-    <InputText type="password" />
-    <InputText type="number" />
-    <InputText type="date" />
-    <InputText type="color" />
-    <InputText type="file" />
-  </Surface>
+  <Form>
+    <Input width="50%" type="text" placeholder="Generic Text Input" />
+    <Input type="email" placeholder="Email Input" />
+    <Input type="search" placeholder="Search Input" />
+    <Input type="password" placeholder="Password Input" />
+    <Input type="tel" placeholder="Tel Input" />
+    <Input type="number" placeholder="Number Input" />
+    <Input type="date" placeholder="Date Input" />
+    <Input type="file" placeholder="File Input" />
+  </Form>
+</Playground>
+
+## With Icon
+
+<Playground>
+  <Form>
+    <Input icon={{ name: 'user' }} type="text" placeholder="Username" />
+    <Input
+      icon={{ name: 'key' }}
+      type="password"
+      placeholder="Password Input"
+    />
+    <Input icon={{ name: 'envelope' }} type="email" placeholder="Email" />
+    <Input icon={{ name: 'phone-alt' }} type="tel" placeholder="Phone" />
+    <Input icon={{ name: 'birthday-cake' }} type="date" placeholder="Birth" />
+  </Form>
 </Playground>

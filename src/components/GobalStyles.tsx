@@ -1,56 +1,11 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 
-/** HKGrotesk */
-import FontLight from '../font/light.woff'
-import FontLight2 from '../font/light.woff2'
-import FontRegular from '../font/regular.woff'
-import FontRegular2 from '../font/regular.woff2'
-import FontMedium from '../font/medium.woff'
-import FontMedium2 from '../font/medium.woff2'
-import FontSemibold from '../font/semiBold.woff'
-import FontSemibold2 from '../font/semiBold.woff2'
-import FontBold from '../font/bold.woff'
-import FontBold2 from '../font/bold.woff2'
-
 const GlobalStyles = () => {
   return (
     <Global
       styles={css`
-        @font-face {
-          font-family: HkGrotesk;
-          src: url(${FontLight}) format('woff'),
-            url(${FontLight2}) format('woff2');
-          font-weight: 300;
-        }
-
-        @font-face {
-          font-family: HkGrotesk;
-          src: url(${FontRegular}) format('woff'),
-            url(${FontRegular2}) format('woff2');
-          font-weight: 400;
-        }
-
-        @font-face {
-          font-family: HkGrotesk;
-          src: url(${FontMedium}) format('woff'),
-            url(${FontMedium2}) format('woff2');
-          font-weight: 500;
-        }
-
-        @font-face {
-          font-family: HkGrotesk;
-          src: url(${FontSemibold}) format('woff'),
-            url(${FontSemibold2}) format('woff2');
-          font-weight: 600;
-        }
-
-        @font-face {
-          font-family: HkGrotesk;
-          src: url(${FontBold}) format('woff'),
-            url(${FontBold2}) format('woff2');
-          font-weight: 800;
-        }
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,800&display=swap');
 
         *,
         *::before,
@@ -67,7 +22,7 @@ const GlobalStyles = () => {
         p,
         button,
         input {
-          font-family: HkGrotesk, sans-serif;
+          font-family: 'Montserrat', sans-serif;
         }
 
         html {
@@ -79,7 +34,8 @@ const GlobalStyles = () => {
         }
 
         body {
-          font-family: HkGrotesk, sans-serif;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
           overflow-x: hidden;
           text-rendering: optimizeLegibility;
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

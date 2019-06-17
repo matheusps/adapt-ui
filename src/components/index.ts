@@ -14,9 +14,8 @@ import { GlobalStyles } from './GobalStyles'
 import { Icon } from './Icon'
 import { FormGroup } from './FormGroup'
 import { Form } from './Form'
-import { InputPassword } from './InputPassword'
-import { InputSearch } from './InputSearch'
-import { InputText } from './InputText'
+import { Input } from './Input'
+import { Label } from './Label'
 
 export {
   Icon,
@@ -35,7 +34,6 @@ export {
   GlobalStyles,
   FormGroup,
   Form,
-  InputPassword,
-  InputSearch,
-  InputText,
+  Input,
+  Label,
 }

@@ -54,7 +54,7 @@ const Clickable: React.FC<ClickableType> = ({
 
         border: none;
         box-sizing: border-box;
-        font-weight: 500;
+        font-weight: 700;
         font-stretch: normal;
         line-height: 1.4;
         overflow: hidden;

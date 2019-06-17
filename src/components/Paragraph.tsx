@@ -7,7 +7,7 @@ const Paragraph: FC = ({ children }) => {
     <p
       css={css`
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 500;
         text-justify: auto;
       `}
     >

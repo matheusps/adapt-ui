@@ -36,7 +36,7 @@ const H3: FC = ({ children }) => (
   <h3
     css={css`
       font-size: 3rem;
-      font-weight: 600;
+      font-weight: 800;
     `}
   >
     {children}
@@ -47,7 +47,7 @@ const H4: FC = ({ children }) => (
   <h4
     css={css`
       font-size: 2.5rem;
-      font-weight: 600;
+      font-weight: 800;
     `}
   >
     {children}
@@ -58,7 +58,7 @@ const H5: FC = ({ children }) => (
   <h5
     css={css`
       font-size: 2rem;
-      font-weight: 600;
+      font-weight: 800;
     `}
   >
     {children}
@@ -69,7 +69,7 @@ const H6: FC = ({ children }) => (
   <h6
     css={css`
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 800;
     `}
   >
     {children}

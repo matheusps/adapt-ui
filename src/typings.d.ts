@@ -1,6 +1,3 @@
-declare module '*.woff'
-declare module '*.woff2'
-
 type Measure = 'sm' | 'md' | 'lg' | 'xl'
 type Speed = 'fast' | 'slow' | 'normal'
 type Shape = 'squared' | 'rounded' | 'circle' | 'pill'
@@ -29,6 +26,11 @@ type NativeInputType = React.DetailedHTMLProps<
 type NativeFormType = React.DetailedHTMLProps<
   React.FormHTMLAttributes<HTMLFormElement>,
   HTMLFormElement
+>
+
+type NativeLabelType = React.DetailedHTMLProps<
+  React.LabelHTMLAttributes<HTMLLabelElement>,
+  HTMLLabelElement
 >
 
 /**
