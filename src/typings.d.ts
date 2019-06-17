@@ -133,3 +133,15 @@ interface TabProps {
   label: string
   icon?: string
 }
+
+type IconType = {
+  name: IconName
+  size?: Measure
+  type: 'solid' | 'regular' | 'brand'
+}
+
+interface ButtonType extends ClickableType {
+  size?: Measure
+  loading?: boolean
+  kind?: 'link' | 'ghost' | 'default'
+}

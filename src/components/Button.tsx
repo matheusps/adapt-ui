@@ -5,12 +5,6 @@ import { jsx, css } from '@emotion/core'
 import { getMeasure } from '../helpers'
 import { Loader, Clickable } from '../index'
 
-interface Props extends ClickableType {
-  size?: Measure
-  loading?: boolean
-  kind?: 'link' | 'ghost' | 'default'
-}
-
 const getFontSize = (measure: Measure) =>
   getMeasure(measure, [0.8, 1, 1.25, 1.5])
 
@@ -22,7 +16,7 @@ const getPadding = (measure: Measure) =>
     '0.80rem 2.6rem 0.80rem 2.6rem',
   ])
 
-const Button: FC<Props> = ({ size, children, loading, ...props }) => {
+const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
   const fontSize = `${getFontSize(size!)}rem`
   const padding = getPadding(size!)
 

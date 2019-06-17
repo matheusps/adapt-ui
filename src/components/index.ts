@@ -1,4 +1,5 @@
 import { Button } from './Button'
+import { IconButton } from './IconButton'
 import { Emoji } from './Emoji'
 import { Clickable } from './Clickable'
 import { Flexible } from './Flexible'
@@ -10,9 +11,12 @@ import { Heading } from './Heading'
 import { Paragraph } from './Paragraph'
 import { DarksideTheme } from './DarksideTheme'
 import { GlobalStyles } from './GobalStyles'
+import { Icon } from './Icon'
 
 export {
+  Icon,
   Button,
+  IconButton,
   Emoji,
   Clickable,
   Flexible,

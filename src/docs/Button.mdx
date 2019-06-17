@@ -3,19 +3,26 @@
 ---
 
 import { Playground } from 'docz'
-import { Button } from '../index'
+import { Button, Icon, IconButton } from '../index'
 
 # Button
 
 ## Size
 
 <Playground>
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+  <Button size="xl">XLarge</Button>
+</Playground>
 
-    <Button size="sm">Small</Button>
-    <Button size="md">Medium</Button>
-    <Button size="lg">Large</Button>
-    <Button size="xl">XLarge</Button>
+## IconButton
 
+<Playground>
+  <IconButton icon={{ name: 'bomb', size: 'sm' }} />
+  <IconButton icon={{ name: 'bomb', size: 'md' }} />
+  <IconButton icon={{ name: 'bomb', size: 'lg' }} />
+  <IconButton icon={{ name: 'bomb', size: 'xl' }} />
 </Playground>
 
 ## Skins

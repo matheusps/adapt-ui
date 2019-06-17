@@ -1,6 +1,7 @@
 import React, { FC, useContext } from 'react'
 
 import { TabsContext } from '../context/TabsContext'
+import { Clickable } from './Clickable'
 
 const Tab: FC<TabProps> = ({ id, label }) => {
   const { activeTab, onTabClick } = useContext(TabsContext)
@@ -9,14 +10,7 @@ const Tab: FC<TabProps> = ({ id, label }) => {
   }
   const isActive = activeTab === id
 
-  return (
-    <button
-      onClick={handleClick}
-      style={{ backgroundColor: isActive ? 'blue' : 'pink' }}
-    >
-      {label}
-    </button>
-  )
+  return <Clickable onClick={handleClick}>{label}</Clickable>
 }
 
 export { Tab }
