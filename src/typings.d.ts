@@ -157,5 +157,4 @@ type IconType = {
 interface ButtonType extends ClickableType {
   size?: Measure
   loading?: boolean
-  kind?: 'link' | 'ghost' | 'default'
 }

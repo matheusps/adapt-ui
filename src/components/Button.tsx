@@ -39,7 +39,6 @@ const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
 
 Button.defaultProps = {
   size: 'md',
-  kind: 'default',
   loading: false,
 }
 
