@@ -1,4 +1,4 @@
-import useTabState from './useTabState'
-import useTheme from './useTheme'
+import { useTabState } from './useTabState'
+import { useTheme } from './useTheme'
 
 export { useTabState, useTheme }

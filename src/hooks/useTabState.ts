@@ -13,4 +13,4 @@ const useTabState = (initalTab: tabID) => {
   }
 }
 
-export default useTabState
+export { useTabState }

@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import emojione from 'emojione'
 import { getMeasure } from '../../helpers'
 
@@ -41,4 +41,4 @@ Emoji.defaultProps = {
   size: 'md',
 }
 
-export default Emoji
+export { Emoji }

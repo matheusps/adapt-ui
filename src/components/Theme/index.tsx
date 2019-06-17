@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { ThemeProvider } from 'emotion-theming'
 
-import GlobalStyles from './GobalStyles'
+import { GlobalStyles } from './GobalStyles'
 import { theme } from '../../config'
 
 interface Props {
@@ -26,4 +26,4 @@ DarksideTheme.defaultProps = {
   theme: theme,
 }
 
-export default DarksideTheme
+export { DarksideTheme }

@@ -100,4 +100,4 @@ const Heading: FC<Props> = ({ level, children, ...rest }) => {
   return <H {...rest}>{children}</H>
 }
 
-export default Heading
+export { Heading }

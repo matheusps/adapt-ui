@@ -1,11 +1,11 @@
-import React, { FC } from 'react'
+import * as React from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-import useTheme from '../../hooks/useTheme'
+import { useTheme } from '../../hooks'
 import { getColor } from '../../helpers'
 
-const Clickable: FC<ClickableType> = ({
+const Clickable: React.FC<ClickableType> = ({
   skin,
   children,
   full,
@@ -80,4 +80,4 @@ Clickable.defaultProps = {
   full: false,
 }
 
-export default Clickable
+export { Clickable }

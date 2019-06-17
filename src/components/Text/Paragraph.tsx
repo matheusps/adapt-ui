@@ -16,4 +16,4 @@ const Paragraph: FC = ({ children }) => {
   )
 }
 
-export default Paragraph
+export { Paragraph }

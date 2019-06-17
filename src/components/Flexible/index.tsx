@@ -61,4 +61,4 @@ Flexible.defaultProps = {
   content: 'stretch',
 }
 
-export default Flexible
+export { Flexible }

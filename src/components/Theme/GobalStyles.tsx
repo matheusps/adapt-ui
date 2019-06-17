@@ -258,4 +258,4 @@ const GlobalStyles = () => {
   )
 }
 
-export default GlobalStyles
+export { GlobalStyles }

@@ -22,9 +22,6 @@ const getPadding = (measure: Measure) =>
     '0.80rem 2.6rem 0.80rem 2.6rem',
   ])
 
-/**
- * TODO: create kinds
- */
 const Button: FC<Props> = ({ size, children, loading, ...props }) => {
   const fontSize = `${getFontSize(size!)}rem`
   const padding = getPadding(size!)
@@ -52,4 +49,4 @@ Button.defaultProps = {
   loading: false,
 }
 
-export default Button
+export { Button }

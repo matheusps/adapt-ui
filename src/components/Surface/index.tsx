@@ -3,8 +3,8 @@ import React, { FC } from 'react'
 import { jsx, css } from '@emotion/core'
 
 import { getColor, getMeasure } from '../../helpers'
-import useTheme from '../../hooks/useTheme'
-import Flexible from '../Flexible'
+import { useTheme } from '../../hooks'
+import { Flexible } from '../Flexible'
 
 interface Props extends FlexibleType, Liftable {}
 
@@ -60,4 +60,4 @@ Surface.defaultProps = {
   content: 'stretch',
 }
 
-export default Surface
+export { Surface }

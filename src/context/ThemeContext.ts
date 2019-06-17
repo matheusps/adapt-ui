@@ -5,5 +5,4 @@ const ThemeContext = React.createContext<ThemeProps>(theme)
 
 const { Provider } = ThemeContext
 
-export default ThemeContext
-export { Provider as ThemeProvider }
+export { ThemeContext, Provider as ThemeProvider }
