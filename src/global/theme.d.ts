@@ -48,7 +48,7 @@ interface Liftable {
   lifting?: Measure
 }
 
-interface Flexible {
+interface FlexibleType {
   /** width in percentage or px */
   width?: string
   /** height in percentage or px */

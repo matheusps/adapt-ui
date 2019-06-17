@@ -1648,6 +1648,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/emojione@^2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@types/emojione/-/emojione-2.2.5.tgz#a1d839e39b33316edbf512aa6ed4ad70ac323a7a"
+  integrity sha512-qQOS8EoHknNOFx7akECkDn5qy3WeChgeD1/ACqHzZ0LBEQydCdyeUq2s5gOSNbhgDo3cHueeaNbxbaXtZ5HpCA==
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -4305,6 +4310,11 @@ emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz#933a04052860c85e83c122479c4748a8e4c72156"
   integrity sha512-CwBLREIQ7LvYFB0WyRvwhq5N5qPhc6PMjD6bYggFlI5YyDgl+0vxq5VHbMOFqLg7hfWzmu8T5Z1QofhmTIhItA==
+
+emojione@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/emojione/-/emojione-4.5.0.tgz#cf1f5d417394988296aef72bd3ac3d480890838a"
+  integrity sha512-Tq55Y3UgPOnayFDN+Qd6QMP0rpoH10a1nhSFN27s8gXW3qymgFIHiXys2ECYYAI134BafmI3qP9ni2rZOe9BjA==
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -10090,6 +10100,18 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
+
+twemoji-parser@12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/twemoji-parser/-/twemoji-parser-12.0.0.tgz#870ea374b495595baa3bddb719e902b39ea7ccd1"
+  integrity sha512-JWZHBY32zKXo6GQ/JIQGLbbSQ5a3k+NHh5VkQ5AJFA++6cr+EtErj1aG8H4K7x8GwQ9/YzArNBQ06ryvKZL+WQ==
+
+twemoji@^12.0.4:
+  version "12.0.4"
+  resolved "https://registry.yarnpkg.com/twemoji/-/twemoji-12.0.4.tgz#f247bb32141a8fa9486ce87eae7abd2c6188eaed"
+  integrity sha512-VEiLYeUErB0t6d3euviuMIXINUUGq0KTksvsqPOmt06oPc7iLO10w5tlYTbVEpiQ+IO2IpkaS9O63D5NIdHrDw==
+  dependencies:
+    twemoji-parser "12.0.0"
 
 type-check@~0.3.2:
   version "0.3.2"

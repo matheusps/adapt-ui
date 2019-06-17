@@ -4,9 +4,9 @@ import { jsx, css } from '@emotion/core'
 
 import { getColor, getMeasure } from '../../helpers'
 import useTheme from '../../hooks/useTheme'
-import Flex from '../Flexible'
+import Flexible from '../Flexible'
 
-interface Props extends Flexible, Liftable {}
+interface Props extends FlexibleType, Liftable {}
 
 const getZIndex = (lifting?: Measure) =>
   lifting ? getMeasure(lifting!, [1, 2, 3, 4]) : 0
@@ -28,7 +28,7 @@ const Surface: FC<Props> = ({ lifting, children, ...rest }) => {
   const borderRadius = elements.roundness
 
   return (
-    <Flex
+    <Flexible
       {...rest}
       css={css`
         z-index: ${zIndex};
@@ -40,7 +40,7 @@ const Surface: FC<Props> = ({ lifting, children, ...rest }) => {
       `}
     >
       {children}
-    </Flex>
+    </Flexible>
   )
 }
 

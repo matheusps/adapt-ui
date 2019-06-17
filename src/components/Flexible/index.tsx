@@ -2,9 +2,9 @@ import React, { FC } from 'react'
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 
-interface Props extends Div, Flexible {}
+interface Props extends NativeDivType, FlexibleType {}
 
-const Flex: FC<Props> = ({
+const Flexible: FC<Props> = ({
   width,
   height,
   order,
@@ -45,7 +45,7 @@ const Flex: FC<Props> = ({
   )
 }
 
-Flex.defaultProps = {
+Flexible.defaultProps = {
   width: 'auto',
   height: 'auto',
   order: 0,
@@ -61,4 +61,4 @@ Flex.defaultProps = {
   content: 'stretch',
 }
 
-export default Flex
+export default Flexible

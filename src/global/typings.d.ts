@@ -3,7 +3,17 @@ type Speed = 'fast' | 'slow' | 'normal'
 type Shape = 'squared' | 'rounded' | 'circle' | 'pill'
 type tabID = string | number
 
-type Div = React.DetailedHTMLProps<
+type NativeDivType = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
+>
+
+type NativeButtonType = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
+
+type NativeImgType = React.DetailedHTMLProps<
+  React.ImgHTMLAttributes<HTMLImageElement>,
+  HTMLImageElement
 >
