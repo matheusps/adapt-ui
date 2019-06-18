@@ -6,16 +6,8 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-import babel from 'rollup-plugin-babel'
 
 import pkg from './package.json'
-
-const globals = {
-  'emotion-theming': 'emotionTheming',
-  '@emotion/core': 'emotion',
-  react: 'React',
-  'react-dom': 'ReactDom',
-}
 
 export default {
   input: 'src/index.ts',
@@ -25,14 +17,12 @@ export default {
       format: 'cjs',
       exports: 'named',
       sourcemap: true,
-      globals: globals,
     },
     {
       file: pkg.module,
       format: 'es',
       exports: 'named',
       sourcemap: true,
-      globals: globals,
     },
   ],
   plugins: [
@@ -40,7 +30,6 @@ export default {
     postcss({
       modules: true,
     }),
-    babel(),
     url(),
     svgr(),
     resolve(),

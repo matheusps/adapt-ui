@@ -37,7 +37,6 @@
     "@types/react-dom": "^16.8.3",
     "@types/styled-components": "^4.1.16",
     "babel-core": "^6.26.3",
-    "babel-plugin-emotion": "^10.0.13",
     "babel-runtime": "^6.26.0",
     "codecov": "^3.3.0",
     "cross-env": "^5.2.0",
@@ -45,10 +44,10 @@
     "docz-theme-default": "^1.2.0",
     "emojione": "^4.5.0",
     "jest": "^24.7.1",
+    "jest-styled-components": "^6.3.3",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-testing-library": "^6.1.1",
     "rollup": "^1.15.6",
     "rollup-plugin-alias": "^1.5.2",
     "rollup-plugin-babel": "^4.3.2",
@@ -67,15 +66,14 @@
     "react-dom": "16.8.6",
     "styled-components": "^4.3.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@testing-library/react": "^8.0.1"
+  },
   "jest": {
     "transform": {
       ".(ts|tsx)": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleNameMapper": {
-      "\\.(woff|woff2)$": "<rootDir>/src/__mocks__/fontMock.ts"
-    },
     "moduleFileExtensions": [
       "ts",
       "tsx",

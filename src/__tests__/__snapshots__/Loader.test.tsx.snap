@@ -14,10 +14,6 @@ exports[`Container component should match snapshot as default 1`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
     height="2rem"
@@ -27,13 +23,13 @@ exports[`Container component should match snapshot as default 1`] = `
     width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -55,26 +51,22 @@ exports[`Container component should match snapshot with all measures 1`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
-    height="sm"
+    height="1.5rem"
     role="img"
     style="animation-duration: 750ms;"
     viewBox="0 0 32 32"
-    width="sm"
+    width="1.5rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -96,26 +88,22 @@ exports[`Container component should match snapshot with all measures 2`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
-    height="md"
+    height="2rem"
     role="img"
     style="animation-duration: 750ms;"
     viewBox="0 0 32 32"
-    width="md"
+    width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -137,26 +125,22 @@ exports[`Container component should match snapshot with all measures 3`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
-    height="lg"
+    height="3rem"
     role="img"
     style="animation-duration: 750ms;"
     viewBox="0 0 32 32"
-    width="lg"
+    width="3rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -178,26 +162,22 @@ exports[`Container component should match snapshot with all measures 4`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
-    height="xl"
+    height="4rem"
     role="img"
     style="animation-duration: 750ms;"
     viewBox="0 0 32 32"
-    width="xl"
+    width="4rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -219,26 +199,22 @@ exports[`Container component should match snapshot with all props 1`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
-    height="3rem"
+    height="2rem"
     role="img"
     style="animation-duration: 600ms;"
     viewBox="0 0 32 32"
-    width="3rem"
+    width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="37.69911184307752"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="43.982297150257104"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -260,10 +236,6 @@ exports[`Container component should match snapshot with all speeds 1`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
     height="2rem"
@@ -273,13 +245,13 @@ exports[`Container component should match snapshot with all speeds 1`] = `
     width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -301,10 +273,6 @@ exports[`Container component should match snapshot with all speeds 2`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
     height="2rem"
@@ -314,13 +282,13 @@ exports[`Container component should match snapshot with all speeds 2`] = `
     width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />
@@ -342,10 +310,6 @@ exports[`Container component should match snapshot with all speeds 3`] = `
   animation-timing-function: linear;
 }
 
-.c1 {
-  stroke: #020100;
-}
-
 <svg
     class="c0"
     height="2rem"
@@ -355,13 +319,13 @@ exports[`Container component should match snapshot with all speeds 3`] = `
     width="2rem"
   >
     <circle
-      class="c1"
       cx="16"
       cy="16"
       fill="none"
       r="12"
       role="presentation"
-      stroke-dasharray="43.982297150257104"
+      stroke="rgba(224, 224, 224, 1)"
+      stroke-dasharray="50.26548245743669"
       stroke-linecap="round"
       stroke-width="4"
     />

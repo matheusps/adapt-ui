@@ -1,14 +1,15 @@
 import React from 'react'
-import { render } from 'react-testing-library'
-import Container from '../components/Container'
-import QuarksTheme from '../components/QuarksTheme'
+
+import { render } from '@testing-library/react'
+import { DarksideTheme } from '../components'
+
 import 'jest-styled-components'
 
-describe('Container component', () => {
+describe('DarksideTheme component', () => {
   const component = render(
-    <QuarksTheme>
-      <Container />
-    </QuarksTheme>
+    <DarksideTheme>
+      <p>Test</p>
+    </DarksideTheme>
   )
 
   it('should render', () => {

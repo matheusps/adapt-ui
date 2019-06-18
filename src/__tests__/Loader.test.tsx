@@ -1,15 +1,15 @@
 import React from 'react'
-import { render } from 'react-testing-library'
-import Loader from '../components/Loader'
-import QuarksTheme from '../components/QuarksTheme'
+import { render } from '@testing-library/react'
+
+import { Loader, DarksideTheme } from '../components'
 import 'jest-styled-components'
 
 describe('Container component', () => {
   const renderComponent = (customProps?) =>
     render(
-      <QuarksTheme>
+      <DarksideTheme>
         <Loader {...customProps!} />
-      </QuarksTheme>
+      </DarksideTheme>
     )
 
   it('should render', () => {
@@ -25,8 +25,8 @@ describe('Container component', () => {
   it('should match snapshot with all props', () => {
     const component = renderComponent({
       gap: 'xl',
-      size: '3rem',
-      appearance: 'primary',
+      size: 'md',
+      skin: 'primary',
       speed: 'fast',
       thickness: 'md',
     })
