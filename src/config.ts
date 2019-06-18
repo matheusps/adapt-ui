@@ -3,20 +3,20 @@ import { DefaultTheme } from 'styled-components'
 export const theme: DefaultTheme = {
   colors: {
     substratum: {
-      r: 3,
-      g: 3,
-      b: 5,
+      r: 16,
+      g: 16,
+      b: 28,
     },
     contrast: {
-      r: 242,
-      g: 239,
-      b: 233,
+      r: 220,
+      g: 227,
+      b: 255,
     },
     skin: {
       primary: {
-        r: 224,
-        g: 224,
-        b: 224,
+        r: 220,
+        g: 227,
+        b: 255,
       },
       secondary: {
         r: 100,

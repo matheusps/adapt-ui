@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
+    background-color: rgb(16, 16, 28) ;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-variant-ligatures: no-common-ligatures;
     padding: 0;
