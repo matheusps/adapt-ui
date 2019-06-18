@@ -10,7 +10,6 @@ import { Tab } from './Tab'
 import { Heading } from './Heading'
 import { Paragraph } from './Paragraph'
 import { DarksideTheme } from './DarksideTheme'
-import { GlobalStyles } from './GobalStyles'
 import { Icon } from './Icon'
 import { FormGroup } from './FormGroup'
 import { Form } from './Form'
@@ -31,7 +30,6 @@ export {
   Heading,
   Paragraph,
   DarksideTheme,
-  GlobalStyles,
   FormGroup,
   Form,
   Input,

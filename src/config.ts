@@ -1,4 +1,6 @@
-export const theme: ThemeProps = {
+import { DefaultTheme } from 'styled-components'
+
+export const theme: DefaultTheme = {
   colors: {
     substratum: {
       r: 3,

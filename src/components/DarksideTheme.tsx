@@ -1,21 +1,22 @@
-import React, { FunctionComponent } from 'react'
-import { ThemeProvider } from 'styled-components'
+import React, { FC } from 'react'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 
-import { GlobalStyles } from './GobalStyles'
 import { theme } from '../config'
+import { GlobalStyle } from './GlobalStyle'
 
 interface Props {
-  theme?: ThemeProps
+  theme?: DefaultTheme
 }
 
 /**
  * Wraps around Theme-provider from emotion 💅🏻
+ *
  */
-const DarksideTheme: FunctionComponent<Props> = ({ theme, children }) => {
+const DarksideTheme: FC<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme!}>
       <>
-        <GlobalStyles />
+        <GlobalStyle />
         {children}
       </>
     </ThemeProvider>
