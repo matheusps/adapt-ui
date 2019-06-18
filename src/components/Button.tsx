@@ -2,12 +2,13 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import { getMeasure } from '../helpers'
-import { Loader, Clickable } from '../index'
+import { Loader } from './Loader'
+import { Clickable } from './Clickable'
 
-const getFontSize = (measure: Measure) =>
+const getFontSize = (measure: Measure): number =>
   getMeasure(measure, [0.8, 1, 1.25, 1.5])
 
-const getPadding = (measure: Measure) =>
+const getPadding = (measure: Measure): string =>
   getMeasure(measure, [
     '0.375rem 1.4rem 0.375rem 1.4rem',
     '0.45rem 1.8rem 0.45rem 1.8rem',
@@ -15,18 +16,23 @@ const getPadding = (measure: Measure) =>
     '0.80rem 2.6rem 0.80rem 2.6rem',
   ])
 
+const StyledClickable = styled(Clickable)<any>(({ fontSize, padding }) => ({
+  fontSize,
+  padding,
+}))
+
 const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
   const fontSize = `${getFontSize(size!)}rem`
   const padding = getPadding(size!)
 
   return (
-    <Clickable {...props}>
+    <StyledClickable fontSize={fontSize} padding={padding} {...props}>
       {loading ? (
         <Loader size={getFontSize(size!)} skin={props.skin} />
       ) : (
         children
       )}
-    </Clickable>
+    </StyledClickable>
   )
 }
 
