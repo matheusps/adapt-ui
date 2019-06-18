@@ -54,6 +54,3 @@ jspm_packages/
 
 #docs
 .docz
-
-#dist
-dist/
