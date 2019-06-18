@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Container component should match snapshot as default 1`] = `
+exports[`Loader component should match snapshot as default 1`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -37,7 +37,7 @@ exports[`Container component should match snapshot as default 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all measures 1`] = `
+exports[`Loader component should match snapshot with all measures 1`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -74,7 +74,7 @@ exports[`Container component should match snapshot with all measures 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all measures 2`] = `
+exports[`Loader component should match snapshot with all measures 2`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -111,7 +111,7 @@ exports[`Container component should match snapshot with all measures 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all measures 3`] = `
+exports[`Loader component should match snapshot with all measures 3`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -148,7 +148,7 @@ exports[`Container component should match snapshot with all measures 3`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all measures 4`] = `
+exports[`Loader component should match snapshot with all measures 4`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -185,7 +185,7 @@ exports[`Container component should match snapshot with all measures 4`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all props 1`] = `
+exports[`Loader component should match snapshot with all props 1`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -222,7 +222,7 @@ exports[`Container component should match snapshot with all props 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all speeds 1`] = `
+exports[`Loader component should match snapshot with all speeds 1`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -259,7 +259,7 @@ exports[`Container component should match snapshot with all speeds 1`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all speeds 2`] = `
+exports[`Loader component should match snapshot with all speeds 2`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;
@@ -296,7 +296,7 @@ exports[`Container component should match snapshot with all speeds 2`] = `
 </DocumentFragment>
 `;
 
-exports[`Container component should match snapshot with all speeds 3`] = `
+exports[`Loader component should match snapshot with all speeds 3`] = `
 <DocumentFragment>
   .c0 {
   -webkit-transition-property: -webkit-transform;

@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading component should match snapshot as default 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0.67em 0;
+}
+
+<h1
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0.67em 0;
+}
+
+<h1
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 2`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+<h2
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 3`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+<h3
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 4`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+<h4
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 5`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+<h5
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all levels 6`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+<h6
+    class="c0"
+  />
+</DocumentFragment>
+`;
+
+exports[`Heading component should match snapshot with all props 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0.67em 0;
+}
+
+<h1
+    class="c0"
+  />
+</DocumentFragment>
+`;

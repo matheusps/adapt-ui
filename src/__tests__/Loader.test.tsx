@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 import { Loader, DarksideTheme } from '../components'
 import 'jest-styled-components'
 
-describe('Container component', () => {
+describe('Loader component', () => {
   const renderComponent = (customProps?) =>
     render(
       <DarksideTheme>
