@@ -1,11 +1,8 @@
 import React from 'react'
-import { Global, css } from '@emotion/core'
+import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyles = () => {
-  return (
-    <Global
-      styles={css`
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,800&display=swap');
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,800&display=swap');
 
         *,
         *::before,
@@ -36,6 +33,7 @@ const GlobalStyles = () => {
         body {
           font-family: 'Montserrat', sans-serif;
           font-weight: 500;
+          background-color: rgb(3, 3,5);
           overflow-x: hidden;
           text-rendering: optimizeLegibility;
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -209,9 +207,6 @@ const GlobalStyles = () => {
         [hidden] {
           display: none;
         }
-      `}
-    />
-  )
-}
+`
 
 export { GlobalStyles }

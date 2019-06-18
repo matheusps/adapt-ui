@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "outDir": "build",
     "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom", "es2016", "es2017"],
     "jsx": "react",
     "moduleResolution": "node",
+    "sourceMap": true,
     "allowJs": true,
     "noEmit": true,
     "strict": true,
@@ -13,5 +16,6 @@
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
 }

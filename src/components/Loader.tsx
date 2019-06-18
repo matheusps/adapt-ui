@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-/** @jsx jsx */
-import { jsx, css, keyframes } from '@emotion/core'
+import styled, { keyframes } from 'styled-components'
 
 import { useTheme } from '../hooks'
 import { getMeasure, getColor } from '../helpers'
@@ -28,23 +27,24 @@ export const getSize = (size: Measure | number) =>
 
 export const getGap = (gap: Measure) => getMeasure(gap, [1.5, 2, 3, 4])
 
+const StyledSvg = styled.svg`
+  transition-property: transform;
+  animation-name: ${infiniteSpin};
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+`
+
 const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
   const { colors } = useTheme()
   const loaderSkin = getColor(colors.skin[skin!])
 
   return (
-    <svg
+    <StyledSvg
       height={`${getSize(size!)}rem`}
       width={`${getSize(size!)}rem`}
       style={{ animationDuration: `${getSpeed(speed!)}ms` }}
       role="img"
       viewBox="0 0 32 32"
-      css={css`
-        transition-property: transform;
-        animation-name: ${infiniteSpin};
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      `}
     >
       <circle
         role="presentation"
@@ -57,7 +57,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
         strokeDasharray={Math.PI * 2 * (11 - getGap(gap!))}
         strokeLinecap="round"
       />
-    </svg>
+    </StyledSvg>
   )
 }
 

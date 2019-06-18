@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import styled from 'styled-components'
 
 import { getMeasure } from '../helpers'
 import { Loader, Clickable } from '../index'
@@ -21,13 +20,7 @@ const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
   const padding = getPadding(size!)
 
   return (
-    <Clickable
-      {...props}
-      css={css`
-        font-size: ${fontSize};
-        padding: ${padding};
-      `}
-    >
+    <Clickable {...props}>
       {loading ? (
         <Loader size={getFontSize(size!)} skin={props.skin} />
       ) : (

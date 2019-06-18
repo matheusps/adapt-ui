@@ -1,19 +1,10 @@
 import React, { FC } from 'react'
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import styled from 'styled-components'
 
-const Paragraph: FC = ({ children }) => {
-  return (
-    <p
-      css={css`
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-justify: auto;
-      `}
-    >
-      {children}
-    </p>
-  )
-}
+const Paragraph = styled.p`
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-justify: auto;
+`
 
 export { Paragraph }

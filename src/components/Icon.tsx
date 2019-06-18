@@ -22,7 +22,9 @@ const getPrefix = (type: any): IconPrefix => {
   }
 }
 
-const Icon: React.FC<IconType> = ({ name, type, size, ...rest }) => {
+interface Props extends IconType, NativeImgType {}
+
+const Icon: React.FC<Props> = ({ name, type, size, ...rest }) => {
   const prefix = getPrefix(type!)
   const iconSize = getMeasure(size!, ['1x', '2x', '3x', '4x'])
   return <FontAwesomeIcon {...rest} size={iconSize} icon={[prefix, name]} />

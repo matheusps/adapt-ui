@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import styled from 'styled-components'
 
 import { useTheme, useLifting } from '../hooks'
 import { IconButton, Icon, Flexible } from '.'
@@ -20,48 +19,51 @@ interface Props extends NativeInputType {
   icon?: IconType
 }
 
-const withIconStyles = (right = false) => `
+const InputWrapper = styled(Flexible)<any>`
+  position: relative;
+  width: 100%;
+  input {
+    ${props => props.hasIconLeft && 'padding-left: 2.5rem'};
+    ${props => props.hasIconRight && 'padding-right: 3rem'};
+  }
+`
+
+const StyledInput = styled.input<any>(
+  props => ({
+    zIndex: props.zIndex,
+    backgroundColor: props.backgroundColor,
+    color: props.color,
+    borderRadius: props.borderRadius,
+  }),
+  `width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  border: none;
+  :focus {
+    outline: none;
+  }`
+)
+
+const StyledIcon = styled(Icon)<any>`
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
   z-index: 999;
-  ${right ? 'right: 0.05rem' : 'left: 0.05rem'};
+  margin: 0 0.5;
+  ${props => (props.right ? 'right: 0.05rem' : 'left: 0.05rem')};
 `
 
-const InputWrapper = ({ children }) => {
-  return (
-    <Flexible
-      css={css`
-        position: relative;
-        width: 100%;
-      `}
-    >
-      {children}
-    </Flexible>
-  )
-}
-
-const InputText: React.FC<Props> = ({ type, size, ...rest }) => {
+const InputText: React.FC<Props> = ({ size, ...rest }) => {
   const { zIndex, bgColor, color } = useLifting('md')
   const { elements } = useTheme()
   const borderRadius = elements.roundness
   return (
-    <input
+    <StyledInput
+      zIndex={zIndex}
+      backgroundColor={bgColor}
+      color={color}
+      borderRadius={borderRadius}
       {...rest}
-      css={css`
-        z-index: ${zIndex};
-        background-color: ${bgColor};
-        color: ${color};
-        border-radius: ${borderRadius};
-        width: 100%;
-        margin: 0.5rem 0 0.5rem 0;
-        padding: 0.8rem 1rem 0.8rem 1rem;
-        border: none;
-        :focus {
-          outline: none;
-        }
-      `}
-      type={type}
     />
   )
 }
@@ -71,20 +73,9 @@ const InputWithIcon: React.FC<{
   input: Props
 }> = props => {
   return (
-    <InputWrapper>
-      <Icon
-        css={css`
-          margin: 0 0.5rem;
-          ${withIconStyles()}
-        `}
-        {...props.icon}
-      />
-      <InputText
-        {...props.input}
-        css={css`
-          padding-left: 2.5rem;
-        `}
-      />
+    <InputWrapper hasIconLeft>
+      <StyledIcon {...props.icon} />
+      <InputText {...props.input} />
     </InputWrapper>
   )
 }
@@ -93,7 +84,7 @@ const InputPassword: React.FC<Props> = props => {
   const [show, setShow] = useState(false)
   const { type, icon, ...rest } = props
   return (
-    <InputWrapper>
+    <InputWrapper hasIconRight>
       {icon ? (
         <InputWithIcon
           input={{
@@ -101,26 +92,24 @@ const InputPassword: React.FC<Props> = props => {
             ...rest,
           }}
           icon={{ name: 'key' }}
-          css={css`
-            padding-right: 3rem;
-          `}
         />
       ) : (
         <InputText
           {...rest}
           type={show ? 'text' : 'password'}
           icon={{ name: 'key' }}
-          css={css`
-            padding-right: 3rem;
-          `}
         />
       )}
 
       <IconButton
-        css={css`
-          margin: 0 0;
-          ${withIconStyles(true)}
-        `}
+        style={{
+          position: 'absolute',
+          transform: 'translateY(-50%)',
+          top: '50%',
+          zIndex: 999,
+          margin: '0 0',
+          right: '0.05rem',
+        }}
         icon={{
           name: show ? 'eye-slash' : 'eye',
         }}

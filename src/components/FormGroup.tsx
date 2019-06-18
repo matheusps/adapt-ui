@@ -1,18 +1,14 @@
 import React from 'react'
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import styled from 'styled-components'
 
 import { Flexible } from './Flexible'
 
+const StyledFlexible = styled(Flexible)`
+  padding: 0.5rem;
+`
+
 const FormGroup: React.FC<FlexibleType> = props => {
-  return (
-    <Flexible
-      css={css`
-        padding: 0.5rem;
-      `}
-      {...props}
-    />
-  )
+  return <StyledFlexible {...props} />
 }
 
 FormGroup.defaultProps = {

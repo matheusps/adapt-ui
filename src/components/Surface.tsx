@@ -1,12 +1,20 @@
 import React, { FC } from 'react'
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import styled from 'styled-components'
 
 import { useTheme } from '../hooks'
 import { Flexible } from './Flexible'
 import { useLifting } from '../hooks/useLifting'
 
 interface Props extends FlexibleType, Liftable {}
+
+const StyledFlexible = styled(Flexible)<any>(props => ({
+  zIndex: props.zIndex,
+  backgroundColor: props.backgroundColor,
+  color: props.color,
+  margin: props.margin,
+  padding: props.padding,
+  borderRadius: props.borderRadius,
+}))
 
 /**
  * TODO: Separate margin and padding into constants.
@@ -18,19 +26,17 @@ const Surface: FC<Props> = ({ lifting, children, ...rest }) => {
   const borderRadius = elements.roundness
 
   return (
-    <Flexible
+    <StyledFlexible
       {...rest}
-      css={css`
-        z-index: ${zIndex};
-        background-color: ${bgColor};
-        color: ${color};
-        margin: 0.5rem;
-        padding: 0.5rem;
-        border-radius: ${borderRadius};
-      `}
+      zIndex={zIndex}
+      backgroundColor={bgColor}
+      color={color}
+      margin="0.5rem"
+      padding="0.5rem"
+      borderRadius={borderRadius}
     >
       {children}
-    </Flexible>
+    </StyledFlexible>
   )
 }
 

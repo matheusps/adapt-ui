@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { ThemeProvider } from 'emotion-theming'
+import { ThemeProvider } from 'styled-components'
 
 import { GlobalStyles } from './GobalStyles'
 import { theme } from '../config'
