@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label component should match snapshot as default 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-size: 1.1rem;
+  display: block;
+  line-height: 1.2rem;
+}
+
+<label
+    class="c0"
+  />
+</DocumentFragment>
+`;
