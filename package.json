@@ -1,6 +1,6 @@
 {
   "name": "darkside-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React lib to create dark user interfaces",
   "repository": "https://github.com/matheusps/darkside.git",
   "author": "matheusps <matheus.ps@icloud.com>",
