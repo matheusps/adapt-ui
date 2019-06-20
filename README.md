@@ -1,10 +1,26 @@
-### Darkside
+# Darkside UI
 
 [![CircleCI](https://circleci.com/gh/matheusps/react-quarks.svg?style=svg)](https://circleci.com/gh/matheusps/react-quarks)
 [![codecov](https://codecov.io/gh/matheusps/react-quarks/branch/master/graph/badge.svg)](https://codecov.io/gh/matheusps/react-quarks)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f4a3987b-301a-4273-b833-ee993812c4c3/deploy-status)](https://app.netlify.com/sites/darkside-ui/deploys)
 
-## Cheatset 🤓
+## Usage
+
+Adding as a dependency
+
+```bash
+$ npm install darkside-ui
+```
+
+or
+
+```bash
+$yarn add darkside-ui
+```
+
+[Check the component docs for more info](https://darkside-ui.netlify.com/)
+
+## 👨🏾‍💻 Develop
 
 ```bash
 # install dependencies
@@ -14,6 +30,9 @@ $ yarn
 $ yarn dev
 
 # Build styleguide
+$ yarn docz:build
+
+# Build the lib
 $ yarn build
 
 # check your types
@@ -24,5 +43,14 @@ $ yarn test
 
 # Get test coverage
 $ yarn test:coverage
-
 ```
+
+## Roadmap
+
+**⚠️ stands for breaking changes**
+
+**🛠 stands for fixes or chores**
+
+
+- [ ] 🛠 Fix bugs with the current component.
+- [ ] ⚠️ Change the color representation structure, to represent solid colors in hex format.
