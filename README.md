@@ -1,7 +1,7 @@
 # Darkside UI
 
-[![CircleCI](https://circleci.com/gh/matheusps/react-quarks.svg?style=svg)](https://circleci.com/gh/matheusps/react-quarks)
-[![codecov](https://codecov.io/gh/matheusps/react-quarks/branch/master/graph/badge.svg)](https://codecov.io/gh/matheusps/react-quarks)
+[![CircleCI](https://circleci.com/gh/matheusps/darkside.svg?style=svg)](https://circleci.com/gh/matheusps/darkside)
+[![codecov](https://codecov.io/gh/matheusps/darkside/branch/master/graph/badge.svg)](https://codecov.io/gh/matheusps/darkside)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f4a3987b-301a-4273-b833-ee993812c4c3/deploy-status)](https://app.netlify.com/sites/darkside-ui/deploys)
 
 ## Usage
@@ -50,7 +50,6 @@ $ yarn test:coverage
 **⚠️ stands for breaking changes**
 
 **🛠 stands for fixes or chores**
-
 
 - [ ] 🛠 Fix bugs with the current component.
 - [ ] ⚠️ Change the color representation structure, to represent solid colors in hex format.
