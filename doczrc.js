@@ -1,5 +1,5 @@
 export default {
-  title: 'Darkside',
+  title: 'Adapt UI',
   files: '**/*.{md,markdown,mdx}',
   wrapper: 'src/docs/Wrapper',
   themeConfig: {
