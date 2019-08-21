@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { getMeasure } from '../helpers'
 import { Loader } from './Loader'
-import { Clickable } from './Clickable'
+import { Clickable } from './core/Clickable'
 
 const getFontSize = (measure: Measure): number =>
   getMeasure(measure, [0.8, 1, 1.25, 1.5])
@@ -27,11 +27,7 @@ const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
 
   return (
     <StyledClickable fontSize={fontSize} padding={padding} {...props}>
-      {loading ? (
-        <Loader size={getFontSize(size!)} skin={props.skin} />
-      ) : (
-        children
-      )}
+      {loading ? <Loader size={getFontSize(size!)} /> : children}
     </StyledClickable>
   )
 }

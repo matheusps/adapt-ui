@@ -1,0 +1,40 @@
+---
+## name: Clickable
+---
+
+import { Playground } from 'docz'
+import { Clickable, Surface, Emoji } from '../../index'
+
+# Clickable
+
+## Basic
+
+<Playground>
+  <Clickable onClick={() => alert('CLICKED')}>Click Me</Clickable>
+</Playground>
+
+## Full
+
+<Playground>
+  <Clickable onClick={() => alert('CLICKED FULL')} full>
+    Clickable that takes de full width
+  </Clickable>
+</Playground>
+
+## Disabled
+
+<Playground>
+  <Clickable disabled>This is disabled and cannot be clicked</Clickable>
+</Playground>
+
+## As Prop
+
+<Playground>
+  <Clickable
+    as="img"
+    src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/male_avatar_323b.svg"
+    width="100"
+    height="100"
+    onClick={() => alert('CLICKED @ Image')}
+  />
+</Playground>

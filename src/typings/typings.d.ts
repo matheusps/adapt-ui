@@ -124,10 +124,8 @@ interface FlexibleType {
     | 'stretch'
 }
 
-interface ClickableType extends HasSkin, NativeButtonType {
+interface ClickableType extends NativeButtonType {
   full?: boolean
-  noEffect?: boolean
-  ghost?: boolean
 }
 
 interface TabsContext {

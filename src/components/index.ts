@@ -1,7 +1,7 @@
 import { Button } from './Button'
 import { IconButton } from './IconButton'
 import { Emoji } from './Emoji'
-import { Clickable } from './Clickable'
+import { Clickable } from './core/Clickable'
 import { Flexible } from './Flexible'
 import { Loader } from './Loader'
 import { Surface } from './Surface'
