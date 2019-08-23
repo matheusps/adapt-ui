@@ -2,10 +2,10 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import { useTheme } from '../hooks'
-import { Flexible } from './Flexible'
+import Flexible, { FlexibleProps } from './core/Flexible'
 import { useLifting } from '../hooks/useLifting'
 
-interface Props extends FlexibleType, Liftable {}
+interface Props extends FlexibleProps, Liftable {}
 
 const StyledFlexible = styled(Flexible)<any>(props => ({
   zIndex: props.zIndex,

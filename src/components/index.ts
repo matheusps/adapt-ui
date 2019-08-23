@@ -1,8 +1,11 @@
+import Box from './core/Box'
+import Clickable from './core/Clickable'
+import Flexible from './core/Flexible'
+import Scrollable from './core/Scrollable'
+
 import { Button } from './Button'
 import { IconButton } from './IconButton'
 import { Emoji } from './Emoji'
-import { Clickable } from './Clickable'
-import { Flexible } from './Flexible'
 import { Loader } from './Loader'
 import { Surface } from './Surface'
 import { Tabs } from './Tabs'
@@ -17,12 +20,14 @@ import { Input } from './Input'
 import { Label } from './Label'
 
 export {
+  Box,
+  Clickable,
+  Flexible,
+  Scrollable,
   Icon,
   Button,
   IconButton,
   Emoji,
-  Clickable,
-  Flexible,
   Loader,
   Surface,
   Tab,

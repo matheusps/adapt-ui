@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6, p, button, input { 
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.15; 
   }
 
   html {

@@ -1,14 +1,13 @@
 import React, { FC, useContext } from 'react'
 
 import { TabsContext } from '../context/TabsContext'
-import { Clickable } from './Clickable'
+import Clickable from './core/Clickable'
 
 const Tab: FC<TabProps> = ({ id, label }) => {
   const { activeTab, onTabClick } = useContext(TabsContext)
   const handleClick = () => {
     onTabClick(id)
   }
-  const isActive = activeTab === id
 
   return <Clickable onClick={handleClick}>{label}</Clickable>
 }

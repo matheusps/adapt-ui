@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Flexible } from './Flexible'
+import Flexible, { FlexibleProps } from './core/Flexible'
 
 const StyledFlexible = styled(Flexible)`
   padding: 0.5rem;
 `
 
-const FormGroup: React.FC<FlexibleType> = props => {
+const FormGroup: React.FC<FlexibleProps> = props => {
   return <StyledFlexible {...props} />
 }
 

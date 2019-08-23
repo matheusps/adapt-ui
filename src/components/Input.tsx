@@ -114,7 +114,6 @@ const InputPassword: React.FC<Props> = props => {
           name: show ? 'eye-slash' : 'eye',
         }}
         onClick={() => setShow(!show)}
-        ghost
       />
     </InputWrapper>
   )

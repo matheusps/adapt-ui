@@ -3,7 +3,7 @@ export default {
   files: '**/*.{md,markdown,mdx}',
   wrapper: 'src/docs/Wrapper',
   themeConfig: {
-    mode: 'dark',
+    mode: 'light',
   },
   typescript: true,
   codesandbox: false,

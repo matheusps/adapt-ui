@@ -3990,32 +3990,20 @@ Loader.defaultProps = {
 };
 var templateObject_1, templateObject_2;
 
-var StyledButton = styled.button(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  ", ";\n  border: none;\n  box-sizing: border-box;\n  font-weight: 700;\n  font-stretch: normal;\n  line-height: 1.4;\n  overflow: hidden;\n  text-align: center;\n  text-decoration: none;\n  text-transform: none;\n  white-space: nowrap;\n  justify-content: center;\n  align-items: center;\n  appearance: none;\n  user-select: none;\n  transition: background-color 0.2s ease-in-out;\n  will-change: background-color;\n  :focus {\n    outline: none;\n  }\n"], ["\n  ",
-    ";\n  border: none;\n  box-sizing: border-box;\n  font-weight: 700;\n  font-stretch: normal;\n  line-height: 1.4;\n  overflow: hidden;\n  text-align: center;\n  text-decoration: none;\n  text-transform: none;\n  white-space: nowrap;\n  justify-content: center;\n  align-items: center;\n  appearance: none;\n  user-select: none;\n  transition: background-color 0.2s ease-in-out;\n  will-change: background-color;\n  :focus {\n    outline: none;\n  }\n"])), function (_a) {
-    var bg = _a.bg, bgHover = _a.bgHover, bgActive = _a.bgActive, color = _a.color, padding = _a.padding, borderRadius = _a.borderRadius, full = _a.full, disabled = _a.disabled, margin = _a.margin;
-    return "background-color: " + bg + ";\n        color: " + color + ";\n        padding: " + padding + ";\n        border-radius: " + borderRadius + ";\n        display: " + (full ? 'block' : 'relative') + ";\n        width: " + (full ? '100%' : 'auto') + ";\n        cursor: " + (disabled ? 'not-allowed' : 'pointer') + ";\n        margin: " + margin + ";\n        :hover {\n          background-color: " + bgHover + ";\n        }\n        :active {\n          background-color: " + bgActive + ";\n        }\n        ";
+var StyledButton = styled.button(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  ", ";\n  border: none;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-decoration: none;\n  appearance: none;\n  user-select: none;\n  background: transparent;\n"], ["\n  ",
+    ";\n  border: none;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-decoration: none;\n  appearance: none;\n  user-select: none;\n  background: transparent;\n"])), function (_a) {
+    var full = _a.full, disabled = _a.disabled;
+    return "\n    display: " + (full ? 'block' : 'relative') + ";\n    width: " + (full ? '100%' : 'auto') + ";\n    cursor: " + (disabled ? 'not-allowed' : 'pointer') + ";\n  ";
 });
 var Clickable = function (_a) {
-    var skin = _a.skin, full = _a.full, disabled = _a.disabled, onClick = _a.onClick, ghost = _a.ghost, noEffect = _a.noEffect, rest = __rest(_a, ["skin", "full", "disabled", "onClick", "ghost", "noEffect"]);
-    var _b = useTheme(), elements = _b.elements, colors = _b.colors;
-    var padding = '0.5rem';
-    var margin = '0.5rem';
-    var borderRadius = elements.roundness;
-    var selectedSkin = colors.skin[skin];
-    var color = getColor(selectedSkin, disabled ? 0.5 : 1);
-    var bg = ghost
-        ? 'transparent'
-        : getColor(selectedSkin, disabled ? 0.08 : 0.1);
-    var bgHover = !noEffect && getColor(selectedSkin, disabled ? 0.08 : 0.2);
-    var bgActive = !noEffect && getColor(selectedSkin, 0.3);
+    var full = _a.full, disabled = _a.disabled, onClick = _a.onClick, rest = __rest(_a, ["full", "disabled", "onClick"]);
     var handleClickEvent = function (e) {
         e.preventDefault();
         onClick && onClick(e);
     };
-    return (React.createElement(StyledButton, __assign({ bg: bg, bgHover: bgHover, bgActive: bgActive, borderRadius: borderRadius, color: color, full: full, padding: padding, margin: margin, disabled: disabled, onClick: handleClickEvent }, rest)));
+    return (React.createElement(StyledButton, __assign({ full: full, disabled: disabled, onClick: handleClickEvent }, rest)));
 };
 Clickable.defaultProps = {
-    skin: 'primary',
     full: false,
 };
 var templateObject_1$1;
@@ -4042,7 +4030,7 @@ var Button = function (_a) {
     var size = _a.size, children = _a.children, loading = _a.loading, props = __rest(_a, ["size", "children", "loading"]);
     var fontSize = getFontSize(size) + "rem";
     var padding = getPadding(size);
-    return (React__default.createElement(StyledClickable, __assign({ fontSize: fontSize, padding: padding }, props), loading ? (React__default.createElement(Loader, { size: getFontSize(size), skin: props.skin })) : (children)));
+    return (React__default.createElement(StyledClickable, __assign({ fontSize: fontSize, padding: padding }, props), loading ? React__default.createElement(Loader, { size: getFontSize(size) }) : children));
 };
 Button.defaultProps = {
     size: 'md',
@@ -15553,7 +15541,7 @@ var InputPassword = function (props) {
                 right: '0.05rem',
             }, icon: {
                 name: show ? 'eye-slash' : 'eye',
-            }, onClick: function () { return setShow(!show); }, ghost: true })));
+            }, onClick: function () { return setShow(!show); } })));
 };
 var Input = function (props) {
     switch (props.type) {
