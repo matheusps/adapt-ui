@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Flexible } from './Flexible'
+import { Flexible } from './core/Flexible'
 
 const StyledFlexible = styled(Flexible)`
   padding: 0.5rem;

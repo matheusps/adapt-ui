@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 
 import { useTheme } from '../hooks'
-import { Flexible } from './Flexible'
+import { Flexible } from './core/Flexible'
 import { useLifting } from '../hooks/useLifting'
 
 interface Props extends FlexibleType, Liftable {}
