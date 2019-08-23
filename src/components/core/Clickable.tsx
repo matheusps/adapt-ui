@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
+import Box from './Box'
 
-const StyledButton = styled.button<any>`
+const StyledBox = styled(Box)<any>`
   ${({ full, disabled }) => `
     display: ${full ? 'block' : 'relative'};
     width: ${full ? '100%' : 'auto'};
     cursor: ${disabled ? 'not-allowed' : 'pointer'};
   `};
   border: none;
-  box-sizing: border-box;
   overflow: hidden;
   text-decoration: none;
   appearance: none;
@@ -16,10 +16,11 @@ const StyledButton = styled.button<any>`
   background: transparent;
 `
 
-const Clickable: React.FC<ClickableType> = ({
+const Clickable: React.FC<ClickableProps> = ({
   full,
   disabled,
   onClick,
+  as,
   ...rest
 }) => {
   const handleClickEvent = (
@@ -30,7 +31,8 @@ const Clickable: React.FC<ClickableType> = ({
   }
 
   return (
-    <StyledButton
+    <StyledBox
+      as={as}
       full={full}
       disabled={disabled}
       onClick={handleClickEvent}
@@ -41,6 +43,12 @@ const Clickable: React.FC<ClickableType> = ({
 
 Clickable.defaultProps = {
   full: false,
+  as: 'button',
 }
 
-export { Clickable }
+export interface ClickableProps extends NativeButtonType {
+  full?: boolean
+  as?: any
+}
+
+export default Clickable

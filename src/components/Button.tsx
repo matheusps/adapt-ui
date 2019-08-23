@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { getMeasure } from '../helpers'
 import { Loader } from './Loader'
-import { Clickable } from './core/Clickable'
+import Clickable from './core/Clickable'
 
 const getFontSize = (measure: Measure): number =>
   getMeasure(measure, [0.8, 1, 1.25, 1.5])
