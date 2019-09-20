@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Montserrat:500,700,800&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700&display=swap');
   
   *,
   *::before,
@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6, p, button, input { 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     line-height: 1.15; 
   }
 
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     background-color: rgb(16, 16, 28) ;
