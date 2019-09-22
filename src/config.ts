@@ -1,46 +1,24 @@
 import { DefaultTheme } from 'styled-components'
 
 export const theme: DefaultTheme = {
-  colors: {
-    substratum: {
-      r: 16,
-      g: 16,
-      b: 28,
-    },
-    contrast: {
-      r: 220,
-      g: 227,
-      b: 255,
-    },
-    skin: {
-      primary: {
-        r: 220,
-        g: 227,
-        b: 255,
+  button: {
+    sizes: {
+      sm: {
+        fontSize: '0.8rem',
+        padding: '0.375rem 1.4rem 0.375rem 1.4rem',
       },
-      secondary: {
-        r: 100,
-        g: 181,
-        b: 246,
+      md: {
+        fontSize: '1rem',
+        padding: '0.45rem 1.8rem 0.45rem 1.8rem',
       },
-      success: {
-        r: 129,
-        g: 199,
-        b: 132,
+      lg: {
+        fontSize: '1.25rem',
+        padding: '0.65rem 2.2rem 0.65rem 2.2rem',
       },
-      warning: {
-        r: 255,
-        g: 183,
-        b: 77,
-      },
-      danger: {
-        r: 240,
-        g: 98,
-        b: 146,
+      xl: {
+        fontSize: '1.5rem',
+        padding: '0.80rem 2.6rem 0.80rem 2.6rem',
       },
     },
-  },
-  elements: {
-    roundness: '.8rem',
   },
 }

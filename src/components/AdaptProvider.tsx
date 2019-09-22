@@ -12,7 +12,7 @@ interface Props {
  * Wraps around Theme-provider from emotion 💅🏻
  *
  */
-const DarksideTheme: FC<Props> = ({ theme, children }) => {
+const AdaptProvider: FC<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme!}>
       <>
@@ -23,8 +23,8 @@ const DarksideTheme: FC<Props> = ({ theme, children }) => {
   )
 }
 
-DarksideTheme.defaultProps = {
+AdaptProvider.defaultProps = {
   theme: theme,
 }
 
-export { DarksideTheme }
+export default AdaptProvider

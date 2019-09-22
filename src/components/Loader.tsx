@@ -35,9 +35,6 @@ const StyledSvg = styled.svg`
 `
 
 const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
-  const { colors } = useTheme()
-  const loaderSkin = getColor(colors.skin[skin!])
-
   return (
     <StyledSvg
       height={`${getSize(size!)}rem`}
@@ -50,7 +47,7 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
         role="presentation"
         cx={16}
         cy={16}
-        stroke={loaderSkin}
+        stroke={'black'}
         r={14 - getThickness(thickness!) / 2}
         fill="none"
         strokeWidth={getThickness(thickness!)}

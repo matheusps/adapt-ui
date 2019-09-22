@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 
-import { Surface } from './Surface'
-import { TabsProvider } from '../context/TabsContext'
+import { TabsProvider } from './context'
+import { Box } from '..'
 
 const Tabs: FC<TabsProps> = ({ activeTab, onTabClick, children }) => {
   return (
-    <Surface lifting="lg" width="100%">
+    <Box width="100%">
       <TabsProvider
         value={{
           activeTab,
@@ -14,7 +14,7 @@ const Tabs: FC<TabsProps> = ({ activeTab, onTabClick, children }) => {
       >
         {children}
       </TabsProvider>
-    </Surface>
+    </Box>
   )
 }
 
