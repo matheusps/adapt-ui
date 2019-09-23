@@ -1,8 +1,8 @@
 import React from 'react'
-import { DarksideTheme } from '../index'
+import { AdaptProvider } from '../components'
 
 const Wrapper = ({ children }) => {
-  return <DarksideTheme>{children}</DarksideTheme>
+  return <AdaptProvider>{children}</AdaptProvider>
 }
 
 export default Wrapper

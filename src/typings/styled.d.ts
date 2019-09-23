@@ -1,10 +1,21 @@
 import 'styled-components'
 
+interface Sizes {
+  [key: string]: {
+    fontSize?: string
+    padding?: string
+  }
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
-    readonly colors: Colors
-    readonly elements: {
-      roundness: string
+    fonts: {
+      heading?: string,
+      body?: string,
+      code?: string
+    }
+    button: {
+      sizes: Sizes
     }
   }
 }

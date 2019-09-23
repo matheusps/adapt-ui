@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,700&display=swap');
+const GlobalStyle = createGlobalStyle`
   
   *,
   *::before,
@@ -9,26 +8,16 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  h1, h2, h3, h4, h5, h6, p, button, input { 
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.15; 
-  }
-
   html {
-    line-height: 1.15; 
-    -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
   body {
-    font-family: 'Work Sans', sans-serif;
     overflow-x: hidden;
-    text-rendering: optimizeLegibility;
     background-color: rgb(16, 16, 28) ;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-variant-ligatures: no-common-ligatures;
     padding: 0;
     margin: 0;
   }
@@ -43,41 +32,16 @@ export const GlobalStyle = createGlobalStyle`
     overflow: visible; 
   }
 
-  pre {
-    font-family: monospace, monospace; 
-    font-size: 1em; 
-  }
-
   a {
     background-color: transparent;
   }
 
   abbr[title] {
     border-bottom: none;
-    text-decoration: underline; 
-    text-decoration: underline dotted; 
-  }
-
-  b,
-  strong {
-    font-weight: bolder;
-  }
-
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace;
-    font-size: 1em; 
-  }
-
-  small {
-    font-size: 80%;
   }
 
   sub,
   sup {
-    font-size: 75%;
-    line-height: 0;
     position: relative;
     vertical-align: baseline;
   }
@@ -99,20 +63,12 @@ export const GlobalStyle = createGlobalStyle`
   optgroup,
   select,
   textarea {
-    font-family: inherit; 
-    font-size: 100%; 
-    line-height: 1.15; 
     margin: 0; 
   }
 
   button,
   input { 
     overflow: visible;
-  }
-
-  button,
-  select {
-    text-transform: none;
   }
 
   button,
@@ -180,7 +136,6 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-file-upload-button {
     -webkit-appearance: button; 
-    font: inherit; 
   }
 
   details {
@@ -200,3 +155,5 @@ export const GlobalStyle = createGlobalStyle`
     display: none;
   }
 `
+
+export default GlobalStyle

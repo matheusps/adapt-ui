@@ -4,7 +4,7 @@
 
 import { Playground } from 'docz'
 
-import { Surface, FormGroup, Form, Input, Label } from '../index'
+import { FormGroup, Form, Input, Label } from '../index'
 
 # Forms
 
@@ -39,21 +39,5 @@ import { Surface, FormGroup, Form, Input, Label } from '../index'
     <Input type="number" placeholder="Number Input" />
     <Input type="date" placeholder="Date Input" />
     <Input type="file" placeholder="File Input" />
-  </Form>
-</Playground>
-
-## With Icon
-
-<Playground>
-  <Form>
-    <Input icon={{ name: 'user' }} type="text" placeholder="Username" />
-    <Input
-      icon={{ name: 'key' }}
-      type="password"
-      placeholder="Password Input"
-    />
-    <Input icon={{ name: 'envelope' }} type="email" placeholder="Email" />
-    <Input icon={{ name: 'phone-alt' }} type="tel" placeholder="Phone" />
-    <Input icon={{ name: 'birthday-cake' }} type="date" placeholder="Birth" />
   </Form>
 </Playground>

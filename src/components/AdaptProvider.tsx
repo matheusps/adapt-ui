@@ -2,7 +2,8 @@ import React, { FC } from 'react'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import { theme } from '../config'
-import { GlobalStyle } from './GlobalStyle'
+import GlobalStyle from './GlobalStyle'
+import Typo from './Typo'
 
 interface Props {
   theme?: DefaultTheme
@@ -12,19 +13,20 @@ interface Props {
  * Wraps around Theme-provider from emotion 💅🏻
  *
  */
-const DarksideTheme: FC<Props> = ({ theme, children }) => {
+const AdaptProvider: FC<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme!}>
       <>
         <GlobalStyle />
+        <Typo />
         {children}
       </>
     </ThemeProvider>
   )
 }
 
-DarksideTheme.defaultProps = {
+AdaptProvider.defaultProps = {
   theme: theme,
 }
 
-export { DarksideTheme }
+export default AdaptProvider
