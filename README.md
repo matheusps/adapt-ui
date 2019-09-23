@@ -38,4 +38,20 @@ $ yarn test:coverage
 **🛠 stands for fixes or chores**
 
 - [ ] 🛠 Fix bugs with the current component.
-- [ ] ⚠️ Change the color representation structure, to represent solid colors in hex format.
+- [x] Button
+- [x] Typo
+- [x] Box
+- [ ] Image
+- [x] Label
+- [x] Input
+- [x] Spinner
+- [ ] Tabs
+- [ ] Collapsible
+- [ ] Hoverable
+- [x] Scrollable
+- [x] Clickable
+- [x] Flexible
+- [ ] Carousel
+- [ ] Toolbar
+- [ ] Theme Parser
+- [ ] Responsive Breakpoints
