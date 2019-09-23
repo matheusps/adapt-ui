@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import styled, { DefaultTheme } from 'styled-components'
 
 import { getMeasure } from '../helpers'
-import { Loader } from './Loader'
+import Spinner from './Spinner'
 import Clickable from './core/Clickable'
 import { useTheme } from '../hooks/useTheme'
 
@@ -35,7 +35,7 @@ const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
   console.log(parseTheme(theme))
   return (
     <StyledClickable fontSize={fontSize} padding={padding} {...props}>
-      {loading ? <Loader size={getFontSize(size!)} /> : children}
+      {loading ? <Spinner size={getFontSize(size!)} /> : children}
     </StyledClickable>
   )
 }

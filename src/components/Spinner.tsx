@@ -1,15 +1,7 @@
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { useTheme } from '../hooks'
-import { getMeasure, getColor } from '../helpers'
-
-interface Props extends HasSkin {
-  readonly speed?: Speed
-  readonly gap?: Measure
-  readonly thickness?: Measure
-  readonly size?: Measure | number
-}
+import { getMeasure } from '../helpers'
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
@@ -34,7 +26,7 @@ const StyledSvg = styled.svg`
   animation-timing-function: linear;
 `
 
-const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
+const Spinner: FC<Props> = ({ thickness, size, speed, gap }) => {
   return (
     <StyledSvg
       height={`${getSize(size!)}rem`}
@@ -58,12 +50,18 @@ const Loader: FC<Props> = ({ thickness, size, speed, gap, skin }) => {
   )
 }
 
-Loader.defaultProps = {
-  skin: 'primary',
+Spinner.defaultProps = {
   size: 'md',
   thickness: 'md',
   speed: 'normal',
   gap: 'lg',
 }
 
-export { Loader }
+type Props = {
+  readonly speed?: Speed
+  readonly gap?: Measure
+  readonly thickness?: Measure
+  readonly size?: Measure | number
+}
+
+export default Spinner

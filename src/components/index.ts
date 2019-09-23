@@ -8,7 +8,7 @@ import AdaptProvider from './AdaptProvider'
 import Typo from './Typo'
 
 import { Button } from './Button'
-import { Loader } from './Loader'
+import Spinner from './Spinner'
 import { Tabs } from './Tabs/Tabs'
 import { Tab } from './Tabs/Tab'
 import { useTabState } from './Tabs/useTabState'
@@ -27,7 +27,7 @@ export {
   AdaptProvider,
   Typo,
   Button,
-  Loader,
+  Spinner,
   Tab,
   Tabs,
   useTabState,
