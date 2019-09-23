@@ -1,6 +1,11 @@
 import { DefaultTheme } from 'styled-components'
 
 export const theme: DefaultTheme = {
+  fonts: {
+    heading: "'Work Sans', sans-serif",
+    body: "'Source Sans Pro', sans-serif",
+    code: "'Source Code Pro', monospace",
+  },
   button: {
     sizes: {
       sm: {

@@ -9,6 +9,11 @@ interface Sizes {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
+    fonts: {
+      heading?: string,
+      body?: string,
+      code?: string
+    }
     button: {
       sizes: Sizes
     }

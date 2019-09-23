@@ -5,6 +5,8 @@ import Scrollable from './core/Scrollable'
 
 import AdaptProvider from './AdaptProvider'
 
+import Typo from './Typo'
+
 import { Button } from './Button'
 import { Loader } from './Loader'
 import { Tabs } from './Tabs/Tabs'
@@ -23,6 +25,7 @@ export {
   Flexible,
   Scrollable,
   AdaptProvider,
+  Typo,
   Button,
   Loader,
   Tab,
