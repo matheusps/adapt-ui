@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
-import { theme } from '../config'
-import GlobalStyle from './GlobalStyle'
-import TypoPreflight from './Typography/Preflight'
+import { theme } from '../../config'
+import GlobalPreflight from './GlobalPreflight'
+import TypoPreflight from '../Typography/Preflight'
 
 interface Props {
   theme?: DefaultTheme
@@ -13,7 +13,7 @@ const AdaptProvider: FC<Props> = ({ theme, children }) => {
   return (
     <ThemeProvider theme={theme!}>
       <>
-        <GlobalStyle />
+        <GlobalPreflight />
         <TypoPreflight />
         {children}
       </>

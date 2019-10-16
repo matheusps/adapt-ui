@@ -1,15 +1,9 @@
 import React, { FC } from 'react'
 import styled, { DefaultTheme } from 'styled-components'
 
-import { getMeasure } from '../helpers'
-import Spinner from './Spinner'
-import Clickable from './Clickable'
-import { useTheme } from '../hooks/useTheme'
-
-const parseTheme = (theme: DefaultTheme) => {
-  const buttonSizes = Object.keys(theme.button.sizes)
-  return buttonSizes
-}
+import { getMeasure } from '../../helpers'
+import Spinner from '../Spinner'
+import Clickable, { ClickableProps } from '../Clickable'
 
 const getFontSize = (measure: Measure): number =>
   getMeasure(measure, [0.8, 1, 1.25, 1.5])
@@ -27,12 +21,15 @@ const StyledClickable = styled(Clickable)<any>(({ fontSize, padding }) => ({
   padding,
 }))
 
-const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
-  const fontSize = `${getFontSize(size!)}rem`
-  const padding = getPadding(size!)
-  const theme = useTheme()
+const Button: FC<ButtonProps> = ({
+  size = 'md',
+  loading = false,
+  children,
+  ...props
+}) => {
+  const fontSize = `${getFontSize(size)}rem`
+  const padding = getPadding(size)
 
-  console.log(parseTheme(theme))
   return (
     <StyledClickable fontSize={fontSize} padding={padding} {...props}>
       {loading ? <Spinner size={getFontSize(size!)} /> : children}
@@ -40,9 +37,9 @@ const Button: FC<ButtonType> = ({ size, children, loading, ...props }) => {
   )
 }
 
-Button.defaultProps = {
-  size: 'md',
-  loading: false,
+export type ButtonProps = ClickableProps & {
+  size?: Measure
+  loading?: boolean
 }
 
-export { Button }
+export default Button
