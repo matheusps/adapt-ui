@@ -19,7 +19,6 @@
   "scripts": {
     "check-types": "tsc",
     "test": "jest",
-    "dev": "docz dev",
     "build": "npm run build-lib && npm run build-storybook",
     "build-lib": "rollup -c ",
     "build-storybook": "build-storybook",
