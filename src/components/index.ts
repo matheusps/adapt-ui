@@ -12,8 +12,9 @@ import Paragraph from './Typography/Paragraph'
 import Input from './Forms/Input'
 import Label from './Forms/Label'
 
-import { Button } from './Button'
 import Spinner from './Spinner'
+
+import { Button } from './Button'
 import { Tabs } from './Tabs/Tabs'
 import { Tab } from './Tabs/Tab'
 import { useTabState } from './Tabs/useTabState'

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { getMeasure } from '../helpers'
+import { getMeasure } from '../../helpers'
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
