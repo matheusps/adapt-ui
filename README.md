@@ -5,32 +5,32 @@
 
 [Check the component docs for more info](https://adapt-ui.netlify.com/)
 
-## 👨🏾‍💻 Develop
+### 👨🏾‍💻 Develop
 
 ```bash
 # install dependencies
 $ yarn
 
-# start development server with docz
-$ yarn dev
+# start development server with storybook
+$ yarn storybook
 
-# Build styleguide
-$ yarn docz:build
+# Build the docs
+$ yarn build-storybook
 
 # Build the lib
-$ yarn build
+$ yarn build-lib
 
-# check your types
-$ yarn check-types
+# Build lib and docs
+$ yarn build
 
 # Run tests
 $ yarn test
 
-# Get test coverage
-$ yarn test:coverage
+# Create a new release with np
+$ yarn release
 ```
 
-## Roadmap
+### Roadmap
 
 **⚠️ stands for breaking changes**
 
