@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Box from './Box'
+import Box from '../Box'
 
 export interface ScrollableProps {
   axis: 'x' | 'y' | 'xy'

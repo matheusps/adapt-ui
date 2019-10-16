@@ -1,4 +1,4 @@
-import Box from './core/Box'
+import Box from './Box'
 import Clickable from './core/Clickable'
 import Flexible from './core/Flexible'
 import Scrollable from './core/Scrollable'

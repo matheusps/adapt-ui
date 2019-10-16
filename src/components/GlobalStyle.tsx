@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    background-color: rgb(16, 16, 28) ;
+    /*background-color: rgb(16, 16, 28) ;*/
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding: 0;
     margin: 0;

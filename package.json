@@ -22,7 +22,8 @@
     "dev": "docz dev",
     "build": "rollup -c ",
     "docz:build": "docz build",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "storybook": "start-storybook -p 6006"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -30,6 +31,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "@storybook/react": "^5.2.4",
     "@svgr/rollup": "^4.3.0",
     "@testing-library/react": "^8.0.1",
     "@types/emojione": "^2.2.5",
@@ -66,6 +68,8 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "react-docgen-typescript-loader": "^3.3.0",
     "styled-components": "^4.3.1"
   },
   "jest": {
