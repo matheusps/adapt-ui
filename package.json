@@ -19,8 +19,6 @@
   "scripts": {
     "check-types": "tsc",
     "test": "jest",
-    "test:coverage": "yarn test --collectCoverage",
-    "codecov": "yarn test:coverage && codecov -f coverage/*.json",
     "dev": "docz dev",
     "build": "rollup -c ",
     "docz:build": "docz build",
@@ -42,7 +40,6 @@
     "@types/styled-components": "^4.1.16",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
-    "codecov": "^3.3.0",
     "cross-env": "^5.2.0",
     "docz": "^1.2.0",
     "docz-theme-default": "^1.2.0",
