@@ -1,5 +1,5 @@
 import React from 'react'
-import Flexible, { FlexibleProps } from './core/Flexible'
+import Flexible, { FlexibleProps } from './Flexible'
 
 interface Props extends NativeFormType {
   flex: FlexibleProps

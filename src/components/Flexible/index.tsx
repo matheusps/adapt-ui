@@ -33,7 +33,7 @@ Flexible.defaultProps = {
   content: 'stretch',
 }
 
-export interface FlexibleProps {
+export type FlexibleProps = {
   /** width in percentage or px */
   width?: string
   /** height in percentage or px */
