@@ -9,14 +9,14 @@ import TypoPreflight from './Typography/Preflight'
 import Heading from './Typography/Heading'
 import Paragraph from './Typography/Paragraph'
 
+import Input from './Forms/Input'
+import Label from './Forms/Label'
+
 import { Button } from './Button'
 import Spinner from './Spinner'
 import { Tabs } from './Tabs/Tabs'
 import { Tab } from './Tabs/Tab'
 import { useTabState } from './Tabs/useTabState'
-
-import Input from './Input'
-import { Label } from './Label'
 
 export {
   Box,

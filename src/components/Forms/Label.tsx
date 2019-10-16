@@ -6,4 +6,4 @@ const Label = styled.label`
   line-height: 1.2rem;
 `
 
-export { Label }
+export default Label
