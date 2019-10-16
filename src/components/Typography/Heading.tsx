@@ -67,4 +67,4 @@ type HeadingProps = NativeHeadingType & {
   level?: HLevel
 }
 
-export { Heading }
+export default Heading

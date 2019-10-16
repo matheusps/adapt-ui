@@ -5,17 +5,16 @@ import Scrollable from './Scrollable'
 
 import AdaptProvider from './AdaptProvider'
 
-import Typo from './Typo'
+import TypoPreflight from './Typography/Preflight'
+import Heading from './Typography/Heading'
+import Paragraph from './Typography/Paragraph'
 
 import { Button } from './Button'
 import Spinner from './Spinner'
 import { Tabs } from './Tabs/Tabs'
 import { Tab } from './Tabs/Tab'
 import { useTabState } from './Tabs/useTabState'
-import { Heading } from './Heading'
-import { Paragraph } from './Paragraph'
-import { FormGroup } from './FormGroup'
-import { Form } from './Form'
+
 import Input from './Input'
 import { Label } from './Label'
 
@@ -25,7 +24,7 @@ export {
   Flexible,
   Scrollable,
   AdaptProvider,
-  Typo,
+  TypoPreflight,
   Button,
   Spinner,
   Tab,
@@ -33,8 +32,6 @@ export {
   useTabState,
   Heading,
   Paragraph,
-  FormGroup,
-  Form,
   Input,
   Label,
 }

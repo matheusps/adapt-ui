@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const Typo = createGlobalStyle`
+const TypoPreflight = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500|Source+Sans+Pro:400,600,700|Work+Sans:400,500,700&display=swap');
 
   h1, h2, h3, h4, h5, h6 { 
@@ -71,4 +71,4 @@ const Typo = createGlobalStyle`
 
 `
 
-export default Typo
+export default TypoPreflight

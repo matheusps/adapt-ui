@@ -6,4 +6,4 @@ const Paragraph = styled.p`
   text-justify: auto;
 `
 
-export { Paragraph }
+export default Paragraph
