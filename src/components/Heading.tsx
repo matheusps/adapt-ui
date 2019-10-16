@@ -1,13 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 
-type HLevel = 1 | 2 | 3 | 4 | 5 | 6
-
-interface Props {
-  level: HLevel
-  style: any //Find correct extension
-}
-
 const H1 = styled.h1`
   font-size: 4rem;
   font-weight: 400;
@@ -57,9 +50,21 @@ const getComponent = (level: HLevel) => {
   }
 }
 
-const Heading: FC<Props> = ({ level, children, ...rest }) => {
-  const H = getComponent(level)
-  return <H {...rest}>{children}</H>
+const Heading: FC<HeadingProps> = ({ level = 1, ...props }) => {
+  const Component = getComponent(level)
+  //@ts-ignore
+  return <Component {...props} />
+}
+
+type HLevel = 1 | 2 | 3 | 4 | 5 | 6
+
+type NativeHeadingType = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+>
+
+type HeadingProps = NativeHeadingType & {
+  level?: HLevel
 }
 
 export { Heading }

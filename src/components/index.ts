@@ -1,7 +1,7 @@
 import Box from './Box'
 import Clickable from './Clickable'
 import Flexible from './core/Flexible'
-import Scrollable from './core/Scrollable'
+import Scrollable from './Scrollable'
 
 import AdaptProvider from './AdaptProvider'
 
