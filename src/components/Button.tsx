@@ -3,7 +3,7 @@ import styled, { DefaultTheme } from 'styled-components'
 
 import { getMeasure } from '../helpers'
 import Spinner from './Spinner'
-import Clickable from './core/Clickable'
+import Clickable from './Clickable'
 import { useTheme } from '../hooks/useTheme'
 
 const parseTheme = (theme: DefaultTheme) => {

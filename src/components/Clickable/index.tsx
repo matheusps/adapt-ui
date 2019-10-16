@@ -46,7 +46,12 @@ Clickable.defaultProps = {
   as: 'button',
 }
 
-export interface ClickableProps extends NativeButtonType {
+type NativeButton = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
+
+export type ClickableProps = NativeButton & {
   full?: boolean
   as?: any
 }

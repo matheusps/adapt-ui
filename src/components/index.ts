@@ -1,5 +1,5 @@
 import Box from './Box'
-import Clickable from './core/Clickable'
+import Clickable from './Clickable'
 import Flexible from './core/Flexible'
 import Scrollable from './core/Scrollable'
 
