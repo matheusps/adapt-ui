@@ -53,4 +53,4 @@ jspm_packages/
 .DS_Store
 
 #docs
-.docz
+storybook-static
