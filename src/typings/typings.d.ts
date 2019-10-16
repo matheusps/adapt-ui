@@ -106,8 +106,3 @@ type IconType = {
   size?: Measure
   type?: 'solid' | 'regular' | 'brand'
 }
-
-interface ButtonType extends ClickableType {
-  size?: Measure
-  loading?: boolean
-}

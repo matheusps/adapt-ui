@@ -1,23 +1,21 @@
-import Box from './core/Box'
-import Clickable from './core/Clickable'
-import Flexible from './core/Flexible'
-import Scrollable from './core/Scrollable'
+import Box from './Box'
+import Clickable from './Clickable'
+import Flexible from './Flexible'
+import Scrollable from './Scrollable'
 
 import AdaptProvider from './AdaptProvider'
 
-import Typo from './Typo'
-
-import { Button } from './Button'
+import TypoPreflight from './Typography/Preflight'
+import Heading from './Typography/Heading'
+import Paragraph from './Typography/Paragraph'
+import Input from './Forms/Input'
+import Label from './Forms/Label'
 import Spinner from './Spinner'
+import Button from './Button'
+
 import { Tabs } from './Tabs/Tabs'
 import { Tab } from './Tabs/Tab'
 import { useTabState } from './Tabs/useTabState'
-import { Heading } from './Heading'
-import { Paragraph } from './Paragraph'
-import { FormGroup } from './FormGroup'
-import { Form } from './Form'
-import Input from './Input'
-import { Label } from './Label'
 
 export {
   Box,
@@ -25,7 +23,7 @@ export {
   Flexible,
   Scrollable,
   AdaptProvider,
-  Typo,
+  TypoPreflight,
   Button,
   Spinner,
   Tab,
@@ -33,8 +31,6 @@ export {
   useTabState,
   Heading,
   Paragraph,
-  FormGroup,
-  Form,
   Input,
   Label,
 }
