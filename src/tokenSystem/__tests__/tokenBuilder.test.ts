@@ -1,4 +1,4 @@
-import tokenBuilder from './index'
+import tokenBuilder from '../index'
 
 describe('Token Builder', () => {
   it('should work as basic', () => {

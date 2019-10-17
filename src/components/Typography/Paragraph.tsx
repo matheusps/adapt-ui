@@ -1,8 +1,8 @@
 import styled from 'styled-components'
+import { TypoSystem, typoSystem } from '../../tokenSystem/typo.system'
 
-const Paragraph = styled.p`
-  font-size: 1.125rem;
-  font-weight: 400;
+const Paragraph = styled.p<TypoSystem>`
+  ${typoSystem}
   text-justify: auto;
 `
 
