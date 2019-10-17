@@ -28,29 +28,39 @@ const defaultSizes = {
     lg: '3rem',
   },
   propName: {
-    width: 'w',
-    height: 'h',
+    width: 'width',
+    height: 'height',
   },
 }
 
-const spacing = styleComposer(defaultSpacing)
-const sizes = styleComposer(defaultSizes)
+const spacing = styleComposer(defaultSpacing) as Spacing
+const sizes = styleComposer(defaultSizes) as Sizes
 
-const Box = styled.div<any>`
-  ${({ width, height }) => `
-    width: ${width};
-    height: ${height};
-  `};
+const Box = styled.div<BoxProps>`
   ${spacing}
   ${sizes}
   box-sizing: border-box;
 `
 
-export interface BoxProps {
-  /** width in percentage or px */
-  width?: string | number
-  /** height in percentage or px */
-  height?: string | number
+type Scale = 'sm' | 'md' | 'lg'
+type Spacing = {
+  m?: Scale
+  mt?: Scale
+  mr?: Scale
+  mb?: Scale
+  ml?: Scale
+  p?: Scale
+  pt?: Scale
+  pr?: Scale
+  pb?: Scale
+  pl?: Scale
 }
+
+type Sizes = {
+  height?: Scale
+  width?: Scale
+}
+
+export type BoxProps = Spacing & Sizes
 
 export default Box

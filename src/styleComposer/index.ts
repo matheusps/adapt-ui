@@ -5,8 +5,8 @@ const styleComposer = (styles: Args) => {
   const styleFunctions = props.map(prop => {
     const name = propName[prop]
 
-    const curriedStyleFn = (key, scale) => _props => ({
-      [prop]: scale[_props[key]],
+    const curriedStyleFn = (key, scale) => receivedProps => ({
+      [prop]: scale[receivedProps[key]],
     })
 
     return curriedStyleFn(name, scale)
@@ -15,9 +15,13 @@ const styleComposer = (styles: Args) => {
   return styleFunctions
 }
 
+type PropSet = {
+  [key: string]: any
+}
+
 type Args = {
-  scale: any
-  propName: any
+  scale: PropSet
+  propName: PropSet
 }
 
 export default styleComposer

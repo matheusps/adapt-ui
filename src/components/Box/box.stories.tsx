@@ -10,13 +10,13 @@ export default {
 export const basic = () => <Box>Hello Button</Box>
 
 export const asH2 = () => (
-  <Box as="h2" mb="sm" mt="sm">
+  <Box as="h2" mb="sm" mt="sm" pt="md">
     A box can be an h2 element
   </Box>
 )
 
 export const asButton = () => (
-  <Box w="sm" as="button" onClick={() => alert('Clicked Box')}>
+  <Box width="sm" as="button" onClick={() => alert('Clicked Box')}>
     A Box can be anything!
   </Box>
 )

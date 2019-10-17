@@ -8,7 +8,7 @@ export default {
 }
 
 export const yAxis = () => (
-  <Scrollable axis="y" width="300px" height="200px">
+  <Scrollable axis="y" width="lg" height="lg">
     <Heading level={6}>Start Scrolling</Heading>
     <Box>
       <Paragraph>
@@ -25,9 +25,9 @@ export const yAxis = () => (
 )
 
 export const xAxis = () => (
-  <Scrollable axis="x" width="300px" height="200px">
+  <Scrollable axis="x" width="lg" height="lg">
     <Heading level={6}>Start Scrolling</Heading>
-    <Box width="600px" height="1px" style={{ backgroundColor: 'black' }} />
+    <Box width="md" height="sm" style={{ backgroundColor: 'black' }} />
     <Box>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -43,9 +43,9 @@ export const xAxis = () => (
 )
 
 export const xyAxis = () => (
-  <Scrollable axis="xy" width="300px" height="200px">
+  <Scrollable axis="xy" width="lg" height="lg">
     <Heading level={6}>Start Scrolling</Heading>
-    <Box width="600px" height="1px" style={{ backgroundColor: 'black' }} />
+    <Box width="md" height="sm" style={{ backgroundColor: 'black' }} />
     <Box>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
