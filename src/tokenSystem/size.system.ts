@@ -1,4 +1,4 @@
-import styleComposer from './index'
+import tokenBuilder from './index'
 
 const defaultSize = {
   scale: {
@@ -12,11 +12,11 @@ const defaultSize = {
   },
 }
 
-export const sizeTokens = styleComposer(defaultSize) as SizeTokens
+export const sizeSystem = tokenBuilder(defaultSize) as SizeSystem
 
 export type SizeScale = 'sm' | 'md' | 'lg'
 
-export type SizeTokens = {
+export type SizeSystem = {
   height?: SizeScale
   width?: SizeScale
 }

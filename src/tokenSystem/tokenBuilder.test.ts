@@ -1,6 +1,6 @@
-import styleComposer from './index'
+import tokenBuilder from './index'
 
-describe('Style Composer', () => {
+describe('Token Builder', () => {
   it('should work as basic', () => {
     const y = {
       scale: {
@@ -12,7 +12,7 @@ describe('Style Composer', () => {
         padding: 'm',
       },
     }
-    const res = styleComposer(y)
+    const res = tokenBuilder(y)
     const solvedResults = res.map(x => x({ m: 'sm' }))
     expect(solvedResults).toEqual([{ margin: '1rem' }, { padding: '1rem' }])
   })

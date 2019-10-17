@@ -1,4 +1,4 @@
-const styleComposer = (styles: Args) => {
+const tokenBuilder = (styles: Args) => {
   const { propName, scale } = styles
   const props = Object.keys(propName)
 
@@ -24,4 +24,4 @@ type Args = {
   propName: PropSet
 }
 
-export default styleComposer
+export default tokenBuilder

@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { spacingTokens, SpacingTokens } from '../../tokenSystem/spacing.tokens'
-import { sizeTokens, SizeTokens } from '../../tokenSystem/size.tokens'
+import { spacingSystem, SpacingSystem } from '../../tokenSystem/spacing.system'
+import { sizeSystem, SizeSystem } from '../../tokenSystem/size.system'
 
 const Box = styled.div<BoxProps>`
-  ${spacingTokens}
-  ${sizeTokens}
+  ${spacingSystem}
+  ${sizeSystem}
   box-sizing: border-box;
 `
 
-export type BoxProps = SpacingTokens & SizeTokens
+export type BoxProps = SpacingSystem & SizeSystem
 
 export default Box

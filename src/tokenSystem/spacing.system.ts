@@ -1,4 +1,4 @@
-import styleComposer from './index'
+import tokenBuilder from './index'
 
 const defaultSpacing = {
   scale: {
@@ -20,11 +20,11 @@ const defaultSpacing = {
   },
 }
 
-export const spacingTokens = styleComposer(defaultSpacing) as SpacingTokens
+export const spacingSystem = tokenBuilder(defaultSpacing) as SpacingSystem
 
 export type SpacingScale = 'sm' | 'md' | 'lg'
 
-export type SpacingTokens = {
+export type SpacingSystem = {
   m?: SpacingScale
   mt?: SpacingScale
   mr?: SpacingScale
