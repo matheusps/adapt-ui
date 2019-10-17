@@ -1,7 +1,7 @@
 import styleComposer from './index'
 
-describe('Something', () => {
-  it('should work', () => {
+describe('Style Composer', () => {
+  it('should work as basic', () => {
     const y = {
       scale: {
         sm: '1rem',
