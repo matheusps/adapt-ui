@@ -17,6 +17,7 @@ const Flexible = styled(Box)<FlexibleProps>(props => ({
   alignContent: props.content,
 }))
 
+//@ts-ignore
 Flexible.defaultProps = {
   width: 'auto',
   height: 'auto',

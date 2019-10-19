@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import styled, { DefaultTheme } from 'styled-components'
+import styled from 'styled-components'
 
 import { getMeasure } from '../../helpers'
 import Spinner from '../Spinner'
