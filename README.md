@@ -1,7 +1,7 @@
 # Adapt UI
 
 [![CircleCI](https://circleci.com/gh/matheusps/adapt-ui.svg?style=svg)](https://circleci.com/gh/matheusps/adapt-ui)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f4a3987b-301a-4273-b833-ee993812c4c3/deploy-status)](https://app.netlify.com/sites/adapt-ui/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f4a3987b-301a-4273-b833-ee993812c4c3/deploy-status)](https://app.netlify.com/sites/adapt-ui/deploys) [![Greenkeeper badge](https://badges.greenkeeper.io/matheusps/adapt-ui.svg)](https://greenkeeper.io/)
 
 [Check the component docs for more info](https://adapt-ui.netlify.com/)
 
