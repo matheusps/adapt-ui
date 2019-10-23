@@ -26,7 +26,7 @@ const StyledSvg = styled.svg`
   animation-timing-function: linear;
 `
 
-const Spinner: FC<Props> = ({ thickness, size, speed, gap }) => {
+const Spinner: FC<SpinnerProps> = ({ thickness, size, speed, gap }) => {
   return (
     <StyledSvg
       height={`${getSize(size!)}rem`}
@@ -57,7 +57,7 @@ Spinner.defaultProps = {
   gap: 'lg',
 }
 
-type Props = {
+export type SpinnerProps = {
   readonly speed?: Speed
   readonly gap?: Measure
   readonly thickness?: Measure
