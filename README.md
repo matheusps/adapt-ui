@@ -37,20 +37,24 @@ $ yarn release
 **🛠 stands for fixes or chores**
 
 - [ ] 🛠 Fix bugs with the current component.
-- [x] Button
 - [x] Typo
 - [x] Box
 - [ ] Image
 - [x] Label
 - [x] Input
 - [x] Spinner
-- [ ] Tabs
 - [ ] Collapsible
-- [ ] Hoverable
 - [x] Scrollable
 - [x] Clickable
 - [x] Flexible
-- [ ] Carousel
-- [ ] Toolbar
 - [ ] Theme Parser
+- [ ] Color tokens
+
+Upcomming version:
+
+- [ ] Tabs
+- [ ] Variation tokens
+- [ ] Carousel
 - [ ] Responsive Breakpoints
+- [ ] Table
+- [ ] Toolbar
