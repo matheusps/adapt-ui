@@ -1,7 +1,20 @@
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
-import { getMeasure } from '../../helpers'
+const getMeasure = (measure: Measure, [sm, md, lg, xl]: Array<any>) => {
+  switch (measure) {
+    case 'sm':
+      return sm
+    case 'md':
+      return md
+    case 'lg':
+      return lg
+    case 'xl':
+      return xl
+    default:
+      return sm
+  }
+}
 
 const infiniteSpin = keyframes`
   from {transform: rotate(0deg)}
