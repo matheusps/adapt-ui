@@ -11,11 +11,6 @@ import Paragraph from './Typography/Paragraph'
 import Input from './Forms/Input'
 import Label from './Forms/Label'
 import Spinner from './Spinner'
-import Button from './Button'
-
-import { Tabs } from './Tabs/Tabs'
-import { Tab } from './Tabs/Tab'
-import { useTabState } from './Tabs/useTabState'
 
 export {
   Box,
@@ -24,11 +19,7 @@ export {
   Scrollable,
   AdaptProvider,
   TypoPreflight,
-  Button,
   Spinner,
-  Tab,
-  Tabs,
-  useTabState,
   Heading,
   Paragraph,
   Input,
