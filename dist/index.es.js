@@ -1,4 +1,4 @@
-import React, { cloneElement, createContext, createElement, Component } from 'react';
+import React, { cloneElement, createContext, createElement, Component, useState, useCallback } from 'react';
 import stream from 'stream';
 
 /*! *****************************************************************************
@@ -4190,5 +4190,35 @@ Spinner.defaultProps = {
 };
 var templateObject_1$9, templateObject_2$1;
 
-export { AdaptProvider, Box, Clickable, Flexible, Heading, Input, Label, Paragraph, Scrollable, Spinner, TypoPreflight };
+var Collapsible = function (_a) {
+    var collapsed = _a.collapsed, children = _a.children, props = __rest(_a, ["collapsed", "children"]);
+    return collapsed ? React.createElement(Box, __assign({}, props), children) : null;
+};
+
+var CollapsibleToggle = function (_a) {
+    var toggle = _a.toggle, children = _a.children, props = __rest(_a, ["toggle", "children"]);
+    return (React.createElement(Clickable, __assign({ onClick: toggle }, props), children));
+};
+
+function useCollapsibleState(initalState) {
+    if (initalState === void 0) { initalState = false; }
+    var _a = useState(initalState), collapsed = _a[0], setCollapsed = _a[1];
+    var toggle = useCallback(function () {
+        setCollapsed(!collapsed);
+    }, [collapsed]);
+    var collapse = useCallback(function () {
+        setCollapsed(true);
+    }, [collapsed]);
+    var uncollapse = useCallback(function () {
+        setCollapsed(false);
+    }, [collapsed]);
+    return {
+        collapsed: collapsed,
+        toggle: toggle,
+        collapse: collapse,
+        uncollapse: uncollapse,
+    };
+}
+
+export { AdaptProvider, Box, Clickable, Collapsible, CollapsibleToggle, Flexible, Heading, Input, Label, Paragraph, Scrollable, Spinner, TypoPreflight, useCollapsibleState };
 //# sourceMappingURL=index.es.js.map

@@ -4197,9 +4197,41 @@ Spinner.defaultProps = {
 };
 var templateObject_1$9, templateObject_2$1;
 
+var Collapsible = function (_a) {
+    var collapsed = _a.collapsed, children = _a.children, props = __rest(_a, ["collapsed", "children"]);
+    return collapsed ? React__default.createElement(Box, __assign({}, props), children) : null;
+};
+
+var CollapsibleToggle = function (_a) {
+    var toggle = _a.toggle, children = _a.children, props = __rest(_a, ["toggle", "children"]);
+    return (React__default.createElement(Clickable, __assign({ onClick: toggle }, props), children));
+};
+
+function useCollapsibleState(initalState) {
+    if (initalState === void 0) { initalState = false; }
+    var _a = React.useState(initalState), collapsed = _a[0], setCollapsed = _a[1];
+    var toggle = React.useCallback(function () {
+        setCollapsed(!collapsed);
+    }, [collapsed]);
+    var collapse = React.useCallback(function () {
+        setCollapsed(true);
+    }, [collapsed]);
+    var uncollapse = React.useCallback(function () {
+        setCollapsed(false);
+    }, [collapsed]);
+    return {
+        collapsed: collapsed,
+        toggle: toggle,
+        collapse: collapse,
+        uncollapse: uncollapse,
+    };
+}
+
 exports.AdaptProvider = AdaptProvider;
 exports.Box = Box;
 exports.Clickable = Clickable;
+exports.Collapsible = Collapsible;
+exports.CollapsibleToggle = CollapsibleToggle;
 exports.Flexible = Flexible;
 exports.Heading = Heading;
 exports.Input = Input;
@@ -4208,4 +4240,5 @@ exports.Paragraph = Paragraph;
 exports.Scrollable = Scrollable;
 exports.Spinner = Spinner;
 exports.TypoPreflight = TypoPreflight;
+exports.useCollapsibleState = useCollapsibleState;
 //# sourceMappingURL=index.js.map
