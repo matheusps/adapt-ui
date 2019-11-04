@@ -12,6 +12,10 @@ import Input from './Forms/Input'
 import Label from './Forms/Label'
 import Spinner from './Spinner'
 
+import Collapsible from './Collapsible'
+import CollapsibleToggle from './Collapsible/CollapsibleToggle'
+import useCollapsibleState from './Collapsible/useCollapsibleState'
+
 export {
   Box,
   Clickable,
@@ -24,4 +28,7 @@ export {
   Paragraph,
   Input,
   Label,
+  Collapsible,
+  CollapsibleToggle,
+  useCollapsibleState,
 }
