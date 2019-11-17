@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Box, { BoxProps } from '../Box'
+import Box from '../Box'
 
 const Collapsible: FC<CollapsibleProps> = ({
   collapsed,
@@ -9,6 +9,6 @@ const Collapsible: FC<CollapsibleProps> = ({
   return collapsed ? <Box {...props}>{children}</Box> : null
 }
 
-export type CollapsibleProps = { collapsed?: boolean } & BoxProps
+export type CollapsibleProps = { collapsed?: boolean }
 
 export default Collapsible

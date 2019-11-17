@@ -1,6 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+import {
+  colorTokens,
+  spacingTokens,
+  SpacingTokens,
+  ColorTokens,
+} from '../../tokens'
 import Box from './index'
 import { Preflight } from '..'
+import { Color } from 'csstype'
 
 export default {
   title: 'Box',
@@ -14,33 +22,25 @@ export default {
   ],
 }
 
-export const basic = () => <Box themeTest="secondary">Hello Button</Box>
+export const basic = () => <Box>Basic Box</Box>
 
-export const asH2 = () => (
-  <Box as="h2" display="flex" direction="row" justify="center">
-    <Box
-      elevation="xs"
-      ma="xl"
-      bgColor="maroon"
-      style={{ width: 100, height: 100 }}
-    ></Box>
-    <Box
-      elevation="md"
-      ma="xl"
-      bgColor="fuchsia"
-      style={{ width: 100, height: 100 }}
-    ></Box>
-    <Box
-      elevation="xl"
-      ma="xl"
-      bgColor="aqua"
-      style={{ width: 100, height: 100 }}
-    ></Box>
-  </Box>
-)
+export const asH2 = () => <Box as="h2">A Box can be a H2</Box>
 
 export const asButton = () => (
   <Box as="button" onClick={() => alert('Clicked Box')}>
     A Box can be anything!
   </Box>
 )
+
+export const withTokens = () => {
+  const StyledBox = styled(Box)<SpacingTokens & ColorTokens>`
+    ${colorTokens}
+    ${spacingTokens}
+  `
+
+  return (
+    <StyledBox pa="xl" bgColor="black" color="fuchsia">
+      <h1>Styled Box</h1>
+    </StyledBox>
+  )
+}
