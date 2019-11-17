@@ -11,9 +11,24 @@ export const basic = () => <Box>Hello Button</Box>
 
 export const asH2 = () => (
   <Box as="h2" display="flex" direction="row" justify="center">
-    <Box bgColor="maroon" style={{ width: 100, height: 100 }}></Box>
-    <Box bgColor="fuchsia" style={{ width: 100, height: 100 }}></Box>
-    <Box bgColor="aqua" style={{ width: 100, height: 100 }}></Box>
+    <Box
+      elevation="xs"
+      ma="xl"
+      bgColor="maroon"
+      style={{ width: 100, height: 100 }}
+    ></Box>
+    <Box
+      elevation="md"
+      ma="xl"
+      bgColor="fuchsia"
+      style={{ width: 100, height: 100 }}
+    ></Box>
+    <Box
+      elevation="xl"
+      ma="xl"
+      bgColor="aqua"
+      style={{ width: 100, height: 100 }}
+    ></Box>
   </Box>
 )
 

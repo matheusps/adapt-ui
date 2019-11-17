@@ -4,13 +4,15 @@ import flex, { FlexSystem } from '../../tokenSystem/flexbox'
 import position, { PositionSystem } from '../../tokenSystem/position'
 import colors, { ColorSystem } from '../../tokenSystem/colors'
 import spacing, { SpacingSystem } from '../../tokenSystem/spacing'
+import elevations, { ElevationSystem } from '../../tokenSystem/elevation'
 
 const Box = styled.div<BoxProps>`
   ${flex};
   ${display};
   ${position};
   ${colors};
-  ${spacing}
+  ${spacing};
+  ${elevations};
   box-sizing: border-box;
 `
 
@@ -18,6 +20,7 @@ export type BoxProps = FlexSystem &
   DisplaySystem &
   PositionSystem &
   ColorSystem &
-  SpacingSystem
+  SpacingSystem &
+  ElevationSystem
 
 export default Box
