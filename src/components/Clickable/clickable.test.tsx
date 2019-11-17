@@ -19,12 +19,6 @@ describe('Clickable component', () => {
     expect(container.firstChild).toBeDefined()
   })
 
-  it('should render with full styles', () => {
-    const { container } = renderComponent({ full: true })
-    expect(container.firstChild).toHaveStyleRule('display', 'block')
-    expect(container.firstChild).toHaveStyleRule('width', '100%')
-  })
-
   it('should render with disabled styles', () => {
     const { container } = renderComponent({ disabled: true })
     expect(container.firstChild).toHaveStyleRule('cursor', 'not-allowed')
