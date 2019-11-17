@@ -10,6 +10,9 @@ import Spinner, {
   getSpeed,
 } from './index'
 
+type Measure = 'sm' | 'md' | 'lg' | 'xl'
+type Speed = 'fast' | 'slow' | 'normal'
+
 import 'jest-styled-components'
 
 afterEach(cleanup)

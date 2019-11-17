@@ -1,6 +1,9 @@
 import React, { FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
+type Measure = 'sm' | 'md' | 'lg' | 'xl'
+type Speed = 'fast' | 'slow' | 'normal'
+
 const getMeasure = (measure: Measure, [sm, md, lg, xl]: Array<any>) => {
   switch (measure) {
     case 'sm':
