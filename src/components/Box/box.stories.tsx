@@ -11,9 +11,9 @@ export const basic = () => <Box>Hello Button</Box>
 
 export const asH2 = () => (
   <Box as="h2" display="flex" direction="row" justify="center">
-    <div style={{ width: 100, height: 100, backgroundColor: 'black' }}></div>
-    <div style={{ width: 100, height: 100, backgroundColor: 'blue' }}></div>
-    <div style={{ width: 100, height: 100, backgroundColor: 'green' }}></div>
+    <Box bgColor="maroon" style={{ width: 100, height: 100 }}></Box>
+    <Box bgColor="fuchsia" style={{ width: 100, height: 100 }}></Box>
+    <Box bgColor="aqua" style={{ width: 100, height: 100 }}></Box>
   </Box>
 )
 
