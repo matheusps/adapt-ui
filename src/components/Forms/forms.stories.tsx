@@ -8,7 +8,7 @@ export default {
 }
 
 export const inputs = () => (
-  <Box width="md">
+  <Box>
     <Input type="text" placeholder="Generic Text Input" />
     <Input type="email" placeholder="Email Input" />
     <Input type="search" placeholder="Search Input" />

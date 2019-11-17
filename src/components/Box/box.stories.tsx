@@ -10,13 +10,15 @@ export default {
 export const basic = () => <Box>Hello Button</Box>
 
 export const asH2 = () => (
-  <Box as="h2" mb="sm" mt="sm" pt="md">
-    A box can be an h2 element
+  <Box as="h2" display="flex" direction="row--r">
+    <div style={{ width: 100, height: 100, backgroundColor: 'black' }}></div>
+    <div style={{ width: 100, height: 100, backgroundColor: 'blue' }}></div>
+    <div style={{ width: 100, height: 100, backgroundColor: 'green' }}></div>
   </Box>
 )
 
 export const asButton = () => (
-  <Box width="sm" as="button" onClick={() => alert('Clicked Box')}>
+  <Box as="button" onClick={() => alert('Clicked Box')}>
     A Box can be anything!
   </Box>
 )

@@ -3924,57 +3924,36 @@ if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test' && 
   window['__styled-components-init__'] += 1;
 }
 
-var tokenBuilder = function (styles) {
-    var propName = styles.propName, scale = styles.scale;
+var createTokens = function (styles) {
+    var propName = styles.propName, values = styles.values;
     var props = Object.keys(propName);
     var styleFunctions = props.map(function (prop) {
         var name = propName[prop];
-        var curriedStyleFn = function (key, scale) { return function (receivedProps) {
+        var curriedStyleFn = function (key, values) { return function (receivedProps) {
             var _a;
             return (_a = {},
-                _a[prop] = scale[receivedProps[key]],
+                _a[prop] = values[receivedProps[key]],
                 _a);
         }; };
-        return curriedStyleFn(name, scale);
+        return curriedStyleFn(name, values);
     });
     return styleFunctions;
 };
 
-var defaultSpacing = {
-    scale: {
-        sm: '5rem',
-        md: '2rem',
-        lg: '3rem',
+var direction = {
+    values: {
+        row: 'row',
+        'row--r': 'row-reverse',
+        col: 'column',
+        'col--r': 'column-reverse',
     },
     propName: {
-        margin: 'm',
-        marginTop: 'mt',
-        marginRight: 'mr',
-        marginBottom: 'mb',
-        marginLeft: 'ml',
-        padding: 'p',
-        paddingTop: 'pt',
-        paddingRight: 'pr',
-        paddingBottom: 'pb',
-        paddingLeft: 'pl',
+        direction: 'flex-direction',
     },
 };
-var spacingSystem = tokenBuilder(defaultSpacing);
+var flex = createTokens(direction);
 
-var defaultSize = {
-    scale: {
-        sm: '50%',
-        md: '2rem',
-        lg: '3rem',
-    },
-    propName: {
-        width: 'width',
-        height: 'height',
-    },
-};
-var sizeSystem = tokenBuilder(defaultSize);
-
-var Box = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n  box-sizing: border-box;\n"], ["\n  ", "\n  ", "\n  box-sizing: border-box;\n"])), spacingSystem, sizeSystem);
+var Box = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  box-sizing: border-box;\n"], ["\n  ", "\n  box-sizing: border-box;\n"])), flex);
 var templateObject_1;
 
 var StyledBox = styled(Box)(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  ", ";\n  border: none;\n  overflow: hidden;\n  text-decoration: none;\n  appearance: none;\n  user-select: none;\n  background: transparent;\n"], ["\n  ",
@@ -4113,35 +4092,7 @@ var Heading = function (_a) {
 };
 var templateObject_1$5, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
 
-var fs = {
-    scale: {
-        h1: '4rem',
-        h2: '3rem',
-        h3: '2.5rem',
-        h4: '2rem',
-        h5: '1.5rem',
-        h6: '1rem',
-        body: '0.8rem',
-    },
-    propName: {
-        fontSize: 'fs',
-    },
-};
-var fw = {
-    scale: {
-        light: '400',
-        normal: '600',
-        bold: '700',
-    },
-    propName: {
-        fontWeight: 'fw',
-    },
-};
-var fontSize = tokenBuilder(fs);
-var fontWeight = tokenBuilder(fw);
-var typoSystem = [fontSize, fontWeight];
-
-var Paragraph = styled.p(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  ", "\n  text-justify: auto;\n"], ["\n  ", "\n  text-justify: auto;\n"])), typoSystem);
+var Paragraph = styled.p(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  text-justify: auto;\n"], ["\n  text-justify: auto;\n"])));
 var templateObject_1$6;
 
 var Input = styled.input(templateObject_1$7 || (templateObject_1$7 = __makeTemplateObject(["\n  width: 100%;\n  margin: 0.5rem 0 0.5rem 0;\n  padding: 0.8rem 1rem 0.8rem 1rem;\n  border: none;\n  :focus {\n    outline: none;\n  }\n"], ["\n  width: 100%;\n  margin: 0.5rem 0 0.5rem 0;\n  padding: 0.8rem 1rem 0.8rem 1rem;\n  border: none;\n  :focus {\n    outline: none;\n  }\n"])));

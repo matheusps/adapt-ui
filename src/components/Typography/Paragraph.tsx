@@ -1,8 +1,6 @@
 import styled from 'styled-components'
-import { TypoSystem, typoSystem } from '../../tokenSystem/typo.system'
 
-const Paragraph = styled.p<TypoSystem>`
-  ${typoSystem}
+const Paragraph = styled.p`
   text-justify: auto;
 `
 

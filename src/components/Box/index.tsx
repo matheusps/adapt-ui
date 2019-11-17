@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import { spacingSystem, SpacingSystem } from '../../tokenSystem/spacing.system'
-import { sizeSystem, SizeSystem } from '../../tokenSystem/size.system'
+import display, { DisplaySystem } from '../../tokenSystem/display'
+import flex, { FlexSystem } from '../../tokenSystem/flexbox'
 
 const Box = styled.div<BoxProps>`
-  ${spacingSystem}
-  ${sizeSystem}
+  ${flex};
+  ${display};
   box-sizing: border-box;
 `
 
-export type BoxProps = SpacingSystem & SizeSystem
+export type BoxProps = FlexSystem & DisplaySystem
 
 export default Box
