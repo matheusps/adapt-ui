@@ -1,14 +1,21 @@
 import React from 'react'
 import Scrollable from './index'
-import { AdaptProvider, Heading, Box, Paragraph } from '..'
+import { Preflight, Heading, Box, Paragraph } from '..'
 
 export default {
   title: 'Scrollable',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const yAxis = () => (
-  <Scrollable axis="y">
+  <Scrollable scroll="y" h="md">
     <Heading level={6}>Start Scrolling</Heading>
     <Box>
       <Paragraph>
@@ -25,7 +32,7 @@ export const yAxis = () => (
 )
 
 export const xAxis = () => (
-  <Scrollable axis="x">
+  <Scrollable scroll="x">
     <Heading level={6}>Start Scrolling</Heading>
     <Box style={{ backgroundColor: 'black' }} />
     <Box>
@@ -43,7 +50,7 @@ export const xAxis = () => (
 )
 
 export const xyAxis = () => (
-  <Scrollable axis="xy">
+  <Scrollable scroll="xy">
     <Heading level={6}>Start Scrolling</Heading>
     <Box style={{ backgroundColor: 'black' }} />
     <Box>

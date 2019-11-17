@@ -1,12 +1,19 @@
 import React from 'react'
 import Collapsible from './index'
 import CollapsibleToggle from './CollapsibleToggle'
-import { AdaptProvider } from '..'
+import { Preflight } from '..'
 import useCollapsibleState from './useCollapsibleState'
 
 export default {
   title: 'Collapsible',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const basic = () => {

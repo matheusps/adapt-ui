@@ -38,6 +38,13 @@ const GlobalStyle = createGlobalStyle`
 
   abbr[title] {
     border-bottom: none;
+    text-decoration: underline; 
+    text-decoration: underline dotted; 
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
   }
 
   sub,
@@ -153,6 +160,35 @@ const GlobalStyle = createGlobalStyle`
 
   [hidden] {
     display: none;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; 
+    font-size: 100%; 
+    line-height: 1.15; 
+  }
+
+  ::-webkit-file-upload-button {
+    font: inherit; 
   }
 `
 

@@ -11,7 +11,7 @@ const draftFloats = {
   },
 }
 
-export type FloatSystem = Partial<{
+export type FloatTokens = Partial<{
   float: keyof typeof draftFloats.values
 }>
 

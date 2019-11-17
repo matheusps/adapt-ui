@@ -2,7 +2,6 @@ import React from 'react'
 import { render, cleanup } from '@testing-library/react'
 
 import Clickable, { ClickableProps } from './index'
-import { AdaptProvider } from '../'
 import 'jest-styled-components'
 
 afterEach(cleanup)
@@ -10,9 +9,9 @@ afterEach(cleanup)
 describe('Clickable component', () => {
   const renderComponent = (customProps?: ClickableProps) =>
     render(
-      <AdaptProvider>
+      <>
         <Clickable {...customProps} />
-      </AdaptProvider>
+      </>
     )
 
   it('should render without crashing', () => {

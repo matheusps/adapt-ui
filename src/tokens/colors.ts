@@ -27,7 +27,7 @@ const draftColors = {
   },
 }
 
-export type ColorSystem = Partial<{
+export type ColorTokens = Partial<{
   color: keyof typeof draftColors.values
   bgColor: keyof typeof draftColors.values
   bColor: keyof typeof draftColors.values

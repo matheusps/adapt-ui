@@ -1,11 +1,18 @@
 import React from 'react'
 import Heading from './Heading'
 import Paragraph from './Paragraph'
-import { AdaptProvider, Box } from '..'
+import { Preflight, Box } from '..'
 
 export default {
   title: 'Typography',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const heading = () => (

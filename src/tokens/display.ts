@@ -13,7 +13,7 @@ const draftDisplay = {
   },
 }
 
-export type DisplaySystem = Partial<{
+export type DisplayTokens = Partial<{
   display: keyof typeof draftDisplay.values
 }>
 

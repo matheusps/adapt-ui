@@ -1,13 +1,20 @@
 import React from 'react'
 import Box from './index'
-import { AdaptProvider } from '..'
+import { Preflight } from '..'
 
 export default {
   title: 'Box',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
-export const basic = () => <Box>Hello Button</Box>
+export const basic = () => <Box themeTest="secondary">Hello Button</Box>
 
 export const asH2 = () => (
   <Box as="h2" display="flex" direction="row" justify="center">

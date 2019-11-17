@@ -27,7 +27,7 @@ const draftSpacing = {
 
 type spacing = keyof typeof draftSpacing.values
 
-export type SpacingSystem = Partial<{
+export type SpacingTokens = Partial<{
   ma: spacing
   mt: spacing
   mr: spacing

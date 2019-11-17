@@ -14,7 +14,7 @@ const draftElevations = {
   },
 }
 
-export type ElevationSystem = Partial<{
+export type ElevationTokens = Partial<{
   elevation: keyof typeof draftElevations.values
 }>
 

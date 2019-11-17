@@ -1,11 +1,30 @@
 import React from 'react'
+import {
+  spacingTokens,
+  colorTokens,
+  SpacingTokens,
+  ColorTokens,
+} from '../../tokens'
+import styled from 'styled-components'
 import Flexible from './index'
-import { AdaptProvider } from '..'
+import { Preflight } from '..'
 
 export default {
   title: 'Flexible',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
+
+const Block = styled.div<SpacingTokens & ColorTokens>`
+  ${spacingTokens}
+  ${colorTokens}
+`
 
 export const basic = () => <Flexible>Flex container</Flexible>
 

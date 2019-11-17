@@ -1,15 +1,16 @@
 import styled from 'styled-components'
+import {
+  scrollTokens,
+  sizeTokens,
+  ScrollVariation,
+  SizeTokens,
+} from '../../tokens'
+
 import Box from '../Box'
 
-export interface ScrollableProps {
-  axis: 'x' | 'y' | 'xy'
-}
-
-const Scrollable = styled(Box)<ScrollableProps>`
-  ${({ axis }) => `
-    overflow-x: ${axis === 'x' || axis === 'xy' ? 'scroll' : 'hidden'};
-    overflow-y: ${axis === 'y' || axis === 'xy' ? 'scroll' : 'hidden'};
-  `};
+const Scrollable = styled(Box)<ScrollVariation & SizeTokens>`
+  ${scrollTokens}
+  ${sizeTokens}
 `
 
 export default Scrollable

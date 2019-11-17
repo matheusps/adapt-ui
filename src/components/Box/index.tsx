@@ -1,26 +1,54 @@
 import styled from 'styled-components'
-import display, { DisplaySystem } from '../../tokenSystem/display'
-import flex, { FlexSystem } from '../../tokenSystem/flexbox'
-import position, { PositionSystem } from '../../tokenSystem/position'
-import colors, { ColorSystem } from '../../tokenSystem/colors'
-import spacing, { SpacingSystem } from '../../tokenSystem/spacing'
-import elevations, { ElevationSystem } from '../../tokenSystem/elevation'
+import { createVariation } from 'styled-tokens'
+import {
+  displayTokens,
+  flexboxTokens,
+  positionTokens,
+  colorTokens,
+  spacingTokens,
+  elevationTokens,
+  DisplayTokens,
+  FlexTokens,
+  PositionTokens,
+  ColorTokens,
+  SpacingTokens,
+  ElevationTokens,
+} from '../../tokens'
+
+const variation = {
+  primary: {
+    backgroundColor: 'blue',
+    color: 'green',
+  },
+  secondary: {
+    backgroundColor: 'aqua',
+    color: 'pink',
+  },
+}
+
+const theme = createVariation({ variation, name: 'themeTest' })
+
+type ThemeVariation = {
+  themeTest?: keyof typeof variation
+}
 
 const Box = styled.div<BoxProps>`
-  ${flex};
-  ${display};
-  ${position};
-  ${colors};
-  ${spacing};
-  ${elevations};
+  ${flexboxTokens};
+  ${displayTokens};
+  ${positionTokens};
+  ${colorTokens};
+  ${spacingTokens};
+  ${elevationTokens};
+  ${theme}
   box-sizing: border-box;
 `
 
-export type BoxProps = FlexSystem &
-  DisplaySystem &
-  PositionSystem &
-  ColorSystem &
-  SpacingSystem &
-  ElevationSystem
+export type BoxProps = FlexTokens &
+  DisplayTokens &
+  PositionTokens &
+  ColorTokens &
+  SpacingTokens &
+  ElevationTokens &
+  ThemeVariation
 
 export default Box

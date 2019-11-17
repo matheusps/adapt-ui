@@ -9,7 +9,7 @@ import Spinner, {
   getGap,
   getSpeed,
 } from './index'
-import { AdaptProvider } from '../'
+
 import 'jest-styled-components'
 
 afterEach(cleanup)
@@ -17,9 +17,9 @@ afterEach(cleanup)
 describe('Spinner component', () => {
   const renderComponent = (customProps?: SpinnerProps) =>
     render(
-      <AdaptProvider>
+      <>
         <Spinner {...customProps} />
-      </AdaptProvider>
+      </>
     )
 
   const sizes: Measure[] = ['sm', 'md', 'lg', 'xl']

@@ -12,7 +12,7 @@ const draftPosition = {
   },
 }
 
-export type PositionSystem = Partial<{
+export type PositionTokens = Partial<{
   position: keyof typeof draftPosition.values
 }>
 

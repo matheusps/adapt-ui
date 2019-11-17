@@ -30,6 +30,7 @@ const items = {
     center: 'center',
     baseline: 'baseline',
     stretch: 'stretch',
+    auto: 'auto',
   },
   propName: {
     alignItems: 'items',
@@ -78,10 +79,11 @@ const order = {
   },
 }
 
-export type FlexSystem = Partial<{
+export type FlexTokens = Partial<{
   direction: keyof typeof direction.values
   wrap: keyof typeof wrap.values
   items: keyof typeof items.values
+  self: keyof typeof items.values
   justify: keyof typeof justify.values
   content: keyof typeof content.values
   order: keyof typeof order.values

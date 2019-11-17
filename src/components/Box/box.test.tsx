@@ -2,15 +2,15 @@ import React from 'react'
 import { render } from '@testing-library/react'
 
 import Box from './index'
-import { AdaptProvider } from '../'
+
 import 'jest-styled-components'
 
 describe('Box component', () => {
   const renderComponent = (customProps?) =>
     render(
-      <AdaptProvider>
+      <>
         <Box {...customProps!} />
-      </AdaptProvider>
+      </>
     )
 
   it('should render', () => {

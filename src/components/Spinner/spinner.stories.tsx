@@ -1,10 +1,17 @@
 import React from 'react'
 import Spinner from './index'
-import { AdaptProvider, Box } from '..'
+import { Preflight, Box } from '..'
 
 export default {
   title: 'Spinner',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const size = () => (

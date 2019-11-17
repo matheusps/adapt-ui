@@ -3,9 +3,8 @@ import Clickable from './Clickable'
 import Flexible from './Flexible'
 import Scrollable from './Scrollable'
 
-import AdaptProvider from './AdaptProvider'
+import Preflight from './Preflight'
 
-import TypoPreflight from './Typography/Preflight'
 import Heading from './Typography/Heading'
 import Paragraph from './Typography/Paragraph'
 import Input from './Forms/Input'
@@ -21,8 +20,7 @@ export {
   Clickable,
   Flexible,
   Scrollable,
-  AdaptProvider,
-  TypoPreflight,
+  Preflight,
   Spinner,
   Heading,
   Paragraph,

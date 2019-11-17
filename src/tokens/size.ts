@@ -34,7 +34,7 @@ const draftSizes = {
 
 type size = keyof typeof draftSizes.values
 
-export type SizeSystem = Partial<{
+export type SizeTokens = Partial<{
   w: size
   h: size
   maw: size

@@ -1,10 +1,17 @@
 import React from 'react'
 import Input from './Input'
-import { AdaptProvider, Box } from '..'
+import { Preflight, Box } from '..'
 
 export default {
   title: 'Forms',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const inputs = () => (

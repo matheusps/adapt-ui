@@ -1,10 +1,17 @@
 import React from 'react'
 import Clickable from './index'
-import { AdaptProvider } from '..'
+import { Preflight } from '..'
 
 export default {
   title: 'Clickable',
-  decorators: [storyFn => <AdaptProvider>{storyFn()}</AdaptProvider>],
+  decorators: [
+    storyFn => (
+      <div>
+        <Preflight />
+        {storyFn()}
+      </div>
+    ),
+  ],
 }
 
 export const basic = () => (
