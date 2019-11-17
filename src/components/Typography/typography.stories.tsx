@@ -1,4 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
+
+import { colorTokens, ColorTokens } from '../../tokens'
 import Heading from './Heading'
 import Paragraph from './Paragraph'
 import { Preflight, Box } from '..'
@@ -15,8 +18,15 @@ export default {
   ],
 }
 
+const StyledHeading = styled(Heading)<ColorTokens>`
+  ${colorTokens}
+`
+
 export const heading = () => (
   <Box>
+    <StyledHeading level={1} color="orange" tt="upper">
+      Styled Heading 1
+    </StyledHeading>
     <Heading level={1}>Heading 1</Heading>
     <Heading level={2}>Heading 2</Heading>
     <Heading level={3}>Heading 3</Heading>

@@ -7,6 +7,7 @@ import positionTokens, { PositionTokens } from './position'
 import scrollTokens, { ScrollVariation } from './scroll'
 import sizeTokens, { SizeTokens } from './size'
 import spacingTokens, { SpacingTokens } from './spacing'
+import textTokens, { TextTokens } from './text'
 
 export {
   colorTokens,
@@ -18,6 +19,7 @@ export {
   scrollTokens,
   sizeTokens,
   spacingTokens,
+  textTokens,
   ColorTokens,
   DisplayTokens,
   ElevationTokens,
@@ -27,4 +29,5 @@ export {
   ScrollVariation,
   SizeTokens,
   SpacingTokens,
+  TextTokens,
 }
