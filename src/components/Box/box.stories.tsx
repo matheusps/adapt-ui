@@ -10,7 +10,7 @@ export default {
 export const basic = () => <Box>Hello Button</Box>
 
 export const asH2 = () => (
-  <Box as="h2" display="flex" direction="row--r">
+  <Box as="h2" display="flex" direction="row" justify="center">
     <div style={{ width: 100, height: 100, backgroundColor: 'black' }}></div>
     <div style={{ width: 100, height: 100, backgroundColor: 'blue' }}></div>
     <div style={{ width: 100, height: 100, backgroundColor: 'green' }}></div>
