@@ -7,7 +7,7 @@ import Preflight from './Preflight'
 
 import Heading from './Typography/Heading'
 import Paragraph from './Typography/Paragraph'
-import Spinner from './Spinner'
+import ExperimentalSpinner from './ExperimentalSpinner'
 
 import Collapsible from './Collapsible'
 import CollapsibleToggle from './Collapsible/CollapsibleToggle'
@@ -19,7 +19,7 @@ export {
   Flexible,
   Scrollable,
   Preflight,
-  Spinner,
+  ExperimentalSpinner,
   Heading,
   Paragraph,
   Collapsible,
