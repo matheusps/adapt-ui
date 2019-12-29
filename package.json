@@ -30,7 +30,7 @@
   "devDependencies": {
     "@storybook/addon-storysource": "^5.2.5",
     "@storybook/react": "^5.2.4",
-    "@svgr/rollup": "^4.3.0",
+    "@svgr/rollup": "^5.0.1",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "@types/jest": "^24.0.11",
