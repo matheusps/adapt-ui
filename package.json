@@ -66,7 +66,7 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
-    "styled-components": "^4.3.1",
+    "styled-components": "^5.0.1",
     "styled-tokens": "^0.0.5"
   },
   "jest": {
