@@ -44,7 +44,7 @@
     "cross-env": "^6.0.3",
     "jest": "^24.7.1",
     "jest-styled-components": "^6.3.3",
-    "np": "^5.1.1",
+    "np": "^6.2.1",
     "path": "^0.12.7",
     "react": "^16.8.6",
     "react-docgen-typescript-loader": "^3.3.0",
